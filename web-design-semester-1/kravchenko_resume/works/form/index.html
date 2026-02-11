@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма для заказа товара</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Заказ товара</h1>
+      <form>
+        <p>Название</p>
+        <input
+          type="text"
+          placeholder="123-ABC/abc{12}"
+          autofocus
+          pattern="[0-9]{3}-[A-Z]{3}/[a-z]{3}\{[0-9]{2}\}"
+          required
+          list="variants"
+        />
+        <p>Имя</p>
+        <input type="text" />
+        <p>E-mail</p>
+        <input type="email" required />
+        <p>Цвет</p>
+        <input type="color" />
+        <p>Количество</p>
+        <input type="number" required />
+        <p>Дата/время</p>
+        <input type="date" required />
+        <fieldset id="delivery">
+          <legend>Способ доставки</legend>
+          <label>
+            <input type="radio" name="deliveryChoose" required />
+            Самовывоз
+          </label>
+          <label>
+            <input type="radio" name="deliveryChoose" required />
+            Курьером
+          </label>
+        </fieldset>
+        <p>Ближайший пункт самовывоза</p>
+        <input list="pickup" required />
+        <datalist id="pickup">
+          <option value="г. Минск"></option>
+          <option value="г. Брест"></option>
+          <option value="г. Витебск"></option>
+          <option value="г. Гомель"></option>
+          <option value="г. Могилев"></option>
+          <option value="г. Гродно"></option>
+        </datalist>
+        <fieldset id="package">
+          <legend>Вид упаковки</legend>
+          <div class="offer">
+            <img src="img/air.png" alt="Предложение1" class="offerPic" />
+            <input
+              type="radio"
+              name="packageChoose"
+              class="packageChoose"
+              required
+            />
+          </div>
+          <div class="offer">
+            <img src="img/food.png" alt="Предложение2" class="offerPic" />
+            <input
+              type="radio"
+              name="packageChoose"
+              class="packageChoose"
+              required
+            />
+          </div>
+          <div class="offer">
+            <img src="img/recycle.png" alt="Предложение3" class="offerPic" />
+            <input
+              type="radio"
+              name="packageChoose"
+              class="packageChoose"
+              required
+            />
+          </div>
+        </fieldset>
+        <input type="submit" value="Заказать" id="buttonSubmit" />
+      </form>
+    </div>
+  </body>
+</html>

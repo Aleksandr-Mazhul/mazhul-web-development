@@ -1,0 +1,55 @@
+.card {
+    transform: scale(1.2);
+    width: 600px;
+    height: auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 8px 8px rgba(34, 60, 80, 0.2);
+    display: flex;
+}
+
+.container{
+    width: 720px;
+}
+
+.text-header {
+	line-height: 4vh;
+}
+
+.letter img {
+    width: 245px;
+    height: 245px;
+    margin: 1vh 0.5vw 0 0.5vw;
+    float:right;
+}
+
+.name {
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+.name h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    margin-left: 0;
+}
+
+.name p {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.discription {
+    margin-top: 10px;
+}
+
+.discription p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 5px;
+}

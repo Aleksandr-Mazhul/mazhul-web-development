@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Интерактивная карта Бразилии</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+<body>
+<header class="page-header">
+  <h1>Интерактивная карта Бразилии</h1>
+  <p>Нажмите на регион или на пин, чтобы перейти на страницу</p>
+</header>
+
+<main>
+  <div class="map-container">
+    <div class="map-wrapper">
+
+
+      <img
+        src="regiony-brazilii.png"
+        alt="Карта регионов Бразилии (ПК)"
+        usemap="#map-desktop"
+        class="map-image map-image-desktop"
+      >
+
+      <!-- Северный -->
+      <a
+        class="pin pin-desktop pin-northern-desktop"
+        href="https://guide.planetofhotels.com/ru/braziliya/severnyy-region"
+        target="_blank"
+      >
+        <img
+          src="pin.svg"
+          alt="Северный регион"
+        >
+      </a>
+
+      <!-- Центрально-западный -->
+      <a
+        class="pin pin-desktop pin-central-desktop"
+        href="https://guide.planetofhotels.com/ru/braziliya/centralno-zapadnyy-region"
+        target="_blank"
+      >
+        <img
+          src="pin.svg"
+          alt="Центрально-западный регион"
+        >
+      </a>
+
+      <!-- Северо-восточный -->
+      <a
+        class="pin pin-desktop pin-northeastern-desktop"
+        href="https://guide.planetofhotels.com/ru/braziliya/severo-vostochnyy-region"
+        target="_blank"
+      >
+        <img
+          src="pin.svg"
+          alt="Северо-восточный регион"
+        >
+      </a>
+
+
+      <map name="map-desktop">
+
+        <area
+          target="_blank"
+          alt="Северный регион"
+          title="Северный регион"
+          href="https://guide.planetofhotels.com/ru/braziliya/severnyy-region"
+          coords="566,98,558,110,550,130,537,141,515,146,491,143,457,143,440,149,414,156,386,163,371,160,365,140,367,123,369,108,353,82,339,91,300,104,274,108,249,104,260,128,271,140,283,154,265,162,242,174,229,178,210,181,201,171,193,155,176,157,155,163,141,166,125,175,135,185,147,191,135,196,134,211,141,224,144,243,144,260,138,280,133,296,130,306,113,309,81,319,69,331,56,345,53,360,48,375,45,391,51,411,61,420,80,435,89,441,101,448,118,442,121,435,129,459,141,466,165,469,184,470,202,455,208,450,227,442,251,440,247,457,248,471,258,484,271,497,291,505,308,509,328,513,343,521,363,526,369,521,372,484,369,465,345,461,328,449,340,411,362,412,408,409,417,376,433,406,444,416,601,432,594,447,591,461,589,479,591,492,601,506,615,506,640,510,653,509,691,508,687,479,688,461,697,445,688,433,683,424,674,404,686,395,668,381,662,355,663,337,638,322,656,311,673,284,689,249,695,227,676,214,659,211,644,210,640,204,616,203,587,196,595,180,605,164,584,142,573,120"
+          shape="poly"
+        >
+
+        <!-- Центрально-западный (rect) -->
+        <area
+          target="_blank"
+          alt="Центрально-западный регион"
+          title="Центрально-западный регион"
+          href="https://guide.planetofhotels.com/ru/braziliya/centralno-zapadnyy-region"
+          coords="406,477,587,662"
+          shape="rect"
+        >
+
+        <!-- Северо-восточный (circle) -->
+        <area
+          target="_blank"
+          alt="Северо-восточный регион"
+          title="Северо-восточный регион"
+          href="https://guide.planetofhotels.com/ru/braziliya/severo-vostochnyy-region"
+          coords="806,399,118"
+          shape="circle"
+        >
+      </map>
+
+
+      <!-- КАРТА ДЛЯ МОБИЛЬНОГО -->
+      <img
+        src="regiony-brazilii-mobile.png"
+        alt="Карта регионов Бразилии (мобильная)"
+        usemap="#map-mobile"
+        class="map-image map-image-mobile"
+      >
+
+
+
+      <!-- Северный -->
+      <a
+        class="pin pin-mobile pin-northern-mobile"
+        href="https://guide.planetofhotels.com/ru/braziliya/severnyy-region"
+        target="_blank"
+      >
+        <img
+          src="pin.svg"
+          alt="Северный регион"
+        >
+      </a>
+
+      <!-- Центрально-западный -->
+      <a
+        class="pin pin-mobile pin-central-mobile"
+        href="https://guide.planetofhotels.com/ru/braziliya/centralno-zapadnyy-region"
+        target="_blank"
+      >
+        <img
+          src="pin.svg"
+          alt="Центрально-западный регион"
+        >
+      </a>
+
+      <!-- Северо-восточный -->
+      <a
+        class="pin pin-mobile pin-northeastern-mobile"
+        href="https://guide.planetofhotels.com/ru/braziliya/severo-vostochnyy-region"
+        target="_blank"
+      >
+        <img
+          src="pin.svg"
+          alt="Северо-восточный регион"
+        >
+      </a>
+
+
+      <map name="map-mobile">
+        <!-- Северный -->
+        <area
+          target="_blank"
+          alt="Северный регион"
+          title="Северный регион"
+          href="https://guide.planetofhotels.com/ru/braziliya/severnyy-region"
+          coords="254,123,265,115,277,90,253,79,229,75,222,34,211,51,169,58,150,58,147,38,125,37,111,42,100,45,102,65,79,72,58,67,53,87,60,108,41,126,26,134,17,153,28,167,52,185,65,187,91,170,101,178,104,194,119,202,139,204,145,186,136,165,155,161,234,171,237,187,247,192,275,199,268,160,263,134"
+          shape="poly"
+        >
+
+        <!-- Центрально-западный -->
+        <area
+          target="_blank"
+          alt="Центрально-западный регион"
+          title="Центрально-западный регион"
+          href="https://guide.planetofhotels.com/ru/braziliya/centralno-zapadnyy-region"
+          coords="199,168,174,168,150,168,146,188,146,207,148,223,167,233,169,255,171,272,174,282,199,294,210,284,225,266,245,255,263,246,265,226,269,215,269,202,242,202,233,192,226,175"
+          shape="poly"
+        >
+
+        <!-- Северо-восточный -->
+        <area
+          target="_blank"
+          alt="Северо-восточный регион"
+          title="Северо-восточный регион"
+          href="https://guide.planetofhotels.com/ru/braziliya/severo-vostochnyy-region"
+          coords="281,92,271,106,266,125,269,140,272,152,274,167,273,185,278,218,295,213,307,221,319,225,332,229,329,241,337,236,341,208,349,193,362,182,373,170,379,157,380,135,366,125,341,114,318,105"
+          shape="poly"
+        >
+      </map>
+
+    </div>
+  </div>
+
+  <!-- ЛЕГЕНДА -->
+  <section class="legend-section">
+    <h2>Легенда карты</h2>
+    <table class="legend-table">
+      <tr>
+        <th>Регион</th>
+        <th>Ссылка</th>
+      </tr>
+      <tr>
+        <td>Северный</td>
+        <td>
+          <a
+            href="https://guide.planetofhotels.com/ru/braziliya/severnyy-region"
+            target="_blank"
+          >Открыть
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Центрально-западный</td>
+        <td>
+          <a
+            href="https://guide.planetofhotels.com/ru/braziliya/centralno-zapadnyy-region"
+            target="_blank"
+          >Открыть
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Северо-восточный</td>
+        <td>
+          <a
+            href="https://guide.planetofhotels.com/ru/braziliya/severo-vostochnyy-region"
+            target="_blank"
+          >Открыть
+          </a>
+        </td>
+      </tr>
+    </table>
+  </section>
+</main>
+</body>
+</html>

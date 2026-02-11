@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+	<xs:simpleType name="statusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="occupied"/>
+			<xs:enumeration value="feely"/>
+			<xs:enumeration value="booked"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ConveniencesType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Интерент"/>
+			<xs:enumeration value="Факс"/>
+			<xs:enumeration value="ТВ"/>
+			<xs:enumeration value="Сейф"/>
+			<xs:enumeration value="Мини-бар"/>
+			<xs:enumeration value="Игровая зона"/>			
+			<xs:enumeration value="Компьютер"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:complexType name="HotelType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="Conveniences" type="ConveniencesType"/>
+			<xs:element name="Price" type="xs:decimal"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+		<xs:attribute name="status" type="statusType" use="required"/>
+		<xs:attribute name="rating" type="xs:decimal"/>
+		<xs:attribute name="available" type="xs:boolean" default="true"/>
+	</xs:complexType>
+
+	<xs:element name="HotelInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Hotel" type="HotelType" maxOccurs="8" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

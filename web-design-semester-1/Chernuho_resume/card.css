@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10;
+    padding: 0;
+    justify-content: left;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.visitka {
+    transform: scale(1.5);
+    margin-left: 450px;
+    margin-top: 120px;
+    width: 540px;
+    height: 300px;
+    padding: 20px;
+    background-image: url("fon.svg");
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+}
+
+
+.visitka h1 {
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 60px;
+    right: -5px;   
+}
+
+.job { 
+    font-size: 25px;
+    font-weight: medium;
+    margin: 10px 0 5px 0;
+}
+
+
+.discription {
+    font-size: 15px;
+    line-height: 2;
+    position: relative;
+    top: -105px;
+    left: 230px;
+
+}
+
+.discription div {
+    margin-bottom: 10px;
+}
+
+.discription i {
+    margin-right: 8px;
+}

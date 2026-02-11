@@ -1,0 +1,50 @@
+.container {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto auto;
+  column-gap: 40px;
+  row-gap: 40px;
+  width: 100%;
+
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.image {
+  float: right;
+  margin: 0  0 20px 20px ;
+  width: 30%;
+
+}
+
+img{
+  width: 100%;
+}
+
+h2{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.flex1{
+  clear: right;
+  flex-direction: column-reverse;
+
+}
+
+
+
+
+
+

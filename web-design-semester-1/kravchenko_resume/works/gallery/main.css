@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1e1e1e;
+}
+
+.container {
+    width: 80%;
+    max-width: 1400px; 
+    margin: 0 auto;
+    background-color: #ebe8e8;
+}
+
+header {
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #858585;
+    margin-bottom: 3vh;
+    border-bottom: 3px solid #000;
+    font-family: Bookman Old Style;
+    color: #000;
+    text-shadow: 1px 1px 3px rgb(67, 67, 67);
+    font-size: 113%;
+}
+
+main {
+    width: 100%;
+}
+
+.paintes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4.5vh;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.paint {
+    display: flex;
+    gap: 1.3em;
+    margin-bottom: 4.5vh;
+    width: 48%;
+}
+
+.paint:hover {
+    background: #cbcbcb;
+    color: #fff;
+}
+
+.second .text {
+    order: 1;
+}
+
+img {
+    width: 100%;
+    box-shadow: 9px 9px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.cont_img {
+    max-width: 260px;
+    margin: 0 0.9vw 0 2.3vw;
+    transition: 1s;
+}
+
+.cont_img:hover {
+    transform: scale(1.1); 
+}
+
+.text {
+    max-width: 270px;
+    margin: 0 2.3vw 0 0.8vw;
+    transition: 1s;
+    font-family: Bookman Old Style;
+    text-align: justify;
+}
+
+.text:hover {
+    transform: scale(1.1); 
+}
+
+.footer {
+    background-color: #858585;
+    height: 6vh;
+    display: block;
+}
+
+.footer p {
+    font-size: 75%;
+    text-align: center;
+}

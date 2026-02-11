@@ -1,0 +1,393 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:10px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+a{color: inherit;}img{max-width: 100%;display: block;}
+
+*{
+	
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+}
+.container{
+		width: 80%;
+		margin: 1% auto;
+}
+header{
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	gap: 1vw;
+}
+.logo {
+	width: 7rem;
+}
+
+.text-header {
+	color: #020913;
+	font-weight: 600;
+	font-size: 2.8rem;
+	
+}
+nav{
+	padding: 0.8rem 0.5rem;
+	background-color: #6699FF;
+	margin-top: 1.2rem;
+}
+nav ul{
+	padding-left: 1vw;
+	display: flex;
+	gap: 2vw;
+	height: 25px;
+}
+nav ul li{
+	font-size: 1.6rem;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.active{
+	text-decoration: underline;
+}
+
+.name {
+	padding-top: 2rem;
+	font-size: 3rem;
+	font-weight: 600;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.3rem solid #000;
+}
+.photo{
+	max-width: 40rem;
+}
+.information {
+	padding-top: 1.5rem;
+	display: grid;
+  grid-template-columns: 40rem 1fr;
+}
+.container-content {
+	padding-left: 0rem;
+}
+.title {
+	
+	font-size: 2rem;
+	margin-left: 1.5rem;
+	border-bottom: 0.2rem dashed #000;
+	padding-bottom: 0.7rem;
+}
+.anketa {
+	padding-top: 2.5rem;
+	display: grid;
+	grid-template-rows: repeat(6, auto);
+}
+.line {
+	display: grid;
+	padding-bottom: 4%;
+	column-gap: 3rem;
+	grid-template-columns: 30rem auto;
+}
+.question {
+	font-weight: 600;
+	text-align: right;
+	font-size: 1.6rem;
+}
+.answer {
+	font-size: 1.6rem;
+}
+
+footer.main{
+	float: right;
+	padding-right: 2.5rem;
+	font-size: 1.6rem;
+ }
+
+ body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+h1{
+	text-align: center;
+	margin: 10px 0 5px;
+}
+.image-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.image-box {
+	flex-basis: calc(25% - 20px);
+	margin: 10px;
+	position: relative;
+	overflow: hidden;
+	background-color: #6699FF;
+	color: white;
+	padding: 1.2vw;
+	border-radius: 1vw;
+	transition: .2s;
+}
+
+.image-box:hover {
+	transition: .2s;
+	background-color: #99CCFF;
+}
+
+.image-box img {
+	width: 100%;
+	height: auto;
+	transition: all 0.3s ease-in-out;
+	border-radius: 1vw;
+	border: 2px solid white;
+}
+
+.image-box h3 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 10px 0 5px 0;
+	text-align: center;
+}
+
+.image-box p {
+	font-size: 16px;
+	margin: 0;
+	text-align: center;
+}
+
+.footer{
+	height: 60px;
+	background-color: #6699FF;
+}
+header{
+margin: 0 10px 0;
+}
+@media screen and (max-width: 992px) {
+	.image-box {
+		flex-basis: calc(33.33% - 20px);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.image-box {
+		flex-basis: calc(50% - 20px);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.image-box {
+		flex-basis: 100%;
+	}
+}
+
+ .card {
+	width: 542px;
+	height: 350px;
+	border: #000;
+	margin: 50px auto;
+	background-image: url(img/ddeko.png);
+	background-color: #e2c9c9;
+	border: 1px solid #000000;
+	text-align: center;
+	padding-top: 50px;
+  }
+  
+  h1 {
+	font-size: 60px;
+	margin: 0;
+  }
+  
+  h2 {
+	font-size: 30px;
+	margin: 0;
+	margin-top: 8px;
+  }
+  
+  p {
+	font-size: 20px;
+	margin: 10px auto;
+	margin-top: 20px;
+  }
+
+
+
+@media(max-width: 577px) {
+	.container {
+	width: 95%;
+	margin: 0 auto;
+	}
+	.text-header {
+	font-size: 1.4rem;
+	}
+	.content-header {
+	padding-left: 1rem;
+	}
+	nav ul li {
+		padding-left: 0.5rem;
+	padding-right: 1rem;
+	font-size: 1.4rem;
+	}
+	.name {
+	font-size: 2rem;
+	}
+	.photo {
+	max-width: 100%;
+	}
+	.information {
+	display: block;
+	}
+	.container-content {
+	padding-left: 0;
+	}
+	.line {
+	display: block;
+	padding-bottom: 3%;
+	}
+	.qustion {
+	text-align: left;
+	font-size: 1.4rem;
+	}
+	.unswer {
+	font-size: 1.4rem;
+	}
+	.cite {
+	font-size: 1.4rem;
+	float: none;
+	padding-right: 0;
+	margin-bottom: 0.05rem;
+	padding-top: 0.05rem;
+	}
+	footer.main {
+	font-size: 1.4rem;
+	text-align: center;
+	padding: 2rem 0;
+	}
+		.SpecialWork, .GraphikWork, .WebSite {
+			gap: 1rem;
+			grid-template-columns: repeat(2, 1fr);
+			}
+			.copyright{
+				font-size: 1.4rem;
+			}
+			.businessCard {
+				width: 100%;
+				height: auto;
+				background-size: 50%;
+				background-position: right;
+			 }
+		  
+			 .name2 {
+				padding: 3rem 2rem;
+			 }
+		  
+			 .myName2 {
+				font-size: 4rem;
+			 }
+		  
+			 .subtitle {
+				font-size: 2.5rem;
+			 }
+		  .contacts{
+			 padding-top: 3rem;
+			 padding-bottom: 1.5rem;
+		  }
+			 .text {
+				font-size: 2rem;
+			 }
+		  
+			 .row img {
+				width: 3rem;
+			 }
+			}
+
+		@media(max-width: 376px) {
+			.text-header {
+				font-size: 1.2rem;
+			 }
+		  
+			 .content-header {
+				padding-left: 0.5rem;
+			 }
+		  
+			 nav ul li {
+				padding-right: 0.5rem;
+				font-size: 1.2rem;
+			 }
+		  
+			 .name {
+				font-size: 1.4rem;
+			 }
+			 .qustion {
+				font-size: 1.2rem;
+			 }
+		  
+			 .unswer {
+				font-size: 1.2rem;
+			 }
+		  
+			 cite {
+				font-size: 1.2rem;
+			 }
+		  
+			 footer.main {
+				font-size: 1.2rem;
+				padding: 1.5rem 0;
+			 }
+
+			.WebSite, .SpecialWork, .GraphikWork {
+			  grid-template-columns: repeat(2, 1fr);
+			  justify-content: center;
+			  gap: 2rem;
+			}
+			.work{
+			  max-width: 100%;
+			  margin-bottom: 1.5rem;
+			}
+			h3 {
+			  font-size: 1.8rem;
+			}
+			.Webwork-title, .work-title {
+			  font-size: 1.6rem;
+			  margin: 0.3rem 0;
+			}
+			.Webwork-text, .SpecialWork-text, .GraphicWork-text {
+			  font-size: 1.4rem;
+			}
+			.businessCard {
+				background-size: 55% ;
+				background-position: 120% 0%;
+			 }
+			 .name2 {
+				padding: 2rem 1rem;
+			 }
+			 .myName2 {
+				font-size: 3rem;
+			 }
+			 .subtitle {
+				font-size: 1.8rem;
+			 }
+			 .contacts {
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			 }
+			 .text {
+				font-size: 1.5rem;
+			 }
+			 .row img {
+				width: 2rem;
+				padding-right: 0.5rem;
+			 }
+		 }

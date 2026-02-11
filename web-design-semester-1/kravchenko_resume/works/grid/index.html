@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грид и его свойства</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Грид и его свойства</h1>
+    <h2>auto-fill</h2>
+    <img src ="images/auto-fill.jpg">
+    <p>/*Автозаполнение сетки, создавая переносы ячеек на новые строки*/</p>
+    <p>.auto-fill {<br>
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr))<br>
+        }
+    </p>
+
+    <h2>auto-fit</h2>
+    <img src ="images/auto-fit.jpg">
+    <p>/*Автозаполнение сетки с переносом ячеек на новые строки так, чтобы заполнить всю строку*/</p>
+    <p>.auto-fit {<br>
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr))<br>
+        }
+    </p>
+
+    <h2>grid-column-start<br>
+        grid-column-end<br>
+        grid-column</h2>
+    <img src ="images/grid-column-start-end.jpg">
+    <p>/*"grid-column-start" определяет с какого столбца ячейка будет начинаться,<br>
+         "grid-column-end" определяет на каком столбце ячейка будет заканчиваться,<br>
+         "grid-column" определяет, в какие столбцы помещать элемент*/</p>
+    <p>.grid > div:nth-child(1) {<br>
+        grid-column-start: 2;<br>
+        grid-column-end: 4;<br>
+    }</p>
+    <p>.grid > div:nth-child(1) {<br>
+        grid-column: 2 / 4;<br>
+    }
+    </p>
+
+    <h2>grid-row-start<br>
+        grid-row-end<br>
+        grid-row</h2>
+    <img src = "images/grid-row.png">
+    <p>/*"grid-row" определяет с какой строки в макете сетки будет начинаться элемент, сколько строк будет занимать элемент, или на какой строке завершится элемент в макете сетки.*/</p>
+    <p>.grid > div:nth-child(1) {<br>
+        grid-column: 2 / 4;<br>
+        grid-row-start:1;<br>
+        grid-row-end:3;<br>
+    }</p>
+    <p>.grid > div:nth-child(1) {<br>
+        grid-column: 2 / 4;<br>
+        grid-row: 1 / 3;<br>
+    }
+    </p>
+
+    <h2>grid-justify-items<br>
+        grid-align-items</h2>
+    <img src="images/grid-justify-items.png">
+    <p>/*grid-justify-items выравнивает содержимое внутри каждой ячейки,<br>
+         grid-align-items выравнивает содержимое внутри каждой ячейки по вертикали*/</p>
+    <p>.grid {<br>
+        display: grid;<br>
+        grid-template-columns: 150px 150px 150px 150px;<br>
+        grid-auto-rows: minmax(100px, auto);<br>
+        grid-gap: 20px;<br>
+        /* start, end, center, stretch<br>
+        justify-items: start;<br>
+        align-items: stretch;<br>
+    }
+    </p>
+
+    <h2>grid-justify-self<br>
+        grid-align-self</h2>
+    <img src="images/grid-justify-self.png">
+    <p>/*grid-justify-self выравнивает элемент внутри ячейки по горизонтальной оси,<br>
+        grid-align-self выравнивает элемент внутри ячейки по вертикальной оси*/</p>
+    <p>.grid > div:nth-child(6) {<br>
+        justify-self: end;<br>
+        align-self: center;<br>
+    }
+    </p>
+
+    <h2>grid-template</h2>
+    <img src="images/grid-template.png">
+    <p>/*grid-template - это удобный способ задать строки, колонки и области в одном свойстве. Позволяет в краткой форме определить или столбцы со строками, или целые области.*/</p>
+    <p>.grid {<br>
+        display: grid;<br>
+        grid-template-columns: 150px 150px 150px 150px;<br>
+        grid-template-rows: 100px 100px 100px;<br>
+        grid-gap: 20px;<br>
+    }
+    </p>
+    <p>.grid {<br>
+        display: grid;<br>
+        grid-template:repeat(3, 100px) / repeat(4, 150px);<br>
+        grid-gap: 20px;<br>
+    }
+    </p>
+    
+    <h2>grid-areas</h2>
+    <img src="images/grid-areas.png">
+    <p>/*grid-template-areas позволяет задать именованные области в грид-сетке. Оно используется для создания визуальной структуры сетки, где каждая область может занимать одну или несколько ячеек.*/</p>
+   
+    <p>.grid {<br>
+        display: grid;<br>
+        grid-gap: 20px;<br>
+        grid-template-columns: 200px 1fr;<br>
+        grid-template-rows: 100px 1fr 100px;<br>
+        grid-template-areas: <br>
+            "header header"<br>
+            "aside main"<br>
+            "aside footer";<br>
+    }</p>
+
+    <p>header {<br>
+        grid-area: header;<br>
+    }</p>
+    <p>aside {<br>
+        grid-area: aside;<br>
+    }</p>
+
+    <p>main {<br>
+        grid-area: main;<br>
+        display:drid;<br>
+        grid-template-columns: 1fr 1fr;<br>
+        grid-gap: 10px;<br>
+    }</p>
+
+    <p>footer {<br>
+        grid-area: footer;<br>
+    }</p>
+    
+</body>
+</html>

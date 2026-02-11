@@ -1,0 +1,98 @@
+* {
+  font-family: "Verdana";
+  font-weight: 400;
+  color: white;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: #ffecec
+}
+
+.container {
+  display: flex;
+  margin: 2% auto;
+  width: 65%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFCCCC;
+  border-radius: 1vw;
+  gap: 2vw;
+}
+
+.video {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  gap: 2vw;
+  margin-bottom: 1vw;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.volume-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.icon {
+  width: auto;
+  height: 2vw;
+}
+
+.audio {
+    width: 90%;
+    margin-top: 3vw;
+}
+
+.arrow {
+  width: 1vw;
+}
+
+.playback-rate {
+  display: grid;
+  row-gap: 1vw;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
+  width: 11vw;
+  color: white;
+}
+
+#playback_rate {
+  grid-row: 1/3;
+}
+
+#timer {
+  width: 5vw;
+  text-align: center;
+}
+
+#range, .volume-set {
+  -webkit-appearance: none; 
+  appearance: none;
+  height: 0.5vw;
+  background: #ececec;
+  outline: none;
+}
+
+#range::-webkit-slider-thumb, .volume-set::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  color: white;
+
+}
+
+.buttons-play {
+    width: 10vw;
+    display: flex;
+    justify-content: space-between;
+}

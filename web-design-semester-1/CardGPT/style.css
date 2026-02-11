@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', serif;
+}
+
+.card {
+  width: 1000px;
+  height: 650px;
+  background: radial-gradient(circle at 0% 0%, #7f9696, #9fa4c5);
+  border: 1px solid #d8caca;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.name {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.title {
+  position: absolute;
+  top: 140px;
+  right: 100px;
+  font-size: 40px;
+}
+
+.contact {
+  position: absolute;
+  bottom: 120px;
+  right: 60px;
+  text-align: right;
+  font-size: 32px;
+  line-height: 1.6;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  right: 20px;
+  width: 2px;
+  background-color: black;
+}
