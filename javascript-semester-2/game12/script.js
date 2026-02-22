@@ -35,7 +35,7 @@ function showCards(to) {
   cardPlayer2.forEach((element,i) => to.innerHTML += element + (i === cardPlayer1.length - 1 ? "" : ","));
 }
 
-function removeCard(n) {
+function removeCard(n,player) {
   actualCardsOfPlayer1 = cardPlayer1.filter(element => element !== n);
-  
+
 }
