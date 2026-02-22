@@ -1,20 +1,79 @@
+###############################################################################
+#                                 __  __                                      #
+#   ___  ___  ___ _   _ _ __ ___  \ \/ /                                      #
+#  / __|/ _ \/ __| | | | '_ ` _ \  \  /                                       #
+#  \__ \  __/ (__| |_| | | | | | | /  \                                       #
+#  |___/\___|\___|\__,_|_| |_| |_|/_/\_\                                      #
+#                                                                             #
+#                     THE ULTIMATE WEB DEVELOPMENT .gitignore                #
+#                   Covers everything: OS, IDEs, Languages, Frameworks       #
+###############################################################################
 
+
+#===============================================================================
+# OPERATING SYSTEMS
+#===============================================================================
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### macOS ###
 # General
 .DS_Store
-__MACOSX/
+.DS_Store?
 .AppleDouble
 .LSOverride
-Icon[]
+
+# Icon must end with two \r
+Icon
 
 # Thumbnails
 ._*
+.Spotlight-V100
+.Trashes
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
-.Spotlight-V100
 .TemporaryItems
-.Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 
@@ -24,3 +83,965 @@ Icon[]
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+#===============================================================================
+# EDITORS & IDEs (ALL OF THEM)
+#===============================================================================
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+### Emacs ###
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
+
+# network security
+/network-security.data
+
+### SublimeText ###
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+
+# Project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using Sublime Text
+# *.sublime-project
+
+# SFTP configuration file
+sftp-config.json
+sftp-config-alt*.json
+
+# Package control specific files
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+# Sublime-github package stores a github token in this file
+GitHub.sublime-settings
+
+### Notepad++ ###
+*.bak
+
+### TextMate ###
+*.tmproj
+*.tmproject
+tmtags
+
+### Visual Studio Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!vscode/*.code-snippets
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### JetBrains IDEs (IntelliJ, WebStorm, PHPStorm, PyCharm, RubyMine, CLion, etc.) ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Xcode ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# Xcode Patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+
+### VSCode (again, but more specific) ###
+.vscode/
+.history/
+*.code-workspace
+
+### Kate ###
+*.kate-swp
+
+
+#===============================================================================
+# PACKAGE MANAGERS & DEPENDENCIES
+#===============================================================================
+
+### Node.js / npm ###
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+.pnp.loader.mjs
+.yarn-integrity
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out/
+
+# Nuxt.js build output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x output
+.vuepress/.temp
+.vuepress/.cache
+
+# vitepress build output
+.vitepress/dist
+
+# serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+### Yarn ###
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+### Bower ###
+bower_components/
+
+### Composer (PHP) ###
+vendor/
+composer.lock
+composer.phar
+
+### Ruby / Bundler ###
+Gemfile.lock
+.bundle/
+vendor/bundle/
+vendor/ruby/
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+### Go ###
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.sum
+
+### Rust ###
+/target/
+**/*.rs.bk
+Cargo.lock
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+### Kotlin ###
+.idea
+*.iml
+*.ipr
+*.iws
+out/
+!src/**/out
+!test/**/out
+.kotlin
+
+
+#===============================================================================
+# FRAMEWORKS & BUILD TOOLS
+#===============================================================================
+
+### React / Create React App ###
+build/
+*.orig
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### Vue.js ###
+# vue-cli
+.vuerc
+
+### Angular ###
+# compiled output
+/dist
+/tmp
+/out-tsc
+# dependencies
+node_modules
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+# System Files
+.DS_Store
+Thumbs.db
+
+### Svelte ###
+/.svelte-kit
+/package
+/build
+/.svelte
+
+### Next.js ###
+.next/
+out/
+build/
+
+### Nuxt.js ###
+.nuxt
+.nuxt-dist
+dist
+
+### Gatsby ###
+# Generated files
+.cache/
+public/
+# Static files
+static/
+
+### Webpack ###
+dist/
+build/
+*.bundle.js
+*.bundle.min.js
+stats.json
+
+### Vite ###
+dist/
+dist-ssr/
+*.local
+
+### Laravel ###
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
+### Symfony ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/phpunit.xml
+/var/
+/vendor/
+###> symfony/framework-bundle ###
+/.env.*
+###< symfony/framework-bundle ###
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+staticfiles
+
+### Flask ###
+instance/
+.webassets-cache
+.env
+
+### Ruby on Rails ###
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+/lib/bundler/man
+
+# these should all be checked in to normalize the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+# if using bower-rails ignore default bower_components path bower.json files
+vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+# Ignore pow environment settings
+.powenv
+
+# Ignore Byebug command history file
+.byebug_history
+
+# Ignore node_modules
+node_modules
+
+
+#===============================================================================
+# TESTING & COVERAGE
+#===============================================================================
+
+# Testing
+/coverage
+/.nyc_output
+/.cache/loader
+.junit.xml
+/test-reports/
+/test-results/
+/__tests__/__snapshots__/
+*.test.ts.snap
+*.test.js.snap
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Jest
+jest-coverage/
+jest-html-report/
+jest-stare/
+.jest-test-results.json
+coverage/
+
+# Mocha
+._mocha
+mocha.opts
+mocha.parallel
+mocha-webpack.*.log
+
+# QUnit
+/qunit.log
+
+# Karma
+karma.conf.js
+karma.debug.js
+karma.*.log
+
+# Protractor
+protractor.conf.js
+protractor.log
+
+# Selenium
+selenium-server.log
+selenium-debug.log
+
+
+#===============================================================================
+# DATABASES & STORAGE
+#===============================================================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# MySQL
+*.my.cnf
+*.my.cnf~
+
+# PostgreSQL
+*.pgpass
+*.pgpass.conf
+
+# MongoDB
+dump/
+mongod.conf
+mongod.log
+
+# Redis
+dump.rdb
+appendonly.aof
+
+# Firebase
+.firebase/
+firebase-debug.log
+.firebaserc
+*-debug.log
+
+# AWS
+.aws/
+**/.aws/**
+credentials
+config
+
+# Google Cloud
+.gcloud/
+config.json
+service-account-key.json
+
+
+#===============================================================================
+# ENVIRONMENT & CONFIGURATION FILES
+#===============================================================================
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Config files that may contain secrets
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.keystore
+.secrets
+secrets/
+secrets.yml
+application-secrets.yml
+credentials.yml
+
+# Local configuration files
+config/local.yml
+config/local.yaml
+config/application-local.yml
+config/database.local.yml
+
+# IDE configs
+.idea/
+.vscode/
+*.sublime-*
+.project
+.classpath
+
+
+#===============================================================================
+# LOGS & TEMPORARY FILES
+#===============================================================================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.pid
+*.seed
+*.pid.lock
+
+# Backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+*.swp
+*.swo
+*~
+*.backup
+*.old
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+#===============================================================================
+# ARCHIVES & PACKAGES
+#===============================================================================
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.gz
+*.xz
+*.lz
+*.lzma
+*.lzo
+*.zst
+
+# Packages
+*.deb
+*.rpm
+*.dmg
+*.pkg
+*.exe
+*.msi
+*.msix
+*.msm
+*.msp
+
+
+#===============================================================================
+# DOCKER & CONTAINERS
+#===============================================================================
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+Dockerfile
+Dockerfile.*
+docker-compose.yml
+docker-compose.*.yml
+
+# Kubernetes
+*.kubeconfig
+kubeconfig
+.helm/
+helm/
+charts/
+*.chart
+
+# Vagrant
+.vagrant/
+Vagrantfile
+
+
+#===============================================================================
+# CI/CD & DEPLOYMENT
+#===============================================================================
+
+# CI/CD
+.circleci/
+.github/
+.gitlab/
+.travis.yml
+.jenkins/
+.ci/
+deploy/
+.drone.yml
+.appveyor.yml
+.woodpecker/
+
+# Deployment
+deploy/
+dist/
+build/
+out/
+release/
+target/
+
+
+#===============================================================================
+# PROJECT SPECIFIC (CUSTOMIZE FOR YOUR NEEDS)
+#===============================================================================
+
+# Add your project-specific ignores below this line
+# Examples:
+# /public/uploads/
+# /storage/
+# /temp/
+# /uploads/
+# /media/
+# /staticfiles/
+# /downloads/
+# /exports/
+# /imports/
+# *.private.*
+# config/private.yml
+
+# -----------------------------------------------------------------------------
+#                            END OF .gitignore
+# -----------------------------------------------------------------------------
