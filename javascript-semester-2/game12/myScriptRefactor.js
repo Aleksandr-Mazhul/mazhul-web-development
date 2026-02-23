@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
   resetBtn.type = 'button';
   resetBtn.value = 'Новая игра';
   resetBtn.id = 'reset';
-  resetBtn.style.marginLeft = '10px';
+  resetBtn.style.marginLeft = '10px';{}
   resetBtn.addEventListener('click', resetGame);
   
   const goBtn = document.querySelector('#go');
