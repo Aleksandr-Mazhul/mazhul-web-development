@@ -277,7 +277,7 @@ function renderAll() {
 
 ///
 
-==
+
 //центр управления UI
 function handleMoveResult(result) {
   if (result === STATUS.CONTINUE) {
