@@ -6,8 +6,7 @@ const STATUS = {
   INVALID: "invalid",
   INVALID_SKIP: "invalid-skip",
   GAME_OVER: "game-over",
-  MUST_MOVE_FIRST: "must-move-first",
-  NO_ROLL: "no-roll"
+  MUST_MOVE_FIRST: "must-move-first"
 };
 
 // ядро игры
@@ -130,9 +129,6 @@ class Game {
   }
 
   playMove(type) {
-    if (this.dice.values.length === 0) {
-      return STATUS.NO_ROLL;
-    }
 
     if (this.gameOver) {
       return STATUS.GAME_OVER;
@@ -147,15 +143,13 @@ class Game {
       }
       player.removeCards(moves.singles);
       this.awaitingMove = false;
-    }
-    else if (type === "sum") {
+    } else if (type === "sum") {
       if (!moves.canUseSum) {
         return STATUS.INVALID;
       }
       player.removeCard(this.dice.sum);
       this.awaitingMove = false;
-    }
-    else  {
+    } else {
       return STATUS.INVALID;
     }
 
@@ -190,7 +184,7 @@ class Game {
 
 
 // UI игры
-const game = new Game(2, 6, 2);
+let game = new Game(2, 6, 2);
 
 //кнопка запуска игры и смены игрока на следующего
 const goButton = document.getElementById("go");
@@ -201,10 +195,15 @@ const diceDiv = document.getElementById("Dice");
 //блок, где отображаются сами карточки (игровое поле)
 const gameFieldDiv = document.getElementById("GameField");
 
+//создаем кнопку restart в DOM дереве
+const restartButton = document.getElementById("restart");
+
 
 //блок с генерацией значений кубиков, кнопок и игроков с их текущими карточками
 function renderDice() {
   diceDiv.innerHTML = "";
+
+  goButton.disabled = game.awaitingMove || game.gameOver;
 
   if (game.dice.values.length === 0) {
     diceDiv.innerHTML = "Your draw";
@@ -217,11 +216,13 @@ function renderDice() {
 
   const moves = game.getAvailableMoves();
   renderMoveButtons(moves);
+
 }
 
 function renderMoveButtons(moves) {
   if (moves.singles.length > 0) {
     const singlesBtn = document.createElement("button");
+    singlesBtn.classList.add("btn", "primary", "move-btn");
     singlesBtn.textContent = "убрать " + moves.singles.join(" и ");
 
     singlesBtn.addEventListener("click", () => {
@@ -231,11 +232,11 @@ function renderMoveButtons(moves) {
     diceDiv.append(singlesBtn);
   }
 
-
   if (moves.canUseSum) {
     const sumBtn = document.createElement("button");
-    sumBtn.textContent = "убрать " + game.dice.sum;
 
+    sumBtn.textContent = "убрать " + game.dice.sum;
+    sumBtn.classList.add("btn", "primary", "move-btn");
     sumBtn.addEventListener("click", () => {
       const result = game.playMove("sum");
       handleMoveResult(result);
@@ -245,6 +246,7 @@ function renderMoveButtons(moves) {
 
   if (moves.singles.length === 0 && !moves.canUseSum) {
     const skipBtn = document.createElement("button");
+    skipBtn.classList.add("btn", "secondary", "move-btn");
     skipBtn.textContent = "пропустить ход";
 
     skipBtn.addEventListener("click", () => {
@@ -260,13 +262,32 @@ function renderPlayers() {
   gameFieldDiv.innerHTML = "";
 
   game.players.forEach((player, index) => {
-    let line = player.name + ":" + player.cards.join(", ")
+    const playerDiv = document.createElement("div");
+    playerDiv.classList.add("player-card");
 
     if (index === game.currentPlayerIndex) {
-      line = "👉 " + line;
+      playerDiv.classList.add("active");
     }
 
-    gameFieldDiv.innerHTML += line + "<br>"
+    const nameDiv = document.createElement("div");
+    nameDiv.classList.add("player-name");
+    nameDiv.textContent = player.name;
+
+    playerDiv.append(nameDiv);
+
+
+    const cardsDiv = document.createElement("div");
+    cardsDiv.classList.add("cards");
+
+    player.cards.forEach((card) => {
+      const cardDiv = document.createElement("div");
+      cardDiv.classList.add("card");
+      cardDiv.textContent = card;
+      cardsDiv.append(cardDiv);
+    })
+    playerDiv.append(cardsDiv);
+
+    gameFieldDiv.append(playerDiv);
   });
 }
 
@@ -311,28 +332,15 @@ goButton.addEventListener("click", () => {
   }
   renderAll();
 });
-///
 
-
-//тестировочная часть в терминале
-/*const game = new Game(2, 6, 2);
-console.log
-("текущий игрок", game.getCurrentPlayer().name);
-
-console.log("бросаем кубики...");
-const diceResult = game.rollDice();
-console.log("выпало:", diceResult);
-
-const moves = game.getAvailableMoves();
-console.log("возможные ходы:", moves);
-
-if (moves.singles.length > 0) {
-  console.log("Делаем ход singles");
-  console.log(game.playMove("singles"));
-} else if (moves.canUseSum) {
-  console.log("Делаем ход sum");
-  console.log(game.playMove("sum"));
-} else {
-  console.log("Нет ходов, пропуск");
-}*/
+restartButton.addEventListener("click", () => {
+  if (!game.gameOver) {
+    const confirmRestart = confirm(" Вы уверены, что хотите начать заново?")
+    if (!confirmRestart) {
+      return;
+    }
+  }
+  game = new Game(2, 6, 2);
+  renderAll();
+});
 ///
