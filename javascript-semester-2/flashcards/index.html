@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>flashcards</title>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
 <body>
-$END$
+<div id="app">
+
+  <div id="decks"></div>
+
+  <div id="study">
+    <div class="study-header">
+      <div id="position"></div>
+      <select id="mode">
+        <option value="all">All</option>
+        <option value="unlearned">Unlearned</option>
+      </select>
+    </div>
+    <div id="card"></div>
+    <button id="toggleList">Show Cards</button>
+    <div class="controls-wrapper">
+      <div class="controls">
+        <button id="prev">◀</button>
+        <button id="flip">Flip</button>
+        <button id="next">▶</button>
+        <button id="shuffle">Shuffle</button>
+        <button id="mark">✓</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="form">
+    <input
+      id="frontInput"
+      placeholder="Front"
+    >
+    <input
+      id="backInput"
+      placeholder="Back"
+    >
+    <button id="addBtn">Add</button>
+  </div>
+
+  <div id="list"></div>
+
+</div>
+
+<script
+  type="module"
+  src="./main.js"
+></script>
 </body>
 </html>

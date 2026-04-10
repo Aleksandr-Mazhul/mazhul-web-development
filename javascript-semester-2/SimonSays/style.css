@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #2a2a4a, #121225);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* основной контейнер */
+
+/* цвета карточек */
+.card:nth-child(4n+1) {
+  background: #ff3b30;
+}
+
+.card:nth-child(4n+2) {
+  background: #34c759;
+}
+
+.card:nth-child(4n+3) {
+  background: #007aff;
+}
+
+.card:nth-child(4n+4) {
+  background: #ffcc00;
+}
+
+/* эффект при наведении */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* активная подсветка */
+.card.active {
+  transform: scale(1.1);
+  filter: brightness(1.8);
+  box-shadow: 0 0 25px white,
+  0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+/* текст ready/set/go */
+.TextInput {
+  margin-top: 25px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TextInput p {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* кнопки */
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* start */
+#start {
+  background: #34c759;
+  color: white;
+}
+
+#start:hover {
+  transform: scale(1.05);
+}
+
+/* restart */
+#restart {
+  background: #ff3b30;
+  color: white;
+}
+
+#restart:hover {
+  transform: scale(1.05);
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 25px;
+  background: #1b1b2f;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  width: calc(50% - 5px); /* 2 в строке */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #2a2a4a, #121225);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* контейнер игры */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #1b1b2f;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* карточки */
+.card {
+  width: calc(50% - 8px);
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+/* цвета */
+.card:nth-child(4n+1) {
+  background: #ff3b30;
+}
+
+.card:nth-child(4n+2) {
+  background: #34c759;
+}
+
+.card:nth-child(4n+3) {
+  background: #007aff;
+}
+
+.card:nth-child(4n+4) {
+  background: #ffcc00;
+}
+
+/* hover */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* активное состояние */
+.card.active {
+  transform: scale(1.1);
+  filter: brightness(1.6);
+  box-shadow: 0 0 20px white,
+  0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+/* текст */
+.TextInput {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.TextInput p {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.TextInput p + p {
+  margin-top: 12px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* score */
+#score, #record {
+  font-size: 18px;
+  opacity: 0.8;
+  display: inline;
+  margin: 0 5px;
+}
+
+/* кнопки */
+button {
+  margin-top: 15px;
+  width: 140px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+/* start */
+#start {
+  background: #34c759;
+  color: white;
+}
+
+#start:hover {
+  transform: scale(1.05);
+}
+
+/* restart */
+#restart {
+  background: #ff3b30;
+  color: white;
+}
+
+#restart:hover {
+  transform: scale(1.05);
+}
+
+#restart.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  filter: grayscale(0.6);
+}

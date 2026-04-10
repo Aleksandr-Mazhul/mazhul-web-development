@@ -1,0 +1,163 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+#decks {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 15px;
+}
+
+.deck {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.deck:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.deck.active {
+  background: #22c55e;
+}
+
+.deck.add {
+  background: #3b82f6;
+}
+
+#study {
+  margin-top: 10px;
+}
+
+.study-header {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  margin: 0 auto 10px;
+  align-items: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#card {
+  width: 320px;
+  height: 200px;
+  margin: 20px auto;
+  perspective: 1000px;
+}
+
+/* NOTE STYLE CARD */
+.note {
+  width: 100%;
+  height: 100%;
+  background: #fef9c3;
+  color: #111;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  padding: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.note.flipped {
+  background: #fde68a;
+  transform: rotate(2deg) scale(1.03);
+}
+
+/* CONTROLS */
+.controls-wrapper {
+  margin-top: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.controls button {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* MARK BUTTON */
+#mark {
+  background: rgba(34,197,94,0.2);
+}
+
+#mark:hover {
+  background: rgba(34,197,94,0.4);
+}
+
+.note.learned {
+  background: #86efac;
+  color: #064e3b;
+  transform: rotate(0deg) scale(1.02);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #22c55e;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* TOGGLE BUTTON */
+#toggleList {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* LIST */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  margin: 6px auto;
+  width: 320px;
+  border-radius: 8px;
+}
+
+.actions button {
+  margin-left: 5px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.delete-deck {
+  margin-left: 8px;
+  color: #ef4444;
+  cursor: pointer;
+}

@@ -1,5 +1,3 @@
-//состояния игры
-
 const STATUS = {
   CONTINUE: "continue",
   WIN: "win",
@@ -9,7 +7,6 @@ const STATUS = {
   MUST_MOVE_FIRST: "must-move-first"
 };
 
-// ядро игры
 class Dice {
   constructor(diceCount, diceSides) {
     this.diceCount = diceCount;
@@ -25,7 +22,6 @@ class Dice {
       const value = Math.floor(Math.random() * this.diceSides) + 1;
       this.values.push(value);
     }
-
     this.sum = this.values.reduce((acc, cur) => acc + cur, 0);
   }
 }
@@ -55,6 +51,7 @@ class Player {
 }
 
 
+
 class Game {
   constructor(diceCount, diceSides, playersCount) {
     this.diceCount = diceCount;
@@ -69,11 +66,13 @@ class Game {
       this.players.push(new Player(name, cards))
     }
     this.awaitingMove = false;
-    //флаг состояния игры(завершен ход или нет, в переводе "ожидающий ход")
     this.gameOver = false;
   }
 
-//вспомогательные функции
+  switchPlayer() {
+    this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.players.length;
+  }
+
   generateCards() {
     let array = [];
     for (let i = 1; i <= this.diceCount * this.diceSides; i++) {
@@ -85,13 +84,6 @@ class Game {
   getCurrentPlayer() {
     return this.players[this.currentPlayerIndex];
   }
-
-  switchPlayer() {
-    this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.players.length;
-  }
-
-///
-
 
   rollDice() {
     if (this.awaitingMove) {
@@ -180,26 +172,18 @@ class Game {
   }
 }
 
-///
 
+let game = new Game(2, 6, 3);
 
-// UI игры
-let game = new Game(2, 6, 2);
-
-//кнопка запуска игры и смены игрока на следующего
 const goButton = document.getElementById("go");
 
-//блок, где показываются ходы и кнопки закрытия карточек
 const diceDiv = document.getElementById("Dice");
 
-//блок, где отображаются сами карточки (игровое поле)
 const gameFieldDiv = document.getElementById("GameField");
 
-//создаем кнопку restart в DOM дереве
 const restartButton = document.getElementById("restart");
 
 
-//блок с генерацией значений кубиков, кнопок и игроков с их текущими карточками
 function renderDice() {
   diceDiv.innerHTML = "";
 
@@ -296,10 +280,7 @@ function renderAll() {
   renderDice();
 }
 
-///
 
-
-//центр управления UI
 function handleMoveResult(result) {
   if (result === STATUS.CONTINUE) {
     renderAll();
@@ -317,8 +298,6 @@ function handleMoveResult(result) {
     alert("пропуск невозможен");
   }
 }
-
-///
 
 
 goButton.addEventListener("click", () => {
