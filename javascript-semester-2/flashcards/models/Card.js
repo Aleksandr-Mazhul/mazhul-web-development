@@ -50,7 +50,6 @@ export class Card {
   }
 
 
-
   get learned() {
     return this.#learned;
   }

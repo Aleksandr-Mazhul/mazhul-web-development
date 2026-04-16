@@ -127,7 +127,7 @@ class Game {
     this.renderHUD();
     this.save();
     this.renderText("Press Start");
-    
+
   }
 
 
@@ -156,7 +156,7 @@ class Game {
   async delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-  
+
 
   renderCards() {
     const container = document.querySelector('#container');
@@ -168,7 +168,7 @@ class Game {
       container.appendChild(div);
     }
   }
-  
+
   renderHUD() {
     document.querySelector('#score').textContent = this.#currentScore;
     document.querySelector('#record').textContent = this.#record;
