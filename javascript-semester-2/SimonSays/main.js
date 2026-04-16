@@ -82,16 +82,19 @@ class Game {
   }
 
 
-  async init() {
+  init() {
     this.load();
     this.setupEventListeners();
     this.renderCards();
     this.renderHUD();
     this.updateControls();
-    await this.showStartMessage();
+    this.showStartMessage();
+    if (this.status === Status.WAITING_INPUT) {
+      void this.playSequence();
+    }
   }
 
-  async showStartMessage() {
+  showStartMessage() {
     if (this.#sequence.length === 0) {
       this.renderText("Press Start");
       return;
@@ -106,6 +109,7 @@ class Game {
   }
 
   async startRound() {
+    if (this.status === Status.SHOWING_SEQUENCE) return;
     this.status = Status.SHOWING_SEQUENCE;
     await this.RSG();
     await this.playSequence();
@@ -201,7 +205,7 @@ class Game {
   handleRestartBtn() {
     const restart = document.querySelector("#restart");
 
-    restart.addEventListener('click', async () => {
+    restart.addEventListener('click', () => {
       if (this.status !== Status.SHOWING_SEQUENCE) {
         this.restartGame();
       }
@@ -283,10 +287,10 @@ class Game {
 
     const data = JSON.parse(raw);
 
-    this.#sequence = data.sequence || [];
-    this.#currentStep = data.currentStep || 0;
-    this.#currentScore = data.currentScore || 0;
-    this.#record = data.record || 0;
+    this.#sequence = Array.isArray(data.sequence) ? data.sequence : [];
+    this.#currentStep = data.currentStep ?? 0;
+    this.#currentScore = data.currentScore ?? 0;
+    this.#record = data.record ?? 0;
     this.status = data.status || Status.IDLE;
   }
 
@@ -297,8 +301,5 @@ class Game {
     this.#record = 0;
   }
 }
-
-(async () => {
-  const game = new Game(4);
-  await game.init();
-})();
+const game = new Game(4);
+game.init();
