@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  <title>Feed</title>
+  <link
+    href="style.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<div class="container">
+  <h1 class="page-title">Feed</h1>
+
+  <div class="search-box">
+    <input
+      class="search-input"
+      id="searchInput"
+      placeholder="Введите слово для поиска..."
+      type="text"
+    />
+  </div>
+
+  <div
+    class="message error hidden"
+    id="errorMessage"
+  ></div>
+  <div
+    class="message empty hidden"
+    id="emptyMessage"
+  >
+    Ничего не найдено
+  </div>
+
+  <div
+    class="posts-list"
+    id="postsList"
+  ></div>
+
+  <div
+    class="loader hidden"
+    id="loader"
+  >Загрузка...
+  </div>
+
+  <button
+    class="load-more-btn"
+    id="loadMoreBtn"
+  >
+    Загрузить ещё
+  </button>
+  <div
+    class="sentinel"
+    id="sentinel"
+  ></div>
+</div>
+
+<script src="api.js"></script>
+<script src="stateManager.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
