@@ -7,7 +7,6 @@
   `web-design-semester-1`, `web-design-semester-2`).
 - A Vite-based project is also present under `vite-app/`.
 - The codebase relies strongly on fundamental web development APIs rather than complex component frameworks, meaning
-  direct DOM manipulation (e.g. `document.querySelector`) and plain JavaScript logic structure are prevalent.
 
 ## Code Conventions & Patterns
 
