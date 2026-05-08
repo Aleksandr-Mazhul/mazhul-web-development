@@ -1,16 +1,109 @@
-# React + Vite
+# Flashcards React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивное приложение для изучения карточек (flashcards) на React + Vite.
+Проект позволяет создавать колоды, добавлять и редактировать карточки, запускать режим обучения и отслеживать прогресс прямо в браузере.
 
-Currently, two official plugins are available:
+## Возможности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Создание и удаление колод.
+- Добавление, редактирование и удаление карточек.
+- Переключение между карточками и перемешивание порядка.
+- Переворот карточки (вопрос/ответ).
+- Отметка карточки как изученной.
+- Режимы обучения:
+  - `all` — все карточки.
+  - `unlearned` — только неизученные.
+- Автосохранение состояния в `localStorage`.
 
-## React Compiler
+## Технологии
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `React 19`
+- `Vite 8`
+- `ES6+` (классы, private fields)
+- `CSS`
 
-## Expanding the ESLint configuration
+## Быстрый старт
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Установка зависимостей
+
+```bash
+npm install
+```
+
+### 2. Запуск в режиме разработки
+
+```bash
+npm run dev
+```
+
+После запуска откройте адрес из терминала (обычно `http://localhost:5173`).
+
+### 3. Production-сборка
+
+```bash
+npm run build
+```
+
+### 4. Локальный preview сборки
+
+```bash
+npm run preview
+```
+
+## Скрипты
+
+- `npm run dev` — запуск dev-сервера Vite.
+- `npm run build` — production-сборка.
+- `npm run preview` — локальный просмотр production-сборки.
+- `npm run lint` — проверка ESLint.
+
+## Архитектура
+
+Проект построен вокруг объектной модели и отдельной логики учебной сессии:
+
+- `Card` — модель карточки (`front`, `back`, `learned`).
+- `Deck` — модель колоды, управляет набором карточек.
+- `StudySession` — поведение режима обучения:
+  - текущая позиция,
+  - порядок карточек,
+  - переворот,
+  - фильтрация по режиму (`all` / `unlearned`),
+  - перемешивание.
+- `StorageService` — загрузка/сохранение данных в `localStorage`.
+
+## Структура проекта
+
+```text
+src/
+  components/
+    cards/        # таблица/список карточек
+    deck/         # список колод
+    form/         # форма добавления/редактирования
+    study/        # панель режима обучения
+  containers/
+    FlashcardsApp.jsx   # основной stateful-контейнер
+  models/
+    Card.js
+    Deck.js
+  services/
+    StorageService.js
+  study/
+    StudySession.js
+  styles/
+    app.css
+```
+
+## Хранение данных
+
+Состояние приложения хранится в браузере по ключу:
+
+- `flashcards-deck`
+
+При перезагрузке страницы колоды, карточки и активная колода автоматически восстанавливаются.
+
+## Что можно улучшить дальше
+
+- Поиск и фильтрация карточек по тексту.
+- Статистика обучения (процент изученных, история сессий).
+- Импорт/экспорт колод (`.json`).
+- Поддержка горячих клавиш в режиме обучения.
