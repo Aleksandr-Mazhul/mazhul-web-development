@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works | Aleksandr Mazhul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/works.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body data-page="works">
+<div class="ambient-background" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="site-nav glass" aria-label="Main Navigation">
+    <a class="brand" href="index.html" aria-label="Go to home">
+      <span class="brand-mark"></span>
+      <span class="brand-text">AM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a data-nav="home" href="index.html">Home</a></li>
+      <li><a data-nav="works" href="works.html">Works</a></li>
+      <li><a data-nav="contacts" href="contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="works-main">
+  <section class="works-hero section" data-reveal>
+    <p class="eyebrow">Selected Frontend Works</p>
+    <h1>Учебные и авторские проекты с упором на UI и архитектуру.</h1>
+    <p>Структура карточек масштабируется: можно добавлять новые работы и заменять превью на реальные скриншоты без изменения шаблона.</p>
+  </section>
+
+  <section class="filters section glass" data-reveal aria-label="Project Filters">
+    <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+    <button class="filter-btn" data-filter="web" type="button">Web</button>
+    <button class="filter-btn" data-filter="ui" type="button">UI</button>
+    <button class="filter-btn" data-filter="concepts" type="button">Concepts</button>
+    <button class="filter-btn" data-filter="interfaces" type="button">Interfaces</button>
+  </section>
+
+  <section class="works-grid section" id="worksGrid" aria-live="polite"></section>
+</main>
+
+<footer class="site-footer glass">
+  <div class="footer-line" aria-hidden="true"></div>
+  <div class="footer-row">
+    <div class="footer-icons" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 8l9 6 9-6"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0"/></svg>
+    </div>
+    <p>&copy; 2026 Aleksandr Mazhul</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.player__controls {
+  transition:
+    opacity .25s ease;
+}
+
+
+.player__video-wrapper:hover .timeline {
+  height: 8px;
+}
+
+.timeline {
+  transition:
+    height .2s ease;
+}
+
+.player__button {
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    opacity .2s ease;
+}
+
+.player__button:active {
+  transform: scale(.92);
+}

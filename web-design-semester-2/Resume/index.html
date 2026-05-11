@@ -2,61 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksandr Mazhul | Portfolio Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script defer src="js/main.js"></script>
 </head>
-<body>
-<header>
-  <div>
-    <h1>duis adipisicing et consectetur irure ex labore duis laborum ipsum</h1>
-  </div>
-  <div>
-    <ul>
-      <li>Главная</li>
-      <li>Работы</li>
-      <li>Контакты</li>
+<body data-page="home">
+<div class="ambient-background" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="site-nav glass" aria-label="Main Navigation">
+    <a class="brand" href="index.html" aria-label="Go to home">
+      <span class="brand-mark"></span>
+      <span class="brand-text">AM</span>
+    </a>
+    <ul class="nav-links">
+      <li><a data-nav="home" href="index.html">Home</a></li>
+      <li><a data-nav="works" href="works.html">Works</a></li>
+      <li><a data-nav="contacts" href="contacts.html">Contacts</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
+
 <main>
-  <h1>Войтович Анна: Студентка первого курса</h1>
-  <section>
-    <h2>Нестандартное резюме</h2>
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
+  <section class="hero section" data-reveal>
+    <p class="eyebrow">Frontend Engineer · UI-Focused Engineer</p>
+    <h1>Aleksandr Mazhul</h1>
+    <p class="hero-text">Строю аккуратные интерфейсы и визуальные системы: от типографики и сеток до анимации и архитектуры компонентов. Фокус на чистой реализации, читаемом коде и точной детализации.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="works.html">
+        View Works
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-secondary" href="contacts.html">Contact</a>
     </div>
+    <span class="hero-background-word" aria-hidden="true">MAZHUL</span>
+  </section>
 
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
+  <section class="profile section" data-reveal>
+    <div class="profile-frame glass tilt-card">
+      <img src="images/profile/profile.svg" alt="AM geometric avatar" loading="lazy">
     </div>
-
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
-    </div>
-
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
-    </div>
-
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
-    </div>
-
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
-    </div>
-
-    <div>
-      <h3>reprehenderit cillum est</h3>
-      <p>cupidatat ullamco ullamco deserunt nisi sit mollit voluptate ea amet duis enim commodo irure deserunt amet nulla irure mollit consectetur</p>
+    <div class="profile-copy">
+      <h2>Мажуль Александр Павлович</h2>
+      <p>Студент направления «Математика и компьютерные науки». Работаю на стыке frontend-инженерии, UI-проектирования и системного подхода к интерфейсам.</p>
+      <div class="meta-grid">
+        <article class="meta-card glass"><span>Location</span><strong>Минск, Беларусь</strong></article>
+        <article class="meta-card glass"><span>University</span><strong>БГУ, мехмат</strong></article>
+        <article class="meta-card glass"><span>Specialization</span><strong>Математика и компьютерные науки</strong></article>
+      </div>
     </div>
   </section>
+
+  <section class="resume-grid section" data-reveal>
+    <article class="resume-card glass">
+      <h3>Education</h3>
+      <p>Белорусский Государственный Университет (БГУ), механико-математический факультет. Направление: математика и компьютерные науки.</p>
+    </article>
+
+    <article class="resume-card glass">
+      <h3>Favorite Book</h3>
+      <p><em>Clean Architecture</em> (Robert C. Martin). Нравится инженерный подход к структуре систем и разделению ответственности.</p>
+    </article>
+
+    <article class="resume-card glass quote-card">
+      <h3>Quote</h3>
+      <blockquote>«Хороший интерфейс не кричит о себе: он просто позволяет думать о задаче, а не о форме.»</blockquote>
+    </article>
+
+    <article class="resume-card glass">
+      <h3>Skills</h3>
+      <div class="skills-pills" aria-label="Skills list">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TypeScript</span>
+        <span>Vite</span><span>Tailwind</span><span>Git</span><span>Linux</span><span>UI/UX</span>
+      </div>
+    </article>
+
+    <article class="resume-card glass">
+      <h3>Interests</h3>
+      <p>UI-исследования, архитектура фронтенда, дизайн-системы, математика, Linux-экосистема, визуальная эстетика цифровых продуктов и creative coding.</p>
+    </article>
+
+    <article class="resume-card glass wide">
+      <h3>Personal Summary</h3>
+      <p>Мне ближе проекты, где важны одновременно инженерная точность и визуальная культура интерфейса. Люблю аккуратные сетки, предсказуемую логику и сдержанную анимацию, которая усиливает UX, а не отвлекает от контента.</p>
+    </article>
+  </section>
 </main>
+
+<footer class="site-footer glass">
+  <div class="footer-line" aria-hidden="true"></div>
+  <div class="footer-row">
+    <div class="footer-icons" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 8l9 6 9-6"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0"/></svg>
+    </div>
+    <p>&copy; 2026 Aleksandr Mazhul</p>
+  </div>
+</footer>
 </body>
 </html>

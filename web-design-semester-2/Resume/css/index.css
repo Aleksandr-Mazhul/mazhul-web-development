@@ -1,0 +1,172 @@
+.hero {
+  position: relative;
+  max-width: 980px;
+}
+
+.hero h1 {
+  max-width: 14ch;
+  font-size: clamp(2.6rem, 8.2vw, 6.2rem);
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.hero-text {
+  margin-top: 22px;
+  max-width: 58ch;
+  color: var(--text-1);
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-background-word {
+  position: absolute;
+  right: -20px;
+  top: -40px;
+  z-index: -1;
+  color: rgba(226, 232, 240, 0.07);
+  letter-spacing: 0.12em;
+  font-size: clamp(4.8rem, 16vw, 12.4rem);
+  font-weight: 900;
+  user-select: none;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: var(--spacing-5);
+  align-items: center;
+}
+
+.profile-frame {
+  border-radius: var(--radius-l);
+  padding: 18px;
+  transition: transform 420ms cubic-bezier(.22, 1, .36, 1), box-shadow 420ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.profile-frame img {
+  border-radius: calc(var(--radius-l) - 10px);
+}
+
+.profile-frame:hover {
+  transform: translateY(-6px) rotate(-0.4deg);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.44);
+}
+
+.profile-copy h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.profile-copy > p {
+  max-width: 56ch;
+  color: var(--text-1);
+}
+
+.meta-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.meta-card {
+  border-radius: var(--radius-m);
+  padding: 16px;
+}
+
+.meta-card span {
+  display: block;
+  color: var(--text-1);
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.meta-card strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.resume-card {
+  grid-column: span 6;
+  border-radius: var(--radius-l);
+  padding: 24px;
+}
+
+.resume-card h3 {
+  margin-bottom: 14px;
+  font-size: 1.22rem;
+}
+
+.resume-card p,
+.resume-card li,
+.resume-card blockquote {
+  color: var(--text-1);
+}
+
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-pills span {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.86rem;
+  transition: transform 260ms cubic-bezier(.22, 1, .36, 1), background-color 260ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.skills-pills span:hover {
+  transform: translateY(-2px);
+  background: rgba(147, 197, 253, 0.14);
+}
+
+.resume-card.wide {
+  grid-column: span 12;
+}
+
+.quote-card blockquote {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 1000px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-frame {
+    max-width: 420px;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .resume-card {
+    grid-column: span 12;
+  }
+
+  .hero h1 {
+    line-height: 1.03;
+  }
+}

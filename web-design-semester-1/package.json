@@ -1,0 +1,21 @@
+{
+  "name": "web-design-semester-1",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Quality gate for static HTML/CSS/JS projects",
+  "scripts": {
+    "format": "find \"businessСard\" \"gallery\" \"map\" \"pigfly\" \"table\" -type f \\( -name \"*.html\" -o -name \"*.css\" -o -name \"*.js\" -o -name \"*.md\" \\) -print0 | xargs -0 prettier --write",
+    "format:check": "find \"businessСard\" \"gallery\" \"map\" \"pigfly\" \"table\" -type f \\( -name \"*.html\" -o -name \"*.css\" -o -name \"*.js\" -o -name \"*.md\" \\) -print0 | xargs -0 prettier --check",
+    "lint:css": "stylelint \"businessСard/**/*.css\" \"gallery/**/*.css\" \"map/**/*.css\" \"pigfly/**/*.css\" \"table/**/*.css\"",
+    "lint:js": "eslint --no-error-on-unmatched-pattern \"businessСard/**/*.js\" \"gallery/**/*.js\" \"map/**/*.js\" \"pigfly/**/*.js\" \"table/**/*.js\"",
+    "lint": "npm run lint:css && npm run lint:js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0"
+  }
+}

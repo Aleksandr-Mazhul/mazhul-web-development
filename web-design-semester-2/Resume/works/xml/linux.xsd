@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="VersionType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z]+[0-9]+\.[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LicenseType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GPL"/>
+            <xs:enumeration value="MIT"/>
+            <xs:enumeration value="Apache"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="developer" type="xs:string"/>
+
+    <xs:complexType name="LinuxDistroType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="kernel" type="xs:string"/>
+            <xs:element ref="developer"/>
+            <xs:element name="packageManager" type="xs:string"/>
+            <xs:element name="releaseYear" type="xs:int"/>
+            <xs:element name="isRolling" type="xs:boolean"/>
+            <xs:element name="base" type="xs:string"/>
+            <xs:element name="isoSizeGB" type="xs:decimal"/>
+            <xs:element name="website" type="xs:string"/>
+        </xs:sequence>
+
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="version" type="VersionType" use="required"/>
+        <xs:attribute name="architecture" type="xs:string" use="required"/>
+        <xs:attribute name="desktop" type="xs:string"/>
+        <xs:attribute name="license" type="LicenseType" default="GPL"/>
+
+        <xs:attribute name="rating">
+            <xs:simpleType>
+                <xs:restriction base="xs:int">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="10"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="packageManager" type="xs:string"/>
+        <xs:attribute name="releaseYear" type="xs:int"/>
+        <xs:attribute name="isRolling" type="xs:boolean"/>
+        <xs:attribute name="base" type="xs:string"/>
+        <xs:attribute name="isoSizeGB" type="xs:decimal"/>
+        <xs:attribute name="website" type="xs:string"/>
+
+    </xs:complexType>
+
+    <xs:element name="linuxDistros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="distro" type="LinuxDistroType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

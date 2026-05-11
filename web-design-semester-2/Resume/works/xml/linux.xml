@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linuxDistros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="linux.xsd">
+
+    <distro id="d1" version="Ubuntu20.04" architecture="x64" desktop="GNOME" rating="9" packageManager="apt" releaseYear="2020" isRolling="false" base="Debian" isoSizeGB="2.5" website="ubuntu.com">
+        <name>Ubuntu</name>
+        <kernel>Linux 5.4</kernel>
+        <developer>Canonical</developer>
+        <packageManager>apt</packageManager>
+        <releaseYear>2020</releaseYear>
+        <isRolling>false</isRolling>
+        <base>Debian</base>
+        <isoSizeGB>2.5</isoSizeGB>
+        <website>ubuntu.com</website>
+    </distro>
+
+    <distro id="d2" version="Fedora38.1" architecture="x64" desktop="GNOME" rating="8" packageManager="dnf" releaseYear="2023" isRolling="false" base="RedHat" isoSizeGB="2.0" website="getfedora.org">
+        <name>Fedora</name>
+        <kernel>Linux 6.2</kernel>
+        <developer>RedHat</developer>
+        <packageManager>dnf</packageManager>
+        <releaseYear>2023</releaseYear>
+        <isRolling>false</isRolling>
+        <base>RedHat</base>
+        <isoSizeGB>2.0</isoSizeGB>
+        <website>getfedora.org</website>
+    </distro>
+
+    <distro id="d3" version="Debian11.2" architecture="x64" rating="10" packageManager="apt" releaseYear="2021" isRolling="false" base="Independent" isoSizeGB="1.5" website="debian.org">
+        <name>Debian</name>
+        <kernel>Linux 5.10</kernel>
+        <developer>Community</developer>
+        <packageManager>apt</packageManager>
+        <releaseYear>2021</releaseYear>
+        <isRolling>false</isRolling>
+        <base>Independent</base>
+        <isoSizeGB>1.5</isoSizeGB>
+        <website>debian.org</website>
+    </distro>
+
+    <distro id="d4" version="Arch1.0" architecture="x64" desktop="KDE" rating="9" packageManager="pacman" releaseYear="2022" isRolling="true" base="Independent" isoSizeGB="0.8" website="archlinux.org">
+        <name>Arch Linux</name>
+        <kernel>Linux 6.0</kernel>
+        <developer>Community</developer>
+        <packageManager>pacman</packageManager>
+        <releaseYear>2022</releaseYear>
+        <isRolling>true</isRolling>
+        <base>Independent</base>
+        <isoSizeGB>0.8</isoSizeGB>
+        <website>archlinux.org</website>
+    </distro>
+
+    <distro id="d5" version="Mint21.0" architecture="x64" desktop="Cinnamon" rating="8" packageManager="apt" releaseYear="2022" isRolling="false" base="Ubuntu" isoSizeGB="2.3" website="linuxmint.com">
+        <name>Linux Mint</name>
+        <kernel>Linux 5.15</kernel>
+        <developer>Mint Team</developer>
+        <packageManager>apt</packageManager>
+        <releaseYear>2022</releaseYear>
+        <isRolling>false</isRolling>
+        <base>Ubuntu</base>
+        <isoSizeGB>2.3</isoSizeGB>
+        <website>linuxmint.com</website>
+    </distro>
+
+    <distro id="d6" version="Manjaro22.0" architecture="x64" desktop="XFCE" rating="7" packageManager="pacman" releaseYear="2022" isRolling="true" base="Arch" isoSizeGB="3.0" website="manjaro.org">
+        <name>Manjaro</name>
+        <kernel>Linux 6.1</kernel>
+        <developer>Manjaro Team</developer>
+        <packageManager>pacman</packageManager>
+        <releaseYear>2022</releaseYear>
+        <isRolling>true</isRolling>
+        <base>Arch</base>
+        <isoSizeGB>3.0</isoSizeGB>
+        <website>manjaro.org</website>
+    </distro>
+
+    <distro id="d7" version="OpenSUSE15.4" architecture="x64" desktop="KDE" rating="8" packageManager="zypper" releaseYear="2022" isRolling="false" base="SUSE" isoSizeGB="4.0" website="opensuse.org">
+        <name>OpenSUSE</name>
+        <kernel>Linux 5.14</kernel>
+        <developer>SUSE</developer>
+        <packageManager>zypper</packageManager>
+        <releaseYear>2022</releaseYear>
+        <isRolling>false</isRolling>
+        <base>SUSE</base>
+        <isoSizeGB>4.0</isoSizeGB>
+        <website>opensuse.org</website>
+    </distro>
+
+    <distro id="d8" version="Kali2023.1" architecture="x64" desktop="XFCE" rating="7" packageManager="apt" releaseYear="2023" isRolling="true" base="Debian" isoSizeGB="3.5" website="kali.org">
+        <name>Kali Linux</name>
+        <kernel>Linux 6.1</kernel>
+        <developer>Offensive Security</developer>
+        <packageManager>apt</packageManager>
+        <releaseYear>2023</releaseYear>
+        <isRolling>true</isRolling>
+        <base>Debian</base>
+        <isoSizeGB>3.5</isoSizeGB>
+        <website>kali.org</website>
+    </distro>
+
+</linuxDistros>

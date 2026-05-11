@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+select {
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      #2d3645 0%,
+      #141923 40%,
+      #08090d 100%
+    );
+
+  color: white;
+
+  font-family:
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.page {
+  width: 100%;
+  padding: clamp(16px, 4vw, 40px);
+}
