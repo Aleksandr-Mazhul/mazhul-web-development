@@ -12,7 +12,6 @@ class DeckItem extends React.Component {
 
   render() {
     const { deck, active } = this.props;
-
     const className = active
       ? 'deck active'
       : 'deck';
