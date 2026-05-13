@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="library.xsd">
+
+    <publisher
+            id="pub1"
+            name="Penguin"/>
+
+    <publisher
+            id="pub2"
+            name="OReilly"/>
+
+    <publisher
+            id="pub3"
+            name="Springer"/>
+
+    <book
+            id="b1"
+            bookCode="BK-CS-101-ab"
+            author="John Smith"
+            cover="Hard"
+            language="English"
+            publisherRef="pub1"
+            pages="320">
+
+        <title>XML Basics</title>
+        <genre>Programming</genre>
+        <year>2020</year>
+
+    </book>
+
+    <book
+            id="b2"
+            bookCode="BK-HT-205-cd"
+            author="Anna Brown"
+            cover="Soft"
+            language="German"
+            publisherRef="pub2"
+            pages="540">
+
+        <title>World History</title>
+        <genre>History</genre>
+        <year>2018</year>
+
+    </book>
+
+    <book
+            id="b3"
+            bookCode="BK-SC-310-ef"
+            author="Robert White"
+            cover="Hard"
+            language="English"
+            publisherRef="pub3"
+            pages="410">
+
+        <title>Physics Today</title>
+        <genre>Science</genre>
+        <year>2021</year>
+
+    </book>
+
+    <book
+            id="b4"
+            bookCode="BK-NV-120-gh"
+            author="Emily Green"
+            cover="Soft"
+            language="French"
+            publisherRef="pub1"
+            pages="270">
+
+        <title>Silent River</title>
+        <genre>Novel</genre>
+        <year>2019</year>
+
+    </book>
+
+    <book
+            id="b5"
+            bookCode="BK-FA-450-ij"
+            author="Michael King"
+            cover="Hard"
+            language="English"
+            publisherRef="pub2"
+            pages="690">
+
+        <title>Dragon Empire</title>
+        <genre>Fantasy</genre>
+        <year>2022</year>
+
+    </book>
+
+    <book
+            id="b6"
+            bookCode="BK-CS-777-kl"
+            author="David Stone"
+            cover="Soft"
+            language="Russian"
+            publisherRef="pub3"
+            pages="860">
+
+        <title>Advanced Programming</title>
+        <genre>Programming</genre>
+        <year>2023</year>
+
+    </book>
+
+    <book
+            id="b7"
+            bookCode="BK-SC-555-mn"
+            author="Sophia Adams"
+            cover="Hard"
+            language="English"
+            publisherRef="pub1"
+            pages="190">
+
+        <title>Biology Guide</title>
+        <genre>Science</genre>
+        <year>2017</year>
+
+    </book>
+
+    <book
+            id="b8"
+            bookCode="BK-NV-888-op"
+            author="Daniel Young"
+            cover="Soft"
+            language="German"
+            publisherRef="pub2"
+            pages="350">
+
+        <title>Lost Memories</title>
+        <genre>Novel</genre>
+        <year>2016</year>
+
+    </book>
+
+</library>

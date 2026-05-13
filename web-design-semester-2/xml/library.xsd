@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="GenreType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Fantasy"/>
+            <xs:enumeration value="Science"/>
+            <xs:enumeration value="History"/>
+            <xs:enumeration value="Programming"/>
+            <xs:enumeration value="Novel"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LanguageType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="English"/>
+            <xs:enumeration value="Russian"/>
+            <xs:enumeration value="German"/>
+            <xs:enumeration value="French"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CoverType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hard"/>
+            <xs:enumeration value="Soft"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="BookCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="BK-[A-Z]{2}-[0-9]{3}-[a-z]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="PublisherType">
+        <xs:attribute
+                name="id"
+                type="xs:ID"
+                use="required"/>
+
+        <xs:attribute
+                name="name"
+                type="xs:string"
+                use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="BookType">
+
+        <xs:sequence>
+            <xs:element
+                    name="title"
+                    type="xs:string"/>
+
+            <xs:element
+                    name="genre"
+                    type="GenreType"/>
+
+            <xs:element
+                    name="year"
+                    type="xs:gYear"/>
+        </xs:sequence>
+
+        <xs:attribute
+                name="id"
+                type="xs:ID"
+                use="required"/>
+
+        <xs:attribute
+                name="bookCode"
+                type="BookCodeType"
+                use="required"/>
+
+        <xs:attribute
+                name="author"
+                type="xs:string"
+                use="required"/>
+
+        <xs:attribute
+                name="cover"
+                type="CoverType"
+                use="optional"/>
+
+        <xs:attribute
+                name="language"
+                type="LanguageType"
+                default="English"/>
+
+        <xs:attribute
+                name="publisherRef"
+                type="xs:IDREF"
+                use="required"/>
+
+        <xs:attribute
+                name="pages"
+                use="required">
+
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="50"/>
+                    <xs:maxInclusive value="2000"/>
+                </xs:restriction>
+            </xs:simpleType>
+
+        </xs:attribute>
+
+    </xs:complexType>
+
+    <xs:element name="library">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <xs:element
+                        name="publisher"
+                        type="PublisherType"
+                        maxOccurs="unbounded"/>
+
+                <xs:element
+                        name="book"
+                        type="BookType"
+                        maxOccurs="unbounded"/>
+
+            </xs:sequence>
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>
