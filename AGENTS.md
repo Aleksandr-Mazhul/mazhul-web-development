@@ -1,39 +1,31 @@
-# AI Agent Guidelines for mazhul-web-development
+# Agent Quick Guide for `mazhul-web-development`
 
-## Architecture & Big Picture
+This repository is a portfolio of small web projects. It contains mostly vanilla JavaScript, HTML, and CSS work, plus a Vite app in `vite-app/`.
 
-- This workspace contains multiple pure JavaScript (Vanilla JS), HTML, and CSS web development projects. It is primarily
-  used for academic projects and web design practice across different semesters (`javascript-semester-2`,
-  `web-design-semester-1`, `web-design-semester-2`).
-- A Vite-based project is also present under `vite-app/`.
-- The codebase relies strongly on fundamental web development APIs rather than complex component frameworks, meaning
+## What to do first
 
-## Code Conventions & Patterns
+1. Read the closest `README.md` and any local `AGENTS.md` before changing files.
+2. Identify the project type:
+   - `vite-app/` → use the Vite scripts.
+   - everything else → treat it as a static browser project.
+3. Make the smallest correct change. Do not refactor unrelated code.
 
-- **Object-Oriented JavaScript:** New features/logic in mini-games and applications should be encapsulated using
-  JavaScript ES6+ Classes.
-- **State Machines:** Use explicit state objects (e.g., `Object.freeze` with specific statuses) inside classes rather
-  than boolean flags. See `javascript-semester-2/SimonSays/main.js` for an example of a cleanly implemented finite state
-  machine.
-- **Encapsulation:** Enforce encapsulation using JavaScript Private Class Features (`#fieldName`).
-- **Event Delegation:** Ensure DOM event listeners are attached to primary parent containers (e.g., `#container`) rather
-  than individual elements when dynamically creating list items, cards, or buttons. This reduces re-renders and memory
-  leaks.
-- **Local Storage Integration:** Persist application or specific game instance states (like score, running sequence,
-  step) using the `localStorage` API. Implement dedicated `save()` and `load()` methods within classes.
+## Project rules
 
-## Workflow & Development
+- Prefer ES6+ classes for non-trivial app/game logic.
+- Use explicit state objects or state machines instead of chains of boolean flags.
+- Use private class fields when state should stay internal.
+- Attach DOM listeners to stable parent containers when elements are created dynamically.
+- Persist app/game state with `localStorage` when the project already uses it.
+- Keep CSS plain and consistent with the existing styling approach.
 
-- **No Build Steps for Most Folders:** Projects outside the `vite-app` folder do not require a build step and can be
-  served statically. When writing code for these folders, ensure browser-compatible ES6 code without relying on complex
-  module bundlers unless inside a sub-project that explicitly uses one.
-- **Vite Applications:** Standard `npm run dev` and `npm run build` scripts apply to the `vite-app`.
+## Validation
 
-## CSS & Styling
+- Run only the existing checks that are relevant to the files you changed.
+- For most folders there is no build step.
+- For `vite-app/`, use the project scripts (`npm run dev`, `npm run build`).
 
-- Styles are plain CSS (e.g., `style.css`), mostly un-preprocessed. Maintain separation of layout, coloring, and
-  animations without enforcing BEM unless explicitly requested in a subproject.
+## Safety
 
-Always defer reading the closest `.md` documentation within a respective sub-project to learn specific requirements
-before making modifications.
-
+- Do not create planning or notes files in the repository unless explicitly asked.
+- If instructions conflict, follow the closest project document first, then this file, then the root `AGENTS.md`.
