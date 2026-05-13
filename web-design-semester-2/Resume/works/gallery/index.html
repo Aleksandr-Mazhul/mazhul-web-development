@@ -1,227 +1,185 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Картинная галерея Ван Гога</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
-    <header>
-      <div class="logo">
-        <h1 id="top">Картинная галерея Ван Гога</h1>
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Галерея Ван Гога
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="styles/global.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="styles/gallery.css"
+  />
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <nav class="site-nav glass">
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+      <span class="brand-dot"></span>
+      <span>
+        Van Gogh Gallery
+      </span>
+    </a>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="index.html">
+          Главная
+        </a>
+      </li>
+
+      <li>
+        <a href="work.html">
+          Работы
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+<main>
+
+  <section class="hero">
+
+    <div class="hero-copy">
+
+      <h1>
+        Искусство Винсента Ван Гога
+      </h1>
+
+      <p>
+        Коллекция наиболее известных работ
+        одного из величайших художников
+        постимпрессионизма.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="work.html"
+          class="hero-btn primary"
+        >
+          Смотреть работы
+        </a>
+
+        <a
+          href="pages/bedroom-in-arles.html"
+          class="hero-btn secondary"
+        >
+          Открыть галерею
+        </a>
+
       </div>
-    </header>
 
-    <main id="main-content">
-      <div class="gallery-grid">
-        <!-- Left Column -->
-        <div class="gallery-column">
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="bedroom-in-arles.html">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="images/img1prev.jpg"
-                  alt="Спальня в Арле"
-                />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="bedroom-in-arles.html">«Спальня в Арле»</a></h2>
-              <p>
-                <a href="bedroom-in-arles.html"
-                  >Картина написана в 1888 году, когда Ван Гог жил в Арле. Простое убранство и яркие
-                  цвета создают ощущение уюта и внутреннего беспокойства художника.</a
-                >
-              </p>
-            </div>
-          </article>
+    </div>
 
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="dance-hall.html">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="images/img2prev.jpg"
-                  alt="Танцевальный зал в Арле"
-                />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="dance-hall.html">«Танцевальный зал в Арле»</a></h2>
-              <p>
-                <a href="dance-hall.html"
-                  >Ван Гог показал энергичную атмосферу зала с танцующими людьми. Контраст жёлтого и
-                  синего подчёркивает движение и шум праздника.</a
-                >
-              </p>
-            </div>
-          </article>
+    <a
+      href="pages/bedroom-in-arles.html"
+      class="hero-image glass"
+    >
 
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="first-steps.html">
-                <img loading="lazy" decoding="async" src="images/img3prev.jpg" alt="Первые шаги" />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="first-steps.html">«Первые шаги»</a></h2>
-              <p>
-                <a href="first-steps.html"
-                  >Картина передаёт трогательную сцену семьи: отец встречает ребёнка, делающего
-                  первые шаги. Тёплые оттенки символизируют нежность и заботу.</a
-                >
-              </p>
-            </div>
-          </article>
+      <img
+        src="images/img1.jpg"
+        alt="Ван Гог"
+      />
 
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="cafe-at-night.html">
-                <img loading="lazy" decoding="async" src="images/img4prev.jpg" alt="Кафе ночью" />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="cafe-at-night.html">«Кафе ночью»</a></h2>
-              <p>
-                <a href="cafe-at-night.html"
-                  >Одно из самых узнаваемых полотен Ван Гога. Художник передал таинственную
-                  атмосферу ночного кафе, наполненного золотым светом и глубокими тенями.</a
-                >
-              </p>
-            </div>
-          </article>
-        </div>
+    </a>
 
-        <!-- Right Column -->
-        <div class="gallery-column">
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="night-cafe.html">
-                <img loading="lazy" decoding="async" src="images/img5prev.jpg" alt="Ночное кафе" />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="night-cafe.html">«Ночное кафе»</a></h2>
-              <p>
-                <a href="night-cafe.html"
-                  >Художник писал, что хотел показать место, где человек может «сойти с ума».
-                  Контраст красных и зелёных тонов создаёт тревожное ощущение.</a
-                >
-              </p>
-            </div>
-          </article>
+  </section>
 
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="white-house-at-night.html">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="images/img6prev.jpg"
-                  alt="Белый дом ночью"
-                />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="white-house-at-night.html">«Белый дом ночью»</a></h2>
-              <p>
-                <a href="white-house-at-night.html"
-                  >Картина написана в последние месяцы жизни Ван Гога. Спокойный пейзаж и мягкий
-                  свет луны создают ощущение тишины и одиночества.</a
-                >
-              </p>
-            </div>
-          </article>
+  <section class="gallery-grid">
 
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="potato-eaters.html">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="images/img7prev.jpg"
-                  alt="Едоки картофеля"
-                />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="potato-eaters.html">«Едоки картофеля»</a></h2>
-              <p>
-                <a href="potato-eaters.html"
-                  >Одно из ранних произведений Ван Гога. Он показал тяжёлую жизнь крестьян,
-                  подчёркивая честность и суровость их труда.</a
-                >
-              </p>
-            </div>
-          </article>
+    <a
+      href="pages/bedroom-in-arles.html"
+      class="gallery-card glass"
+    >
 
-          <article class="gallery-card">
-            <div class="card-image">
-              <a href="red-vineyards.html">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="images/img8prev.jpg"
-                  alt="Красные виноградники в Арле"
-                />
-              </a>
-            </div>
-            <div class="card-content">
-              <h2><a href="red-vineyards.html">«Красные виноградники в Арле»</a></h2>
-              <p>
-                <a href="red-vineyards.html"
-                  >Единственная работа, проданная при жизни художника. На ней изображён сбор
-                  винограда при закате — символ труда и быстротечности жизни.</a
-                >
-              </p>
-            </div>
-          </article>
-        </div>
+      <div class="gallery-preview">
+
+        <img
+          src="images/img1prev.jpg"
+          alt="Спальня в Арле"
+        />
+
       </div>
-    </main>
 
-    <footer>
-      <div class="footer-container">
-        <p class="footer-info">
-          <a
-            href="https://ru.wikipedia.org/wiki/Ван_Гог,_Винсент"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Информация</a
-          >
+      <div class="gallery-content">
+
+        <span class="gallery-tag">
+          1888
+        </span>
+
+        <h2>
+          Спальня в Арле
+        </h2>
+
+        <p>
+          Одна из самых известных картин художника.
         </p>
 
-        <ol class="footer-links">
-          <li>
-            <a href="https://t.me/MazhulSasha" target="_blank" rel="noopener noreferrer"
-              >Telegram</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/mazhulsasha"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a href="mailto:map07102007@gmail.com" target="_blank" rel="noopener noreferrer"
-              >Email</a
-            >
-          </li>
-        </ol>
-
-        <p class="footer-up">
-          <a href="#top">↑ Наверх</a>
-        </p>
       </div>
-    </footer>
-  </body>
+
+    </a>
+
+  </section>
+
+</main>
+
+<footer class="site-footer glass">
+
+  <div class="footer-row">
+
+    <p>
+      Vincent Van Gogh Gallery
+    </p>
+
+    <ul class="footer-links">
+
+      <li>
+        <a
+          href="https://t.me/MazhulSasha"
+          target="_blank"
+        >
+          Telegram
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.instagram.com/mazhulsasha"
+          target="_blank"
+        >
+          Instagram
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</footer>
+
+</body>
 </html>

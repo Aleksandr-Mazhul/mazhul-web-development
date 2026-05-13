@@ -41,6 +41,20 @@ const projects = [
     image: "images/works/work-06.svg",
     link: "works/table/index.html",
     description: "Исследование стеклянной эстетики в портфолио-структуре и сетках."
+  },
+  {
+    title: "Form UX Flow",
+    category: "interfaces",
+    image: "images/works/work-05.svg",
+    link: "works/Form5/index.html",
+    description: "Формы с фокусом на структуру полей, контрасты и понятные состояния ввода."
+  },
+  {
+    title: "Business Card",
+    category: "ui",
+    image: "images/works/work-04.svg",
+    link: "works/businessСard/index.html",
+    description: "Мини-проект о композиции визитки: типографика, отступы и баланс блоков."
   }
 ];
 

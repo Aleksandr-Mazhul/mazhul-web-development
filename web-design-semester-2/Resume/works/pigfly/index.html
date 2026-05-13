@@ -1,130 +1,318 @@
+<!-- index.html -->
+
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сайт Летающих парасенгов | Главная</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
-    <div class="container">
-      <header class="site-header">
-        <h1>
-          <a href="https://www.pigfly.ru" target="_blank" rel="noopener noreferrer"
-            >Летающие Парасенги</a
-          >
-        </h1>
-        <p class="description">Сайт о поросятах-летенухах и счастливой летучей жизни</p>
-      </header>
+<head>
 
-      <nav aria-label="Основная навигация">
-        <ul>
-          <li><span aria-current="page">Главная</span></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">О летучести</a></li>
-          <li><a href="#">О везучести</a></li>
-          <li><a href="#">Свинки-герои</a></li>
-          <li><a href="#">Подружиться</a></li>
-        </ul>
-      </nav>
+  <meta charset="UTF-8" />
 
-      <div class="layout">
-        <main id="main-content">
-          <img
-            loading="lazy"
-            decoding="async"
-            class="img1"
-            src="images/pig1.jpg"
-            alt="Летящий свин"
-          />
-          <p>
-            Летать всегда! Летать везде! Летать много, очень-очень много и всегда с улыбкой под
-            пятачком - вот наше кредо!
-          </p>
-          <p>
-            Все пиггасы рано или поздно приходят к осмыслению никчемной жизни в грязной луже и
-            подаются в летчики-пилоты. Причем для летания вовсе не нужна никакая посторонняя
-            техника. Только сильное и несокрушимое желание, а также упорство, спортивная злость и
-            немного вредности. Оно того стоит. Уж поверьте.
-          </p>
-          <p>
-            Всего лишь после недели тренировок на брезентовом батуте и трёх зачетных прыжков с крыши
-            сарая, адепт получает звание летуна-прыгуна. При этом заработанные синяки, ссадины и
-            шишки также засчитываются в опыт.
-          </p>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-          <img
-            loading="lazy"
-            decoding="async"
-            class="venzel"
-            src="images/venzel.gif"
-            alt=""
-            aria-hidden="true"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            class="img2"
-            src="images/pig2.jpg"
-            alt="Пиггсы на проводе"
-          />
+  <title>
+    Летающие Парасенги
+  </title>
 
-          <section class="list" aria-labelledby="members-title">
-            <h2 id="members-title">Список новых участников</h2>
-            <ol>
-              <li><a href="#">Рыжий</a></li>
-              <li><a href="#">Брат Карнелий</a></li>
-              <li><a href="#">Муха</a></li>
-              <li><a href="#">Пигфлай</a></li>
-              <li><a href="#">Ниггабоб</a></li>
-              <li><a href="#">Помидорка</a></li>
-              <li><a href="#">Косолапыч</a></li>
-              <li><a href="#">Тушка</a></li>
-              <li><a href="#">Свин Полезный</a></li>
-            </ol>
-          </section>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
 
-          <img
-            loading="lazy"
-            decoding="async"
-            class="line"
-            src="images/line.gif"
-            alt=""
-            aria-hidden="true"
-          />
-        </main>
+</head>
 
-        <aside class="news" aria-labelledby="news-title">
-          <h2 id="news-title">Самые распоследние новости</h2>
-          <ul>
-            <li>
-              Всю прошедшую неделю лил жуткий дождь, и полёты временно приостановились. Самые
-              безбашенные пиггасы, однако, всё равно кучковались стаями на проводах местной
-              радиолинии и дружно создавали помехи. Молодцы!
-            </li>
-            <li>Пиггас Хмурый Пятак снова хмурый. Обещал всех урыть. Груб и нелюбезен.</li>
-            <li>
-              У нашего друга Боббса завтра ДР. Поздравления и подарочки просил вручать возле новой
-              будки и непременно на виду у соседского пса Мухомора, чтобы тому завидно стало. Пляски
-              намечаются до самого утра.
-            </li>
-          </ul>
-        </aside>
+<body>
+
+<div class="ambient-bg"></div>
+
+<header class="site-header">
+
+  <nav class="site-nav glass">
+
+    <a
+      href="#"
+      class="brand"
+    >
+
+      <span class="brand-dot"></span>
+
+      <span>
+        PigFly Society
+      </span>
+
+    </a>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#">
+          Главная
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          Полёты
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          Герои
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          Контакты
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+<main>
+
+  <section class="hero">
+
+    <div class="hero-copy">
+
+      <span class="hero-tag">
+        Flying Pig Community
+      </span>
+
+      <h1>
+        Летающие
+        Парасенги
+      </h1>
+
+      <p>
+        Секретное общество свиней-летунов,
+        посвятивших свою жизнь полётам,
+        свободе и абсолютному свинскому счастью.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="#members"
+          class="hero-btn primary"
+        >
+          Вступить
+        </a>
+
+        <a
+          href="#news"
+          class="hero-btn secondary"
+        >
+          Новости
+        </a>
+
       </div>
 
-      <footer>
-        <p>
-          Главная |
-          <a href="#">О нас</a> | <a href="#">О летучести</a> | <a href="#">О везучести</a> |
-          <a href="#">Свинки-герои</a> |
-          <a href="#">Подружиться</a>
-        </p>
-        <p>
-          &copy; Pigfly.ru, 2007-2011 | Все поросячьи права защищены. Не ешьте свинины, будете
-          здоровы!
-        </p>
-      </footer>
     </div>
-  </body>
+
+    <div class="hero-image glass">
+
+      <img
+        src="images/header.jpg"
+        alt="Летающий поросёнок"
+      />
+
+    </div>
+
+  </section>
+
+  <section class="content-grid">
+
+    <article class="story glass">
+
+      <div class="story-image">
+
+        <img
+          src="images/pig1.jpg"
+          alt="Летающий поросёнок"
+        />
+
+      </div>
+
+      <div class="story-content">
+
+        <h2>
+          Философия полёта
+        </h2>
+
+        <p>
+          Летать всегда. Летать везде.
+          Летать настолько высоко,
+          чтобы даже соседские гуси
+          смотрели снизу вверх.
+        </p>
+
+        <p>
+          Все настоящие пиггасы
+          однажды понимают,
+          что жизнь в луже —
+          это путь слабых.
+        </p>
+
+        <p>
+          После недель тренировок
+          на батуте и нескольких
+          прыжков с крыши сарая,
+          свин получает
+          официальный статус летуна.
+        </p>
+
+      </div>
+
+    </article>
+
+    <aside
+      class="news glass"
+      id="news"
+    >
+
+      <h2>
+        Последние новости
+      </h2>
+
+      <div class="news-card">
+
+        <span>
+          ПОЛЁТЫ
+        </span>
+
+        <p>
+          Из-за шторма полёты временно ограничены,
+          однако самые безумные пиггасы
+          всё равно зависают на проводах.
+        </p>
+
+      </div>
+
+      <div class="news-card">
+
+        <span>
+          ОБЩЕСТВО
+        </span>
+
+        <p>
+          Хмурый Пятак снова угрожает соседям.
+          Никто не удивлён.
+        </p>
+
+      </div>
+
+      <div class="news-card">
+
+        <span>
+          СОБЫТИЯ
+        </span>
+
+        <p>
+          Завтра день рождения Боббса.
+          Ожидаются ночные пляски
+          и массовые полёты.
+        </p>
+
+      </div>
+
+    </aside>
+
+  </section>
+
+  <section class="members glass">
+
+    <div class="members-copy">
+
+      <span class="section-tag">
+        Members
+      </span>
+
+      <h2 id="members">
+        Новые участники
+      </h2>
+
+    </div>
+
+    <ol class="members-list">
+
+      <li>Рыжий</li>
+      <li>Брат Карнелий</li>
+      <li>Муха</li>
+      <li>Пигфлай</li>
+      <li>Ниггабоб</li>
+      <li>Помидорка</li>
+      <li>Косолапыч</li>
+      <li>Тушка</li>
+      <li>Свин Полезный</li>
+
+    </ol>
+
+  </section>
+
+  <section class="gallery">
+
+    <div class="gallery-card glass">
+
+      <img
+        src="images/pig2.jpg"
+        alt="Пиггасы"
+      />
+
+    </div>
+
+    <div class="gallery-text">
+
+      <h2>
+        Высшая степень летучести
+      </h2>
+
+      <p>
+        Настоящий пиггас способен
+        парить в воздухе часами,
+        создавая атмосферу хаоса,
+        восторга и абсолютной свободы.
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer glass">
+
+  <div class="footer-row">
+
+    <p>
+      PigFly Society © 2026
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#">
+        Полёты
+      </a>
+
+      <a href="#">
+        Герои
+      </a>
+
+      <a href="#">
+        Контакты
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
 </html>

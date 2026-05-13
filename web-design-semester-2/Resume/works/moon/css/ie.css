@@ -1,11 +1,2 @@
-* html .group { /* IE6 */
-	height: 1%;
-	}
-*:first-child+html .group { /* IE7 */
-	min-height: 1px;
-	}
-
-	
-*:first-child+html h4#things-count span {
-	line-height: 2;
-	}
+/* Legacy IE hacks removed.
+   File intentionally left minimal for compatibility with screen.css imports. */

@@ -1,6 +1,39 @@
+/* style.css */
+
+:root {
+  --bg-0: #0f172a;
+  --bg-1: #111827;
+  --bg-2: #1e293b;
+
+  --text-0: #f8fafc;
+  --text-1: #cbd5e1;
+  --text-2: #94a3b8;
+
+  --accent: #93c5fd;
+  --accent-strong: #60a5fa;
+
+  --glass-a: rgba(255,255,255,0.05);
+  --glass-b: rgba(255,255,255,0.08);
+  --glass-c: rgba(255,255,255,0.14);
+
+  --radius-xl: 34px;
+  --radius-l: 26px;
+  --radius-m: 18px;
+
+  --shadow-a:
+    0 28px 80px rgba(0,0,0,0.48);
+
+  --shadow-b:
+    inset 0 1px 0 rgba(255,255,255,0.14);
+
+  --transition:
+    320ms cubic-bezier(.22,1,.36,1);
+}
+
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
@@ -12,30 +45,130 @@ select {
   font: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  position: relative;
+
+  overflow: hidden;
+
   min-height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background:
-    radial-gradient(
-      circle at 20% 0%,
-      #2d3645 0%,
-      #141923 40%,
-      #08090d 100%
-    );
-
-  color: white;
+  color: var(--text-0);
 
   font-family:
-    "Segoe UI",
-    Roboto,
+    "Inter",
+    "SF Pro Display",
+    system-ui,
     sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 14% 18%,
+      rgba(59,130,246,0.18),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 82% 12%,
+      rgba(147,197,253,0.08),
+      transparent 24%
+    ),
+
+    linear-gradient(
+      145deg,
+      var(--bg-0),
+      var(--bg-1)
+    );
+}
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: -20%;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      40% 50% at 20% 10%,
+      rgba(59,130,246,0.12),
+      transparent 70%
+    ),
+
+    radial-gradient(
+      35% 45% at 80% 20%,
+      rgba(148,163,184,0.08),
+      transparent 68%
+    ),
+
+    radial-gradient(
+      45% 40% at 50% 86%,
+      rgba(96,165,250,0.12),
+      transparent 70%
+    );
+
+  filter: blur(40px);
+
+  animation:
+    ambientMove 18s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  z-index: -1;
+
+  opacity: 0.05;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(#ffffff 0.7px, transparent 0.7px);
+
+  background-size:
+    18px 18px;
 }
 
 .page {
   width: 100%;
-  padding: clamp(16px, 4vw, 40px);
+
+  padding:
+    clamp(18px, 4vw, 40px);
+}
+
+@keyframes ambientMove {
+  from {
+    transform:
+      translate3d(0,0,0)
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate3d(-2%,2%,0)
+      scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
