@@ -52,7 +52,7 @@ const projects = [
   {
     title: "Business Card",
     category: "ui",
-    image: "images/works/businessCard.png",
+    image: "images/works/businessСard.png",
     link: "works/businessСard/index.html",
     description: "Мини-проект о композиции визитки: типографика, отступы и баланс блоков."
   }
