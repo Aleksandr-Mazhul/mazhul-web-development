@@ -33,6 +33,30 @@ export class StudySession {
     return this.#currentIndex;
   }
 
+  getCurrentPosition() {
+    if (this.#order.length === 0) {
+      return 0;
+    }
+
+    const currentCard = this.getCurrentCard();
+
+    if (!currentCard) {
+      return 0;
+    }
+
+    const cards = this.#deck.getCards();
+    const scopedCards = this.#mode === 'all'
+      ? cards
+      : cards.filter((card) => !card.learned);
+    const index = scopedCards.findIndex((card) => card.id === currentCard.id);
+
+    if (index === -1) {
+      return 0;
+    }
+
+    return index + 1;
+  }
+
   getCurrentCard() {
     if (this.#order.length === 0) {
       return null;

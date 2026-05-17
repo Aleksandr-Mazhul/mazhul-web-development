@@ -246,7 +246,7 @@ class FlashcardsApp extends React.Component {
 
     const isFlipped = this.state.session.isFlipped();
 
-    const pos = this.state.session.getCurrentIndex() + 1;
+    const pos = this.state.session.getCurrentPosition();
 
     const total = this.state.session.getCount();
 
