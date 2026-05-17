@@ -12,24 +12,21 @@
 
   overflow: hidden;
 
-  border:
-    1px solid var(--glass-c);
+  border: 1px solid var(--glass-c);
 
   border-radius: var(--radius-xl);
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.1),
-      rgba(255,255,255,0.04)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.04)
+  );
 
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
 
-  box-shadow:
-    var(--shadow-a),
-    var(--shadow-b);
+  box-shadow: var(--shadow-a),
+  var(--shadow-b);
 }
 
 .player__video-wrapper::before {
@@ -42,12 +39,11 @@
 
   pointer-events: none;
 
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(147,197,253,0.12),
-      transparent 34%
-    );
+  background: radial-gradient(
+    circle at top right,
+    rgba(147, 197, 253, 0.12),
+    transparent 34%
+  );
 }
 
 .player__video {
@@ -72,13 +68,12 @@
 
   z-index: 2;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(2,6,23,0.92),
-      rgba(2,6,23,0.18) 40%,
-      transparent
-    );
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.92),
+    rgba(2, 6, 23, 0.18) 40%,
+    transparent
+  );
 
   pointer-events: none;
 }
@@ -92,8 +87,7 @@
 
   z-index: 4;
 
-  padding:
-    clamp(16px, 2vw, 24px);
+  padding: clamp(16px, 2vw, 24px);
 
   display: flex;
   flex-direction: column;
@@ -126,13 +120,11 @@
   justify-content: center;
   align-items: center;
 
-  border:
-    1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   border-radius: 50%;
 
-  background:
-    rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
   backdrop-filter: blur(16px);
 
@@ -140,36 +132,29 @@
 
   cursor: pointer;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 
-  transition:
-    transform var(--transition),
-    background-color var(--transition),
-    border-color var(--transition),
-    box-shadow var(--transition);
+  transition: transform var(--transition),
+  background-color var(--transition),
+  border-color var(--transition),
+  box-shadow var(--transition);
 }
 
 .player__button:hover {
-  transform:
-    translateY(-2px);
+  transform: translateY(-2px);
 
-  background:
-    rgba(147,197,253,0.14);
+  background: rgba(147, 197, 253, 0.14);
 
-  border-color:
-    rgba(147,197,253,0.22);
+  border-color: rgba(147, 197, 253, 0.22);
 
-  box-shadow:
-    0 12px 24px rgba(0,0,0,0.24);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
 }
 
 .player__button:focus-visible,
 .player__speed:focus-visible,
 .timeline:focus-visible,
 .volume:focus-visible {
-  outline:
-    2px solid rgba(147,197,253,0.8);
+  outline: 2px solid rgba(147, 197, 253, 0.8);
 
   outline-offset: 3px;
 }
@@ -185,17 +170,13 @@
 }
 
 .player__speed {
-  padding:
-    10px
-    14px;
+  padding: 10px 14px;
 
-  border:
-    1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   border-radius: 14px;
 
-  background:
-    rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
   backdrop-filter: blur(16px);
 
@@ -203,21 +184,17 @@
 
   cursor: pointer;
 
-  transition:
-    background-color var(--transition),
-    border-color var(--transition),
-    transform var(--transition);
+  transition: background-color var(--transition),
+  border-color var(--transition),
+  transform var(--transition);
 }
 
 .player__speed:hover {
-  transform:
-    translateY(-1px);
+  transform: translateY(-1px);
 
-  background:
-    rgba(147,197,253,0.14);
+  background: rgba(147, 197, 253, 0.14);
 
-  border-color:
-    rgba(147,197,253,0.22);
+  border-color: rgba(147, 197, 253, 0.22);
 }
 
 .player__speed option {
@@ -234,8 +211,7 @@
 
   border-radius: 999px;
 
-  background:
-    rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 
   cursor: pointer;
 }
@@ -246,15 +222,13 @@
 
   border-radius: inherit;
 
-  background:
-    linear-gradient(
-      90deg,
-      #93c5fd,
-      #60a5fa
-    );
+  background: linear-gradient(
+    90deg,
+    #93c5fd,
+    #60a5fa
+  );
 
-  box-shadow:
-    0 0 24px rgba(147,197,253,0.45);
+  box-shadow: 0 0 24px rgba(147, 197, 253, 0.45);
 }
 
 .player__volume {
@@ -274,8 +248,7 @@
 
   border-radius: 999px;
 
-  background:
-    rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 
   cursor: pointer;
 }
@@ -286,12 +259,11 @@
 
   border-radius: inherit;
 
-  background:
-    linear-gradient(
-      90deg,
-      #93c5fd,
-      #60a5fa
-    );
+  background: linear-gradient(
+    90deg,
+    #93c5fd,
+    #60a5fa
+  );
 }
 
 .player__controls.hidden {

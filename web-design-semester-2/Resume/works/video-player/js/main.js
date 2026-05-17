@@ -1,3 +1,3 @@
-import { initPlayer } from "./player.js";
+import {initPlayer} from "./player.js";
 
 initPlayer();

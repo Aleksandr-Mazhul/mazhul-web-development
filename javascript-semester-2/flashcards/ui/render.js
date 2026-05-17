@@ -12,7 +12,7 @@ export function renderCard(activeCard, isFlipped) {
       ${isFlipped ? activeCard.back : activeCard.front}
     </div>
   `;
-  
+
 }
 
 export function renderPosition(pos, total) {

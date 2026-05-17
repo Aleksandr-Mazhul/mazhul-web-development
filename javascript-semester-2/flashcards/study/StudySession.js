@@ -33,8 +33,8 @@ export class StudySession {
     const id = this.#order[this.#currentIndex];
     return this.#deck.getCardById(id);
   }
-  
-  
+
+
   isFlipped() {
     return this.#isFlipped;
   }
@@ -45,19 +45,19 @@ export class StudySession {
     this.#currentIndex = (this.#currentIndex - 1 + this.#order.length) % this.#order.length;
     this.#isFlipped = false;
   }
-  
+
   next() {
     if (this.#order.length === 0) return;
     this.#currentIndex = (this.#currentIndex + 1) % this.#order.length;
     this.#isFlipped = false;
   }
-  
+
   flip() {
     this.#isFlipped = !this.#isFlipped;
   }
 
   shuffle() {
-    this.reset(); 
+    this.reset();
 
     for (let i = this.#order.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -68,7 +68,7 @@ export class StudySession {
     this.#isFlipped = false;
   }
 
-  
+
   setMode(mode) {
     if (this.#mode === mode) return;
     if (mode !== "all" && mode !== "unlearned") {
@@ -78,7 +78,7 @@ export class StudySession {
     this.reset();
   }
 
-  
+
   reset() {
     const cards = this.#deck.getCards();
 

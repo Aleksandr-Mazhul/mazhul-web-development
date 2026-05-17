@@ -45,21 +45,20 @@
 
   font-weight: 600;
 
-  transition:
-    transform 300ms cubic-bezier(.22,1,.36,1),
-    box-shadow 300ms cubic-bezier(.22,1,.36,1);
+  transition: transform 300ms cubic-bezier(.22, 1, .36, 1),
+  box-shadow 300ms cubic-bezier(.22, 1, .36, 1);
 }
 
 .hero-btn.primary {
   background: #f8fafc;
   color: #0f172a;
 
-  box-shadow: 0 14px 40px rgba(255,255,255,0.18);
+  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.18);
 }
 
 .hero-btn.secondary {
   border: 1px solid var(--glass-c);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .hero-btn:hover {
@@ -88,7 +87,7 @@
   right: -30px;
   bottom: -10px;
 
-  color: rgba(255,255,255,0.08);
+  color: rgba(255, 255, 255, 0.08);
 
   font-size: clamp(4rem, 10vw, 8rem);
   font-weight: 900;
@@ -106,19 +105,17 @@
 
   border-radius: var(--radius-xl);
 
-  transition:
-    transform 420ms cubic-bezier(.22,1,.36,1),
-    box-shadow 420ms cubic-bezier(.22,1,.36,1),
-    border-color 420ms cubic-bezier(.22,1,.36,1);
+  transition: transform 420ms cubic-bezier(.22, 1, .36, 1),
+  box-shadow 420ms cubic-bezier(.22, 1, .36, 1),
+  border-color 420ms cubic-bezier(.22, 1, .36, 1);
 }
 
 .gallery-card:hover {
   transform: translateY(-8px);
 
-  border-color: rgba(245,196,107,0.42);
+  border-color: rgba(245, 196, 107, 0.42);
 
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.5);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
 }
 
 .gallery-preview {
@@ -127,7 +124,7 @@
   overflow: hidden;
   aspect-ratio: 16 / 10;
 
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .gallery-preview::before {
@@ -137,8 +134,7 @@
   inset: 0;
   z-index: 2;
 
-  background:
-    linear-gradient(to top, rgba(0,0,0,0.34), transparent 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.34), transparent 60%);
 }
 
 .gallery-preview img {
@@ -147,9 +143,8 @@
 
   object-fit: cover;
 
-  transition:
-    transform 520ms cubic-bezier(.22,1,.36,1),
-    filter 520ms cubic-bezier(.22,1,.36,1);
+  transition: transform 520ms cubic-bezier(.22, 1, .36, 1),
+  filter 520ms cubic-bezier(.22, 1, .36, 1);
 }
 
 .gallery-card:hover .gallery-preview img {

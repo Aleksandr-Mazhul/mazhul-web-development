@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Видео и аудио</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <div class="container">
-    <audio src="Koshechki%20Horoshie.mp3" controls muted class="audio"></audio>
-    <div class="video">
-      <video
-        id="video"
-        src="img/cats.MP4"
-        width="auto"
-        height="auto"
-        preload="metadata"
-        poster="img/cat.jpg"
-       ></video>
-      <input type="range" class="range-time" id="range" value="0" />
-      <div class="buttons">
-        <div class="buttons-play">
-          <img src="img/previous.png" class="icon" id="previous" />
-          <img src="img/play.png" class="icon" id="play" />
-          <img src="img/next.png" class="icon" id="next" />
-        </div>
-        <p id="timer">00:00</p>
-        <div class="volume-buttons">
-          <img src="img/volume.png" class="icon" id="volume_stop" />
-          <input
-            class="volume-set rangeVolume"
-            type="range"
-            step="0.1"
-            min="0" max="1"
-            value="0.5"
-            id="volume"
-          />
-        </div>
-        <div class="buttons"></div>
-        <div class="buttons playback-rate">
-          <span id="playback_rate"></span>
-            <img src="img/volumeup.png" class="arrow" id="faster"/>
-            <img src="img/volumedown.png" class="arrow" id="slower"/>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  <title>Видео и аудио</title>
+  <link
+    href="style.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<div class="container">
+  <audio
+    class="audio"
+    controls
+    muted
+    src="Koshechki%20Horoshie.mp3"
+  ></audio>
+  <div class="video">
+    <video
+      height="auto"
+      id="video"
+      poster="img/cat.jpg"
+      preload="metadata"
+      src="img/cats.MP4"
+      width="auto"
+    ></video>
+    <input
+      class="range-time"
+      id="range"
+      type="range"
+      value="0"
+    />
+    <div class="buttons">
+      <div class="buttons-play">
+        <img
+          class="icon"
+          id="previous"
+          src="img/previous.png"
+        />
+        <img
+          class="icon"
+          id="play"
+          src="img/play.png"
+        />
+        <img
+          class="icon"
+          id="next"
+          src="img/next.png"
+        />
+      </div>
+      <p id="timer">00:00</p>
+      <div class="volume-buttons">
+        <img
+          class="icon"
+          id="volume_stop"
+          src="img/volume.png"
+        />
+        <input
+          class="volume-set rangeVolume"
+          id="volume"
+          max="1"
+          min="0"
+          step="0.1"
+          type="range"
+          value="0.5"
+        />
+      </div>
+      <div class="buttons"></div>
+      <div class="buttons playback-rate">
+        <span id="playback_rate"></span>
+        <img
+          class="arrow"
+          id="faster"
+          src="img/volumeup.png"
+        />
+        <img
+          class="arrow"
+          id="slower"
+          src="img/volumedown.png"
+        />
       </div>
     </div>
+  </div>
 </div>
-    <script src="player.js"></script>
-  </bodyf
+<script src="player.js"></script>
+</bodyf
 </html>
 
 ((      )

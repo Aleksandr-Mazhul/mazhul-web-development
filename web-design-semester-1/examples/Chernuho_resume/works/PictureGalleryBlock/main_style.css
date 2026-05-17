@@ -1,238 +1,242 @@
 * {
-    margin: 0;
-    font-family: "Gill Sans", sans-serif;
-    color: #20170f;
-    text-decoration: none;
+  margin: 0;
+  font-family: "Gill Sans", sans-serif;
+  color: #20170f;
+  text-decoration: none;
 }
 
 body {
-    background-color: #fff1e9;
-    margin-left: 0px;
-    margin-right: 0px;
+  background-color: #fff1e9;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 #container {
-    padding-left: 50px;
-    padding-right: 50px;
-    display: block;
-    justify-content: space-between;
-    text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: block;
+  justify-content: space-between;
+  text-decoration: none;
 }
 
 #header_top {
-    display: block;
-    justify-content: center;
-    background-color: #221916;
-    margin-bottom: 0%;
+  display: block;
+  justify-content: center;
+  background-color: #221916;
+  margin-bottom: 0%;
 }
 
 h1 {
-    font-style: oblique;
-    font-size: max(4.5vw, 35px);
-    margin-top: 1.7vw;
-    margin-bottom: 1.7vw;
-    font-weight: 800;
-    text-align: center;
-    color: #fff1e9;
+  font-style: oblique;
+  font-size: max(4.5vw, 35px);
+  margin-top: 1.7vw;
+  margin-bottom: 1.7vw;
+  font-weight: 800;
+  text-align: center;
+  color: #fff1e9;
 }
 
 h4 {
-    font-style: normal;
-    font-size: max(1.7vw, 13px);
-    margin-top: 0.8vw;
-    margin-bottom: 0.2vw;
-    font-weight: 200;
-    color: #fff1e9;
-    text-align: right;
+  font-style: normal;
+  font-size: max(1.7vw, 13px);
+  margin-top: 0.8vw;
+  margin-bottom: 0.2vw;
+  font-weight: 200;
+  color: #fff1e9;
+  text-align: right;
 }
 
 #topline {
-    margin-top: 0px;
-    flex-direction: column;
+  margin-top: 0px;
+  flex-direction: column;
 }
 
 .line {
-    background-color: #a99687;
-    height: 0.8vw;
-    margin-bottom: 25px;
+  background-color: #a99687;
+  height: 0.8vw;
+  margin-bottom: 25px;
 }
 
 #pictures {
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .left_pic {
-    background-repeat: no-repeat;
-    width: 18vw;
-    height: 18vw;
+  background-repeat: no-repeat;
+  width: 18vw;
+  height: 18vw;
 }
 
 #woman {
-    background-image: url(images/woman.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: 0;
-    background-size: max(80px,20vw);
+  background-image: url(images/woman.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: 0;
+  background-size: max(80px, 20vw);
 }
 
 h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: normal;
-    font-weight: 650;
-    font-size: max(2.2vw, 25px);
-    margin: -0.7vw 0 0 -0.8vw;
-    text-wrap: nowrap;
-    margin-bottom: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 650;
+  font-size: max(2.2vw, 25px);
+  margin: -0.7vw 0 0 -0.8vw;
+  text-wrap: nowrap;
+  margin-bottom: 15px;
 }
 
 h3 {
-    font-family: sans-serif;
-    font-style: normal;
-	font-size: 18px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 18px;
 }
 
 .left_text {
-    text-align: left;
-    margin-left: 30px;
+  text-align: left;
+  margin-left: 30px;
 }
 
-div .left_container{
-    text-align: left;
-    padding: 25px 0;
-    margin: auto;
-    display: inline-block;
-    margin-bottom: 100px;
+div .left_container {
+  text-align: left;
+  padding: 25px 0;
+  margin: auto;
+  display: inline-block;
+  margin-bottom: 100px;
 }
 
-div .left_text{
-   padding: 0 10% 0 0;
-   font-size: 18px;
-   width: 45%;
-   display: inline-block;
+div .left_text {
+  padding: 0 10% 0 0;
+  font-size: 18px;
+  width: 45%;
+  display: inline-block;
 }
 
 .left_container:hover {
-    background-color: #c5aaa296;
-    border-radius: 20px;
-    transition: 0.01s;
+  background-color: #c5aaa296;
+  border-radius: 20px;
+  transition: 0.01s;
 }
 
 #onhorse {
-    background-image: url(images/onhorse.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/onhorse.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 h3 {
-    font-weight: 900;
-    font-size: max(1.6vw, 11px);
-    margin: -0.7vw -0.8vw 0 0;
-    white-space: nowrap;
+  font-weight: 900;
+  font-size: max(1.6vw, 11px);
+  margin: -0.7vw -0.8vw 0 0;
+  white-space: nowrap;
 }
 
 #main_inf {
-    width: 92vw;
-    padding-bottom: 4vw;
+  width: 92vw;
+  padding-bottom: 4vw;
 }
 
 #monalisa {
-    background-image: url(images/monalisa.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/monalisa.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 #chokolate {
-    background-image: url(images/chokolate.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/chokolate.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 #oldman {
-    background-image: url(images/oldman.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/oldman.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 #judje {
-    background-image: url(images/judje.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/judje.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 #oldwoman {
-    background-image: url(images/oldwoman.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/oldwoman.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 #duo {
-    background-image: url(images/duo.sq.p.jpeg);
-    background-repeat: no-repeat;
-    margin-top: -80px;
-    background-size: max(80px,20vw);
+  background-image: url(images/duo.sq.p.jpeg);
+  background-repeat: no-repeat;
+  margin-top: -80px;
+  background-size: max(80px, 20vw);
 }
 
 .left_pic:hover {
-    transform: scale(1.05);
-    transition: .3s;
+  transform: scale(1.05);
+  transition: .3s;
 }
 
-footer{
-    text-align: center;
-	display: block;
-	width: 100%;
-	height: 9vh;
-	background-color: #221916;
-	padding: 10px 0;
+footer {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 9vh;
+  background-color: #221916;
+  padding: 10px 0;
 }
 
-.wrapper div{
-	display: block;
+.wrapper div {
+  display: block;
 }
 
-footer p{
-    display: inline;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
-	width: fit-content;
-    margin-right: 20px;
-    font-style: normal;
-    font-weight: 750;
-    color: #fff1e9;
-}
-footer .wrapper{
-	display: block;
-	flex-direction: row;
-    margin-left: 15px;
-	justify-content: space-between;
-	align-items: end;
-}
-footer a{
-	color: #fff1e9;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 25px;
-	width: fit-content;
-}
-footer a:hover{
-	color: #9b8077;
+footer p {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  width: fit-content;
+  margin-right: 20px;
+  font-style: normal;
+  font-weight: 750;
+  color: #fff1e9;
 }
 
-dl{
-	flex-direction: row;
-	align-items: end;
+footer .wrapper {
+  display: block;
+  flex-direction: row;
+  margin-left: 15px;
+  justify-content: space-between;
+  align-items: end;
 }
-dt{
-    display: inline-block;
-	margin: 0 16px;
+
+footer a {
+  color: #fff1e9;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  width: fit-content;
+}
+
+footer a:hover {
+  color: #9b8077;
+}
+
+dl {
+  flex-direction: row;
+  align-items: end;
+}
+
+dt {
+  display: inline-block;
+  margin: 0 16px;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }

@@ -47,8 +47,8 @@ body {
 }
 
 .audio {
-    width: 90%;
-    margin-top: 3vw;
+  width: 90%;
+  margin-top: 3vw;
 }
 
 .arrow {
@@ -74,7 +74,7 @@ body {
 }
 
 #range, .volume-set {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
   height: 0.5vw;
   background: #ececec;
@@ -92,7 +92,7 @@ body {
 }
 
 .buttons-play {
-    width: 10vw;
-    display: flex;
-    justify-content: space-between;
+  width: 10vw;
+  display: flex;
+  justify-content: space-between;
 }

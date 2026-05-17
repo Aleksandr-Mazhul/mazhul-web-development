@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta
-    name="viewport"
     content="width=device-width, initial-scale=1.0"
+    name="viewport"
   />
 
   <title>Video Player</title>
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/player.css" />
-  <link rel="stylesheet" href="./css/animations.css" />
+  <link
+    href="./css/style.css"
+    rel="stylesheet"
+  />
+  <link
+    href="./css/player.css"
+    rel="stylesheet"
+  />
+  <link
+    href="./css/animations.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
 
@@ -24,9 +33,9 @@
       <video
         class="player__video"
         id="video"
+        poster="./assets/video/poster.jpg"
         preload="metadata"
         src="./assets/video/video.mp4"
-        poster="./assets/video/poster.jpg"
       ></video>
 
       <div class="player__overlay"></div>
@@ -37,7 +46,10 @@
 
           <div class="timeline">
 
-            <div class="timeline__progress" id="progress"></div>
+            <div
+              class="timeline__progress"
+              id="progress"
+            ></div>
 
           </div>
 
@@ -48,17 +60,17 @@
           <div class="player__left-controls">
 
             <button
+              aria-label="Play or pause"
               class="player__button"
               id="play-btn"
-              aria-label="Play or pause"
             ></button>
 
             <div class="player__volume">
 
               <button
+                aria-label="Mute or unmute"
                 class="player__button"
                 id="mute-btn"
-                aria-label="Mute or unmute"
               ></button>
 
               <div
@@ -92,16 +104,20 @@
             >
               <option value="0.5">0.5x</option>
               <option value="0.75">0.75x</option>
-              <option value="1" selected>1x</option>
+              <option
+                selected
+                value="1"
+              >1x
+              </option>
               <option value="1.25">1.25x</option>
               <option value="1.5">1.5x</option>
               <option value="2">2x</option>
             </select>
 
             <button
+              aria-label="Toggle fullscreen"
               class="player__button"
               id="fullscreen-btn"
-              aria-label="Toggle fullscreen"
             ></button>
 
           </div>
@@ -117,8 +133,8 @@
 </main>
 
 <script
-  type="module"
   src="./js/main.js"
+  type="module"
 ></script>
 
 </body>

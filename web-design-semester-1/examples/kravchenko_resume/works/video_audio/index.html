@@ -1,46 +1,76 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Видео и аудио</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-    <audio src="witch.mp3" controls muted class="audio"></audio>
-    <div class="video-container">
-      <video
-        id="video"
-        src="wunschpunsch.mp4"
-        width="auto"
-        height="auto"
-        preload="metadata"
-        poster="wunschpunsch.jpg"
-      ></video>
-      <input type="range" class="range-time" id="range" value="0" />
-      <div class="buttons">
-        <div class="buttons-play">
-          <img src="buttoms/left.png" class="icon" id="back" />
-          <img src="buttoms/play.png" class="icon" id="play" />
-          <img src="buttoms/right.png" class="icon" id="next" />
-        </div>
-        <p id="timer">00:00</p>
-        <div class="voice-buttons">
-          <img src="buttoms/volume.png" class="icon" id="volume_stop" />
-          <input
-            class="volume-set rangeVolume"
-            type="range"
-            step="0.1"
-            min="0"
-            max="1"
-            value="0.5"
-            id="volume"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  <title>Видео и аудио</title>
+  <link
+    href="style.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<div class="container">
+  <audio
+    class="audio"
+    controls
+    muted
+    src="witch.mp3"
+  ></audio>
+  <div class="video-container">
+    <video
+      height="auto"
+      id="video"
+      poster="wunschpunsch.jpg"
+      preload="metadata"
+      src="wunschpunsch.mp4"
+      width="auto"
+    ></video>
+    <input
+      class="range-time"
+      id="range"
+      type="range"
+      value="0"
+    />
+    <div class="buttons">
+      <div class="buttons-play">
+        <img
+          class="icon"
+          id="back"
+          src="buttoms/left.png"
+        />
+        <img
+          class="icon"
+          id="play"
+          src="buttoms/play.png"
+        />
+        <img
+          class="icon"
+          id="next"
+          src="buttoms/right.png"
+        />
+      </div>
+      <p id="timer">00:00</p>
+      <div class="voice-buttons">
+        <img
+          class="icon"
+          id="volume_stop"
+          src="buttoms/volume.png"
+        />
+        <input
+          class="volume-set rangeVolume"
+          id="volume"
+          max="1"
+          min="0"
+          step="0.1"
+          type="range"
+          value="0.5"
+        />
+      </div>
     </div>
-</div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

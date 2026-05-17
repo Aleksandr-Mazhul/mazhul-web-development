@@ -10,12 +10,12 @@
   background-color: #ebe8e8;
 }
 
-body{
-    background-color: #1e1e1e;
+body {
+  background-color: #1e1e1e;
 }
 
 h2 {
-  margin-bottom: 3vh; 
+  margin-bottom: 3vh;
   font-size: 200%;
 }
 
@@ -29,17 +29,17 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #858585;
-  margin-bottom: 3vh; 
+  margin-bottom: 3vh;
   border-bottom: 3px solid #000;
   font-family: Bookman Old Style;
   color: #000;
   text-shadow: 1px 1px 2px rgb(43, 42, 42);
   transition: 0.4s;
-  font-size: 114%; 
+  font-size: 114%;
 }
 
-header:hover{
-  transform: scale(1.1); 
+header:hover {
+  transform: scale(1.1);
 }
 
 a {
@@ -49,15 +49,15 @@ a {
 
 main {
   width: 100%;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   font-family: Bookman Old Style;
 }
 
 .before, .after {
   width: 50px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .button_before, .button_after {
@@ -67,7 +67,7 @@ main {
 
 .main__img {
   max-width: 300px;
-  float: left; 
+  float: left;
   margin: 0 20px 20px 0;
   shape-outside: margin-box;
 }
@@ -78,9 +78,9 @@ img {
 }
 
 .main_block {
-  width: calc(100% - 100px); 
-  display: block; 
-  overflow: hidden; 
+  width: calc(100% - 100px);
+  display: block;
+  overflow: hidden;
 }
 
 .main_text {

@@ -1,4 +1,4 @@
-import { Deck } from '../models/Deck.js';
+import {Deck} from '../models/Deck.js';
 
 export class StudySession {
   #deck;

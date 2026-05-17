@@ -22,9 +22,8 @@
 
   border-radius: 50%;
 
-  transition:
-    transform 300ms cubic-bezier(.22,1,.36,1),
-    background-color 300ms cubic-bezier(.22,1,.36,1);
+  transition: transform 300ms cubic-bezier(.22, 1, .36, 1),
+  background-color 300ms cubic-bezier(.22, 1, .36, 1);
 }
 
 .nav-arrow:hover {

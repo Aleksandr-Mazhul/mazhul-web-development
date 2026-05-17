@@ -4,20 +4,20 @@ const volume = document.getElementById("volume");
 const timer = document.getElementById("timer");
 let lastVolume = 0.5;
 
-video.addEventListener("loadedmetadata", function() {
+video.addEventListener("loadedmetadata", function () {
   range.max = video.duration;
 });
 
-video.addEventListener("timeupdate", function() {
+video.addEventListener("timeupdate", function () {
   range.value = video.currentTime;
   timer.textContent = secondsToTime(video.currentTime);
 });
 
-range.addEventListener("input", function() {
+range.addEventListener("input", function () {
   video.currentTime = range.value;
 });
 
-document.getElementById("play").onclick = function() {
+document.getElementById("play").onclick = function () {
   if (video.paused) {
     video.play();
     this.src = "buttoms/pause.png";
@@ -27,21 +27,21 @@ document.getElementById("play").onclick = function() {
   }
 };
 
-document.getElementById("back").onclick = function() {
+document.getElementById("back").onclick = function () {
   video.currentTime -= 5;
 };
-document.getElementById("next").onclick = function() {
+document.getElementById("next").onclick = function () {
   video.currentTime += 5;
 };
 
-volume.addEventListener("input", function() {
+volume.addEventListener("input", function () {
   video.volume = volume.value;
   video.muted = (volume.value == 0);
-  document.getElementById("volume_stop").src = 
+  document.getElementById("volume_stop").src =
     (volume.value == 0) ? "buttoms/novolume.png" : "buttoms/volume.png";
 });
 
-document.getElementById("volume_stop").onclick = function() {
+document.getElementById("volume_stop").onclick = function () {
   if (video.muted) {
     video.muted = false;
     volume.value = (lastVolume === 0) ? 0.5 : lastVolume;
@@ -59,7 +59,7 @@ function secondsToTime(time) {
   const h = Math.floor(time / 3600);
   const m = Math.floor((time % 3600) / 60);
   const s = Math.floor(time % 60);
-  
+
   return [
     h.toString().padStart(2, "0"),
     m.toString().padStart(2, "0"),

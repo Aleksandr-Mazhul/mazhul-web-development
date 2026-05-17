@@ -2,8 +2,11 @@ import React from 'react';
 
 class FlashCard extends React.Component {
   handleToggleLearned = (event) => {
+    const {onToggleLearned} = this.props;
+
     event.stopPropagation();
-    this.props.onToggleLearned();
+
+    onToggleLearned();
   };
 
   render() {
@@ -11,7 +14,6 @@ class FlashCard extends React.Component {
       card,
       isFlipped,
       onFlip,
-      onToggleLearned,
     } = this.props;
 
     if (!card) {
@@ -40,18 +42,10 @@ class FlashCard extends React.Component {
         onClick={onFlip}
       >
         <div className={className}>
-          {card.learned && onToggleLearned && (
+          {card.learned  && (
             <div
               className="badge"
               onClick={this.handleToggleLearned}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault();
-                  this.handleToggleLearned(event);
-                }
-              }}
             >
               ✓
             </div>

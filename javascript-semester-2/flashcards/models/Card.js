@@ -15,17 +15,6 @@ export class Card {
     this.learned = learned;
   }
 
-  update(front, back) {
-    if (front == null || back == null) return;
-    this.front = front;
-    this.back = back;
-  }
-
-  toggleLearned() {
-    this.learned = !this.learned;
-  }
-
-
   get front() {
     return this.#front;
   }
@@ -36,7 +25,6 @@ export class Card {
     }
     this.#front = value;
   }
-
 
   get back() {
     return this.#back;
@@ -49,23 +37,12 @@ export class Card {
     this.#back = value;
   }
 
-
   get learned() {
     return this.#learned;
   }
 
   set learned(value) {
     this.#learned = Boolean(value);
-  }
-
-
-  toJSON() {
-    return {
-      id: this.id,
-      front: this.front,
-      back: this.back,
-      learned: this.learned,
-    };
   }
 
   static fromJSON(data) {
@@ -77,5 +54,24 @@ export class Card {
       data.back ?? "",
       data.learned ?? false,
     );
+  }
+
+  update(front, back) {
+    if (front == null || back == null) return;
+    this.front = front;
+    this.back = back;
+  }
+
+  toggleLearned() {
+    this.learned = !this.learned;
+  }
+
+  toJSON() {
+    return {
+      id: this.id,
+      front: this.front,
+      back: this.back,
+      learned: this.learned,
+    };
   }
 }

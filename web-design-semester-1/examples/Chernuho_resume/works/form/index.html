@@ -1,86 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Форма для заказа товара</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Заказ товара</h1>
-      <form>
-        <p>Название</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    content="width=device-width, initial-scale=1.0"
+    name="viewport"
+  />
+  <title>Форма для заказа товара</title>
+  <link
+    href="style.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<div class="container">
+  <h1>Заказ товара</h1>
+  <form>
+    <p>Название</p>
+    <input
+      list="variants"
+      pattern="[0-9]{3}-[A-Z]{3}/[a-z]{3}\{[0-9]{2}\}"
+      placeholder="123-ABC/abc{12}"
+      type="text"
+    />
+    <p>Имя</p>
+    <input type="text" />
+    <p>E-mail</p>
+    <input
+      required
+      type="email"
+    />
+    <p>Цвет</p>
+    <input
+      autofocus
+      type="color"
+    />
+    <p>Количество</p>
+    <input
+      required
+      type="number"
+    />
+    <p>Дата/время</p>
+    <input
+      required
+      type="date"
+    />
+    <fieldset id="delivery">
+      <legend>Способ доставки</legend>
+      <label>
         <input
-          type="text"
-          placeholder="123-ABC/abc{12}"
-          pattern="[0-9]{3}-[A-Z]{3}/[a-z]{3}\{[0-9]{2}\}"
-          list="variants"
+          name="deliveryChoose"
+          required
+          type="radio"
         />
-        <p>Имя</p>
-        <input type="text" />
-        <p>E-mail</p>
-        <input type="email" required />
-        <p>Цвет</p>
-        <input type="color" 
-        autofocus/>
-        <p>Количество</p>
-        <input type="number"required />
-        <p>Дата/время</p>
-        <input type="date" required />
-        <fieldset id="delivery">
-          <legend>Способ доставки</legend>
-          <label>
-            <input type="radio" name="deliveryChoose" required />
-            Самовывоз
-          </label>
-          <label>
-            <input type="radio" name="deliveryChoose" required />
-            Курьером
-          </label>
-        </fieldset>
-        <p>Ближайший пункт самовывоза</p>
-        <input list="pickup" required />
-        <datalist id="pickup">
-          <option value="г. Минск"></option>
-          <option value="г. Борисов"></option>
-          <option value="деревня Демидовка"></option>
-          <option value="деревня Копище"></option>
-          <option value="г. Могилёв"></option>
-          <option value="г. Климград"></option>
-        </datalist>
-        <fieldset id="package">
-          <legend>Вид упаковки</legend>
-          <div class="offer">
-            <img src="img/package1.png" alt="Упаковка1" class="packagePick" />
-            <input
-              type="radio"
-              name="packageChoose"
-              class="packageChoose"
-              required
-            />
-          </div>
-          <div class="offer">
-            <img src="img/package2.png" alt="Упаковка2" class="packagePick" />
-            <input
-              type="radio"
-              name="packageChoose"
-              class="packageChoose"
-              required
-            />
-          </div>
-          <div class="offer">
-            <img src="img/package3.png" alt="Упаковка3" class="packagePick" />
-            <input
-              type="radio"
-              name="packageChoose"
-              class="packageChoose"
-              required
-            />
-          </div>
-        </fieldset>
-        <input type="submit" value="Заказать" id="submitButton" />
-      </form>
-    </div>
-  </body>
+        Самовывоз
+      </label>
+      <label>
+        <input
+          name="deliveryChoose"
+          required
+          type="radio"
+        />
+        Курьером
+      </label>
+    </fieldset>
+    <p>Ближайший пункт самовывоза</p>
+    <input
+      list="pickup"
+      required
+    />
+    <datalist id="pickup">
+      <option value="г. Минск"></option>
+      <option value="г. Борисов"></option>
+      <option value="деревня Демидовка"></option>
+      <option value="деревня Копище"></option>
+      <option value="г. Могилёв"></option>
+      <option value="г. Климград"></option>
+    </datalist>
+    <fieldset id="package">
+      <legend>Вид упаковки</legend>
+      <div class="offer">
+        <img
+          alt="Упаковка1"
+          class="packagePick"
+          src="img/package1.png"
+        />
+        <input
+          class="packageChoose"
+          name="packageChoose"
+          required
+          type="radio"
+        />
+      </div>
+      <div class="offer">
+        <img
+          alt="Упаковка2"
+          class="packagePick"
+          src="img/package2.png"
+        />
+        <input
+          class="packageChoose"
+          name="packageChoose"
+          required
+          type="radio"
+        />
+      </div>
+      <div class="offer">
+        <img
+          alt="Упаковка3"
+          class="packagePick"
+          src="img/package3.png"
+        />
+        <input
+          class="packageChoose"
+          name="packageChoose"
+          required
+          type="radio"
+        />
+      </div>
+    </fieldset>
+    <input
+      id="submitButton"
+      type="submit"
+      value="Заказать"
+    />
+  </form>
+</div>
+</body>
 </html>

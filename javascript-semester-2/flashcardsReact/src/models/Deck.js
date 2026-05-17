@@ -1,4 +1,4 @@
-import { Card } from './Card.js';
+import {Card} from './Card.js';
 
 export class Deck {
   #cards;
@@ -19,6 +19,24 @@ export class Deck {
 
   get name() {
     return this.#name;
+  }
+
+  static fromJSON(json) {
+    if (!json) {
+      return null;
+    }
+
+    const rawCards = Array.isArray(json.cards) ? json.cards : [];
+    const cards = rawCards
+      .map((data) => Card.fromJSON(data))
+      .filter(Boolean);
+
+    const id = json.id ?? Date.now();
+    const name = typeof json.name === 'string' && json.name.trim()
+      ? json.name
+      : 'New Deck';
+
+    return new Deck(cards, id, name);
   }
 
   #findIndexById(id) {
@@ -85,24 +103,6 @@ export class Deck {
       name: this.#name,
       cards: this.#cards.map((card) => card.toJSON()),
     };
-  }
-
-  static fromJSON(json) {
-    if (!json) {
-      return null;
-    }
-
-    const rawCards = Array.isArray(json.cards) ? json.cards : [];
-    const cards = rawCards
-      .map((data) => Card.fromJSON(data))
-      .filter(Boolean);
-
-    const id = json.id ?? Date.now();
-    const name = typeof json.name === 'string' && json.name.trim()
-      ? json.name
-      : 'New Deck';
-
-    return new Deck(cards, id, name);
   }
 }
 

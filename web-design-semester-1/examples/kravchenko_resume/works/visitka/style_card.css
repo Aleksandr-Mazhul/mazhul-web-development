@@ -1,65 +1,65 @@
 * {
-    margin: 0;
-    padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: century gothic;
-    background-color: #f2f2f2;
+  font-family: century gothic;
+  background-color: #f2f2f2;
 }
 
 .card {
-    width: 600px;
-    height: 270px;
-    padding: 5px;
-    margin: 50px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+  width: 600px;
+  height: 270px;
+  padding: 5px;
+  margin: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
-    .card h1 {
-        text-align: left;
-        font-size: 24px;
-        margin-bottom: 90px;
-    }
+.card h1 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 90px;
+}
 
-    .card p {
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
+.card p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 
-    .card span {
-        font-weight: bold;
-    }
+.card span {
+  font-weight: bold;
+}
 
 .name p {
-    text-align: left;
-    font-size: 15px;
-    margin-bottom: 80px;
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 80px;
 }
 
 .name h1 {
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 10px;
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .logo {
-    text-align: left;
-    margin-bottom: 35px;
+  text-align: left;
+  margin-bottom: 35px;
 }
 
-    .logo img {
-        margin: 20px;
-        width: 240px;
-        height: 240px;
-        float: left;
-    }
+.logo img {
+  margin: 20px;
+  width: 240px;
+  height: 240px;
+  float: left;
+}
 
 .discription p {
-    text-align: left;
-    font-size: 15px;
-    margin-bottom: 10px;
-    line-height: 5px;
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 5px;
 }

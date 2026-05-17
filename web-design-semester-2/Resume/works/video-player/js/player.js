@@ -1,8 +1,8 @@
-import { initControls } from "./controls.js";
-import { initTimeline } from "./timeline.js";
-import { initKeyboard } from "./keyboard.js";
-import { formatTime } from "./utils.js";
-import { initVolume } from "./volume.js";
+import {initControls} from "./controls.js";
+import {initTimeline} from "./timeline.js";
+import {initKeyboard} from "./keyboard.js";
+import {formatTime} from "./utils.js";
+import {initVolume} from "./volume.js";
 
 export function initPlayer() {
   const video = document.getElementById("video");
@@ -58,5 +58,5 @@ export function initPlayer() {
   video.addEventListener("pause", () => {
     controls.classList.remove("hidden");
   });
-  
+
 }

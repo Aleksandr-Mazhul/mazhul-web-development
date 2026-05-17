@@ -116,10 +116,10 @@ videoEl.addEventListener(
 );
 
 function secondsToTime(time) {
-    if (video.duration == video.currentTime)
-        document.getElementById("play").src = "img/again.svg";
-      range.value = video.currentTime;
-      let fulltime;
+  if (video.duration == video.currentTime)
+    document.getElementById("play").src = "img/again.svg";
+  range.value = video.currentTime;
+  let fulltime;
   var h = Math.floor(time / (60 * 60)),
     dm = time % (60 * 60),
     m = Math.floor(dm / 60),

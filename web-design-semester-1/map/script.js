@@ -68,7 +68,7 @@ const XLINK_NS =
   "http://www.w3.org/1999/xlink";
 
 let lastPointer =
-  { x: 0, y: 0 };
+  {x: 0, y: 0};
 
 const TOOLTIP_GAP =
   10;

@@ -1,4 +1,4 @@
-/* 
+/*
 Title:		IE patches
 Author: 	dan@simplebits.com
 */
@@ -6,14 +6,15 @@ Author: 	dan@simplebits.com
 /* self-clear floats */
 
 * html .group { /* IE6 */
-	height: 1%;
-	}
-*:first-child+html .group { /* IE7 */
-	min-height: 1px;
-	}
+  height: 1%;
+}
+
+*:first-child + html .group { /* IE7 */
+  min-height: 1px;
+}
 
 /* fix ticker height */
 
-*:first-child+html h4#things-count span {
-	line-height: 2;
-	}
+*:first-child + html h4#things-count span {
+  line-height: 2;
+}

@@ -1,208 +1,207 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <performances xmlns="http://tempuri.org/XMLSchema.xsd"
-	   xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<performance id="f1" rating="8.5" language="Русский" duration="148" ageRating="12+">
-		<title>Лебединое озеро</title>
-		<director>Пётр Ильич Чайковский</director>
-		<year>1885</year>
-		<genre>Балет</genre>
-		<code>F-2010_incep.BR</code>
-		<cast>
-			<actor>
-				<name>Майя Плисецкая</name>
-				<role>Жизель</role>
-			</actor>
-			<actor>
-				<name>Антон Грессе</name>
-				<role>Артур</role>
-			</actor>
-		</cast>
-	</performance>
+>
+    <performance id="f1" rating="8.5" language="Русский" duration="148" ageRating="12+">
+        <title>Лебединое озеро</title>
+        <director>Пётр Ильич Чайковский</director>
+        <year>1885</year>
+        <genre>Балет</genre>
+        <code>F-2010_incep.BR</code>
+        <cast>
+            <actor>
+                <name>Майя Плисецкая</name>
+                <role>Жизель</role>
+            </actor>
+            <actor>
+                <name>Антон Грессе</name>
+                <role>Артур</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f2" rating="7.3" language="Французский" duration="122" ageRating="12+">
-		<title>Травиата</title>
-		<director>Жан-Пьер Жене</director>
-		<year>1820</year>
-		<genre>Комедия</genre>
-		<code>F-2001_amelie.FR</code>
-		<cast>
-			<actor>
-				<name>Одри Тоту</name>
-				<role>Виолетта Валери</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f2" rating="7.3" language="Французский" duration="122" ageRating="12+">
+        <title>Травиата</title>
+        <director>Жан-Пьер Жене</director>
+        <year>1820</year>
+        <genre>Комедия</genre>
+        <code>F-2001_amelie.FR</code>
+        <cast>
+            <actor>
+                <name>Одри Тоту</name>
+                <role>Виолетта Валери</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f3" rating="9.0" language="Японский" duration="125" ageRating="6+">
-		<title>Покорнее сакуры</title>
-		<director>Химото Лиосано</director>
-		<year>1889</year>
-		<genre>Феерия</genre>
-		<code>F-2001_spirit.JP</code>
-		<cast>
-			<actor>
-				<name>Руми Хиираги</name>
-				<role>Тихиро</role>
-			</actor>
-			<actor>
-				<name>Мию Ирино</name>
-				<role>Хаку</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f3" rating="9.0" language="Японский" duration="125" ageRating="6+">
+        <title>Покорнее сакуры</title>
+        <director>Химото Лиосано</director>
+        <year>1889</year>
+        <genre>Феерия</genre>
+        <code>F-2001_spirit.JP</code>
+        <cast>
+            <actor>
+                <name>Руми Хиираги</name>
+                <role>Тихиро</role>
+            </actor>
+            <actor>
+                <name>Мию Ирино</name>
+                <role>Хаку</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f4" rating="6.8" language="Русский" duration="81" ageRating="16+">
-		<title>Униженные и оскорблённые</title>
-		<director>Том Тыквер</director>
-		<year>1998</year>
-		<genre>Опера</genre>
-		<code>F-1998_lola.DE</code>
-		<cast>
-			<actor>
-				<name>Франка Потенте</name>
-				<role>Лола</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f4" rating="6.8" language="Русский" duration="81" ageRating="16+">
+        <title>Униженные и оскорблённые</title>
+        <director>Том Тыквер</director>
+        <year>1998</year>
+        <genre>Опера</genre>
+        <code>F-1998_lola.DE</code>
+        <cast>
+            <actor>
+                <name>Франка Потенте</name>
+                <role>Лола</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f5" rating="8.2" language="Испанский" awards="Гойя" duration="118" ageRating="18+">
-		<title>Лабиринт Фавна</title>
-		<director>Гильермо дель Торо</director>
-		<year>2006</year>
-		<genre>Драма</genre>
-		<code>F-2006_pan.ES</code>
-		<cast>
-			<actor>
-				<name>Ивана Бакиро</name>
-				<role>Офелия</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f5" rating="8.2" language="Испанский" awards="Гойя" duration="118" ageRating="18+">
+        <title>Лабиринт Фавна</title>
+        <director>Гильермо дель Торо</director>
+        <year>2006</year>
+        <genre>Драма</genre>
+        <code>F-2006_pan.ES</code>
+        <cast>
+            <actor>
+                <name>Ивана Бакиро</name>
+                <role>Офелия</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f6" rating="9.3" language="Английский" duration="142" ageRating="18+">
-		<title>Человек, который смеётся</title>
-		<director>Фрэнсис Анри</director>
-		<year>1921</year>
-		<genre>Драма</genre>
-		<code>F-1994_shaw.EN</code>
-		<cast>
-			<actor>
-				<name>Тим Роббинс</name>
-				<role>Энди Дюфрейн</role>
-			</actor>
-			<actor>
-				<name>Мор Лисс</name>
-				<role>Ред</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f6" rating="9.3" language="Английский" duration="142" ageRating="18+">
+        <title>Человек, который смеётся</title>
+        <director>Фрэнсис Анри</director>
+        <year>1921</year>
+        <genre>Драма</genre>
+        <code>F-1994_shaw.EN</code>
+        <cast>
+            <actor>
+                <name>Тим Роббинс</name>
+                <role>Энди Дюфрейн</role>
+            </actor>
+            <actor>
+                <name>Мор Лисс</name>
+                <role>Ред</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f7" rating="7.5" language="Корейский" duration="118" ageRating="16+">
-		<title>Сказание о кумихо</title>
-		<director>Йон Сан-хо</director>
-		<year>1950</year>
-		<genre>Опера</genre>
-		<code>F-2016_train.KR</code>
-		<cast>
-			<actor>
-				<name>Гон Ю</name>
-				<role>Сок-у</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f7" rating="7.5" language="Корейский" duration="118" ageRating="16+">
+        <title>Сказание о кумихо</title>
+        <director>Йон Сан-хо</director>
+        <year>1950</year>
+        <genre>Опера</genre>
+        <code>F-2016_train.KR</code>
+        <cast>
+            <actor>
+                <name>Гон Ю</name>
+                <role>Сок-у</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f8" rating="6.9" language="Английский" format="DVD" duration="100" ageRating="12+">
-		<title>Двойная порция</title>
-		<director>Морган Сперлок</director>
-		<year>1900</year>
-		<genre>Комедия</genre>
-		<code>F-2004_supersize.US</code>
-		<cast>
-			<actor>
-				<name>Морган Сперлок</name>
-				<role>Сам себя</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f8" rating="6.9" language="Английский" format="DVD" duration="100" ageRating="12+">
+        <title>Двойная порция</title>
+        <director>Морган Сперлок</director>
+        <year>1900</year>
+        <genre>Комедия</genre>
+        <code>F-2004_supersize.US</code>
+        <cast>
+            <actor>
+                <name>Морган Сперлок</name>
+                <role>Сам себя</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f9" rating="8.0" language="Итальянский" format="Blu-ray" duration="116" ageRating="12+">
-		<title>Жизнь прекрасна</title>
-		<director>Роберто Бениньи</director>
-		<year>1997</year>
-		<genre>Драма</genre>
-		<code>F-1997_life.IT</code>
-		<cast>
-			<actor>
-				<name>Роберто Бениньи</name>
-				<role>Гвидо</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f9" rating="8.0" language="Итальянский" format="Blu-ray" duration="116" ageRating="12+">
+        <title>Жизнь прекрасна</title>
+        <director>Роберто Бениньи</director>
+        <year>1997</year>
+        <genre>Драма</genre>
+        <code>F-1997_life.IT</code>
+        <cast>
+            <actor>
+                <name>Роберто Бениньи</name>
+                <role>Гвидо</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f10" rating="8.6" language="Хинди" duration="170" ageRating="12+">
-		<title>Гордость и предубеждение</title>
-		<director>Раджкумар Хирани</director>
-		<year>1934</year>
-		<genre>Комедия</genre>
-		<code>F-2009_idiots.IN</code>
-		<cast>
-			<actor>
-				<name>Аамир Хан</name>
-				<role>Ранчо</role>
-			</actor>
-			<actor>
-				<name>Р. Мадхаван</name>
-				<role>Фархан</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f10" rating="8.6" language="Хинди" duration="170" ageRating="12+">
+        <title>Гордость и предубеждение</title>
+        <director>Раджкумар Хирани</director>
+        <year>1934</year>
+        <genre>Комедия</genre>
+        <code>F-2009_idiots.IN</code>
+        <cast>
+            <actor>
+                <name>Аамир Хан</name>
+                <role>Ранчо</role>
+            </actor>
+            <actor>
+                <name>Р. Мадхаван</name>
+                <role>Фархан</role>
+            </actor>
+        </cast>
+    </performance>
 
-		<performance id="f11" rating="8.1" language="Китайский" duration="120" ageRating="12+">
-		<title>Крадущийся тигр, затаившийся дракон</title>
-		<director>Энг Ли</director>
-		<year>2000</year>
-		<genre>Феерия</genre>
-		<code>F-2000_tiger.CN</code>
-		<cast>
-			<actor>
-				<name>Чоу Юн-Фат</name>
-				<role>Ли Му Бай</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f11" rating="8.1" language="Китайский" duration="120" ageRating="12+">
+        <title>Крадущийся тигр, затаившийся дракон</title>
+        <director>Энг Ли</director>
+        <year>2000</year>
+        <genre>Феерия</genre>
+        <code>F-2000_tiger.CN</code>
+        <cast>
+            <actor>
+                <name>Чоу Юн-Фат</name>
+                <role>Ли Му Бай</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f12" rating="7.4" language="Русский" awards="Золотой орёл" duration="140" ageRating="18+">
-		<title>Левиафан</title>
-		<director>Андрей Звягинцев</director>
-		<year>2014</year>
-		<genre>Драма</genre>
-		<code>F-2014_levia.RU</code>
-		<cast>
-			<actor>
-				<name>Алексей Серебряков</name>
-				<role>Коля</role>
-			</actor>
-		</cast>
-	</performance>
+    <performance id="f12" rating="7.4" language="Русский" awards="Золотой орёл" duration="140" ageRating="18+">
+        <title>Левиафан</title>
+        <director>Андрей Звягинцев</director>
+        <year>2014</year>
+        <genre>Драма</genre>
+        <code>F-2014_levia.RU</code>
+        <cast>
+            <actor>
+                <name>Алексей Серебряков</name>
+                <role>Коля</role>
+            </actor>
+        </cast>
+    </performance>
 
-	<performance id="f13" rating="9.0" language="Английский" duration="175" ageRating="18+">
-		<title>Крёстный отец</title>
-		<director>Фрэнсис Форд Коппола</director>
-		<year>1972</year>
-		<genre>Драма</genre>
-		<code>F-1972_godfath.US</code>
-		<cast>
-			<actor>
-				<name>Марлон Брандо</name>
-				<role>Вито Корлеоне</role>
-			</actor>
-			<actor>
-				<name>Аль Пачино</name>
-				<role>Майкл Корлеоне</role>
-			</actor>
-		</cast>
-	</performance>
-
+    <performance id="f13" rating="9.0" language="Английский" duration="175" ageRating="18+">
+        <title>Крёстный отец</title>
+        <director>Фрэнсис Форд Коппола</director>
+        <year>1972</year>
+        <genre>Драма</genre>
+        <code>F-1972_godfath.US</code>
+        <cast>
+            <actor>
+                <name>Марлон Брандо</name>
+                <role>Вито Корлеоне</role>
+            </actor>
+            <actor>
+                <name>Аль Пачино</name>
+                <role>Майкл Корлеоне</role>
+            </actor>
+        </cast>
+    </performance>
 
 
 </performances>

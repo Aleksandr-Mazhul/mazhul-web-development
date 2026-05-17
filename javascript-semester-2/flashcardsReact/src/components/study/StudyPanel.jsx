@@ -48,7 +48,10 @@ class StudyPanel extends React.Component {
           id="toggleList"
           onClick={onToggleList}
         >
-          {showList ? 'Hide Cards' : 'Show Cards'}
+          {showList
+            ? 'Hide Cards'
+            : 'Show Cards'
+          }
         </button>
 
         <Controls

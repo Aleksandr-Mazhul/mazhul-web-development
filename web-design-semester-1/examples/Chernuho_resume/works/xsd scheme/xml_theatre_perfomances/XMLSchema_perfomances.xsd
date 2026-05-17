@@ -1,39 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://tempuri.org/XMLSchema.xsd"
-    xmlns="http://tempuri.org/XMLSchema.xsd"
-    elementFormDefault="qualified">
+           targetNamespace="http://tempuri.org/XMLSchema.xsd"
+           xmlns="http://tempuri.org/XMLSchema.xsd"
+           elementFormDefault="qualified">
 
-	<xs:simpleType name="genreType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Мюзикл"/>
-			<xs:enumeration value="Драма"/>
-			<xs:enumeration value="Комедия"/>
-			<xs:enumeration value="Балет"/>
-			<xs:enumeration value="Опера"/>
-			<xs:enumeration value="Феерия"/>
-			<xs:enumeration value="Пантомима"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="genreType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Мюзикл"/>
+            <xs:enumeration value="Драма"/>
+            <xs:enumeration value="Комедия"/>
+            <xs:enumeration value="Балет"/>
+            <xs:enumeration value="Опера"/>
+            <xs:enumeration value="Феерия"/>
+            <xs:enumeration value="Пантомима"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="yearOfProduction">
-		<xs:restriction base="xs:gYear">
-			<xs:minInclusive value="1900"/>
-			<xs:maxInclusive value="2025"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="yearOfProduction">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2025"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="ratingType">
-		<xs:restriction base="xs:decimal">
-			<xs:minInclusive value="0.0"/>
-			<xs:maxInclusive value="10.0"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="ratingType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="10.0"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<!-- Код театральной постановки: должен начинаться с F-, затем год, затем произвольная строка (название, формат и т.д.), затем точка и 2 заглавные буквы -->
-	<xs:simpleType name="codeType">
-		<xs:restriction base="xs:string">
-			<!-- 
+    <!-- Код театральной постановки: должен начинаться с F-, затем год, затем произвольная строка (название, формат и т.д.), затем точка и 2 заглавные буквы -->
+    <xs:simpleType name="codeType">
+        <xs:restriction base="xs:string">
+            <!--
       Пример кода: F-2010_incep.BR
       Формат:
         - начинается с "F-"
@@ -43,58 +43,58 @@
         - 2 заглавные латинские буквы (например, страна или формат)
       Регулярное выражение: F-[0-9]{4}[_a-zA-Z]+[.][A-Z]{2}
     -->
-			<xs:pattern value="F-[0-9]{4}[_a-zA-Z]+[.][A-Z]{2}"/>
-		</xs:restriction>
-	</xs:simpleType>
+            <xs:pattern value="F-[0-9]{4}[_a-zA-Z]+[.][A-Z]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:simpleType name="directorNameType">
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
+    <xs:simpleType name="directorNameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-	<xs:element name="director" type="directorNameType"/>
+    <xs:element name="director" type="directorNameType"/>
 
-	<xs:complexType name="actorType">
-		<xs:sequence>
-			<xs:element name="name" type="xs:string"/>
-			<xs:element name="role" type="xs:string"/>
-		</xs:sequence>
-	</xs:complexType>
+    <xs:complexType name="actorType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="role" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
 
-	<xs:complexType name="PerfomanceType">
-		<xs:sequence>
-			<xs:element name="title" type="xs:string"/>
-			<xs:element ref="director"/>
-			<xs:element name="year" type="yearOfProduction"/>
-			<xs:element name="genre" type="genreType"/>
-			<xs:element name="code" type="codeType"/>
-			<xs:element name="cast">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="actor" type="actorType" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
+    <xs:complexType name="PerfomanceType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element ref="director"/>
+            <xs:element name="year" type="yearOfProduction"/>
+            <xs:element name="genre" type="genreType"/>
+            <xs:element name="code" type="codeType"/>
+            <xs:element name="cast">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="actor" type="actorType" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
 
-		<xs:attribute name="id" type="xs:ID" use="required"/>
-		<xs:attribute name="rating" type="ratingType" use="required"/>
-		<xs:attribute name="language" type="xs:string" use="required"/>
-		<xs:attribute name="awards" type="xs:string" use="optional"/>
-		<xs:attribute name="format" type="xs:string" use="optional" default="MP3"/>
-		
-		<!-- Длительность в минутах -->
-		<xs:attribute name="duration" type="xs:positiveInteger" use="optional"/>
-		<xs:attribute name="ageRating" type="xs:string" use="optional"/>
-	</xs:complexType>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="rating" type="ratingType" use="required"/>
+        <xs:attribute name="language" type="xs:string" use="required"/>
+        <xs:attribute name="awards" type="xs:string" use="optional"/>
+        <xs:attribute name="format" type="xs:string" use="optional" default="MP3"/>
 
-	<xs:element name="perfomances">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="perfomance" type="PerfomanceType" maxOccurs="unbounded"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+        <!-- Длительность в минутах -->
+        <xs:attribute name="duration" type="xs:positiveInteger" use="optional"/>
+        <xs:attribute name="ageRating" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <xs:element name="perfomances">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="perfomance" type="PerfomanceType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

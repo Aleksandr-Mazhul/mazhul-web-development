@@ -10,18 +10,16 @@
 
   --accent: #7dd3fc;
 
-  --glass-a: rgba(255,255,255,0.08);
-  --glass-b: rgba(255,255,255,0.12);
+  --glass-a: rgba(255, 255, 255, 0.08);
+  --glass-b: rgba(255, 255, 255, 0.12);
 
   --radius-xl: 34px;
   --radius-l: 28px;
   --radius-m: 20px;
 
-  --shadow:
-    0 24px 80px rgba(0,0,0,0.45);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
 
-  --container:
-    min(1240px, 92vw);
+  --container: min(1240px, 92vw);
 }
 
 * {
@@ -35,15 +33,13 @@ body {
 
   color: var(--text-0);
 
-  background:
-    radial-gradient(circle at top left, #20365e 0%, transparent 32%),
-    radial-gradient(circle at bottom right, #18243d 0%, transparent 28%),
-    linear-gradient(145deg, var(--bg-0), var(--bg-1));
+  background: radial-gradient(circle at top left, #20365e 0%, transparent 32%),
+  radial-gradient(circle at bottom right, #18243d 0%, transparent 28%),
+  linear-gradient(145deg, var(--bg-0), var(--bg-1));
 
-  font-family:
-    Inter,
-    system-ui,
-    sans-serif;
+  font-family: Inter,
+  system-ui,
+  sans-serif;
 }
 
 img {
@@ -63,15 +59,13 @@ main {
 }
 
 .glass {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.12),
-      rgba(255,255,255,0.04)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
 
-  border:
-    1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
   backdrop-filter: blur(22px);
 
@@ -84,17 +78,16 @@ main {
 
   z-index: -1;
 
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(125,211,252,0.18),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(255,255,255,0.08),
-      transparent 26%
-    );
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(125, 211, 252, 0.18),
+    transparent 30%
+  ),
+  radial-gradient(
+    circle at 80% 80%,
+    rgba(255, 255, 255, 0.08),
+    transparent 26%
+  );
 
   animation: ambient 12s ease-in-out infinite alternate;
 }
@@ -147,8 +140,7 @@ main {
 
   background: var(--accent);
 
-  box-shadow:
-    0 0 20px rgba(125,211,252,0.7);
+  box-shadow: 0 0 20px rgba(125, 211, 252, 0.7);
 }
 
 .nav-links {
@@ -165,9 +157,8 @@ main {
 
   color: var(--text-1);
 
-  transition:
-    background-color 300ms ease,
-    transform 300ms ease;
+  transition: background-color 300ms ease,
+  transform 300ms ease;
 }
 
 .nav-links a:hover {
@@ -193,11 +184,9 @@ main {
 
   border-radius: 999px;
 
-  background:
-    rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
 
-  border:
-    1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
   color: var(--text-1);
 
@@ -235,8 +224,7 @@ main {
 
   font-weight: 600;
 
-  transition:
-    transform 300ms ease;
+  transition: transform 300ms ease;
 }
 
 .hero-btn:hover {
@@ -249,8 +237,7 @@ main {
 }
 
 .hero-btn.secondary {
-  border:
-    1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .hero-image {
@@ -324,11 +311,9 @@ main {
 
   border-radius: 20px;
 
-  background:
-    rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 
-  border:
-    1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .news-card span {
@@ -364,14 +349,11 @@ main {
 
   border-radius: 18px;
 
-  background:
-    rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 
-  border:
-    1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
-  transition:
-    transform 300ms ease;
+  transition: transform 300ms ease;
 }
 
 .members-list li:hover {

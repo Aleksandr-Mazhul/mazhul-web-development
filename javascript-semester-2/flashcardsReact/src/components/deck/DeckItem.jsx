@@ -2,22 +2,27 @@ import React from 'react';
 
 class DeckItem extends React.Component {
   handleSelect = () => {
-    this.props.onSelect(this.props.deck.id);
+    const {deck, onSelect} = this.props;
+
+    onSelect(deck.id);
   };
 
   handleDelete = (event) => {
+    const {deck, onDelete} = this.props;
+
     event.stopPropagation();
-    this.props.onDelete(this.props.deck.id);
+
+    onDelete(deck.id);
   };
 
   render() {
-    const { deck, active } = this.props;
+    const {deck, active} = this.props;
+
     const className = active
       ? 'deck active'
       : 'deck';
 
-    return (
-      <button
+    return (<button
         className={className}
         onClick={this.handleSelect}
       >
@@ -29,8 +34,7 @@ class DeckItem extends React.Component {
         >
           ×
         </span>
-      </button>
-    );
+      </button>);
   }
 }
 

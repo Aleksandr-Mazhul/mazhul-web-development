@@ -1,136 +1,155 @@
 * {
-    color: white;
-  }
-  
-  body {
-    margin: 0;
-  }
+  color: white;
+}
 
+body {
+  margin: 0;
+}
+
+.container {
+  width: 65%;
+  margin: 2% auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5vw;
+  background-color: #99CC99;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-row-gap: 2vw;
+  grid-column-gap: 1vw;
+  width: 50vw;
+  margin-bottom: 3vw;
+  justify-items: center;
+  align-items: center;
+}
+
+.form p {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
+input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  width: 30vw;
+  height: 3vw;
+  border-radius: 0.2vw;
+  border: 0;
+  color: #669966;
+  padding-left: 1vw;
+  font-size: 1.2vw;
+}
+
+input[type="color"] {
+  height: 10vw;
+  width: 15vw;
+  justify-self: center;
+  background-color: initial;
+}
+
+#delivery {
+  text-align: left;
+  grid-column: span 2;
+  padding: 1vw;
+  width: 100%;
+}
+
+#package {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  grid-column: span 2;
+  width: 100%;
+  padding: 1vw;
+  align-items: flex-end;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.packagePick {
+  width: 15vw;
+  margin-bottom: 15px;
+}
+
+input[type="radio"] {
+  height: 2vw;
+  width: 3vw;
+}
+
+#submitButton {
+  grid-column: span 2;
+  width: 50%;
+  align-self: center;
+  color: #669966;
+  background-color: white;
+  font-size: 2vw;
+  border-color: white;
+  height: 50px;
+}
+
+#submitButton:hover {
+  color: white;
+  background-color: #669966;
+  border-color: white;
+  transition: 0.5s;
+}
+
+fieldset {
+  border: 0.2vw solid white;
+  border-radius: 1vw;
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  gap: 1vw;
+  margin-right: 10%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
   .container {
-    width: 65%;
-    margin: 2% auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 400;
-    font-size: 2.5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 0.5vw;
-    background-color: #99CC99;
+    width: 95%;
+    font-size: 5vw;
   }
 
   form {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    grid-row-gap: 2vw;
-    grid-column-gap: 1vw;
-    width: 50vw;
-    margin-bottom: 3vw;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .form p {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
+    width: 80%;
   }
 
   input {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
-    width: 30vw;
-    height: 3vw;
-    border-radius: 0.2vw;
-    border: 0;
-    color: #669966;
-    padding-left: 1vw;
-    font-size: 1.2vw;
-  }
-
-  input[type="color"] {
-    height: 10vw;
-    width: 15vw;
-    justify-self: center;
-    background-color: initial;
-  }
-
-  #delivery {
-    text-align: left;
-    grid-column: span 2;
-    padding: 1vw;
-    width: 100%;
-  }
-  
-  #package {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    grid-column: span 2;
-    width: 100%;
-    padding: 1vw;
-    align-items: flex-end;
-  }
-
-  .offer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-  }
-  
-  .packagePick {
-    width: 15vw;
-    margin-bottom: 15px;
-  }
-
-  input[type="radio"] {
-    height: 2vw;
-    width: 3vw;
+    width: 90%;
+    height: 8vw;
+    font-size: 4vw;
   }
 
   #submitButton {
-    grid-column: span 2;
-    width: 50%;
-    align-self: center;
-    color: #669966;
-    background-color: white;
-    font-size: 2vw;
-    border-color: white;
-    height: 50px;
-  }
-  
-  #submitButton:hover {
-    color: white;
-    background-color: #669966;
-    border-color: white;
-    transition: 0.5s;
+    width: 90%;
+    font-size: 5vw;
+    height: 10vw;
   }
 
-  fieldset {
-    border: 0.2vw solid white;
-    border-radius: 1vw;
-    display: flex;
-    gap: 1vw;
-    align-items: center;
+  fieldset, label {
+    display: block;
   }
-  
-  label {
-    display: flex;
-    gap: 1vw;
-    margin-right: 10%;
-    height: auto;
-  }
+}
 
-  @media screen and (max-width: 768px) {
-    .container { width: 95%; font-size: 5vw; }
-    form { width: 80%; }
-    input { width: 90%; height: 8vw; font-size: 4vw; } 
-    #submitButton { width: 90%; font-size: 5vw; height: 10vw; }
-    fieldset, label { display: block; }
-  }
-  
 
 
 

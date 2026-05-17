@@ -1,8 +1,7 @@
 import {Deck} from '../models/Deck.js';
 import {StudySession} from "../study/StudySession.js";
 import {Card} from "../models/Card.js";
-import {renderCard, renderPosition, renderListCards} from "../ui/render.js";
-import {renderDeckList} from "../ui/render.js";
+import {renderCard, renderDeckList, renderListCards, renderPosition} from "../ui/render.js";
 
 export class App {
   #decks;
@@ -109,7 +108,7 @@ export class App {
     this.render();
   }
 
-  flipCard()  {
+  flipCard() {
     this.#session.flip();
     this.render();
   }
@@ -158,7 +157,7 @@ export class App {
     cardEl.addEventListener('click', () => {
       this.flipCard();
     });
-    
+
     const prevBTN = document.getElementById('prev');
     prevBTN.addEventListener('click', () => {
       this.prevCard();
@@ -199,7 +198,7 @@ export class App {
 
     const frontInput = document.getElementById('frontInput');
     const backInput = document.getElementById('backInput');
-    
+
     const addBtn = document.getElementById('addBtn');
     addBtn.addEventListener('click', () => {
       const front = frontInput.value;
@@ -249,12 +248,12 @@ export class App {
     }
     const cards = deck.getCards();
 
-    
+
     renderCard(activeCard, isFlipped);
-    
+
 
     renderPosition(pos, total);
-    
+
     if (this.#showList) {
       renderListCards(cards, {
         onDelete: (id) => this.deleteCard(id),

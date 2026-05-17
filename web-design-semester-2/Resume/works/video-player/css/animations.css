@@ -1,8 +1,7 @@
 /* animations.css */
 
 .player__controls {
-  transition:
-    opacity .25s ease;
+  transition: opacity .25s ease;
 }
 
 .player__video-wrapper:hover .timeline {
@@ -10,42 +9,36 @@
 }
 
 .timeline {
-  transition:
-    height .22s ease,
-    background-color var(--transition);
+  transition: height .22s ease,
+  background-color var(--transition);
 }
 
 .player__button {
-  transition:
-    transform var(--transition),
-    background-color var(--transition),
-    border-color var(--transition),
-    box-shadow var(--transition),
-    opacity .2s ease;
+  transition: transform var(--transition),
+  background-color var(--transition),
+  border-color var(--transition),
+  box-shadow var(--transition),
+  opacity .2s ease;
 }
 
 .player__button:active {
-  transform:
-    scale(.94);
+  transform: scale(.94);
 }
 
 .player__video-wrapper:hover .player__overlay {
-  background:
-    linear-gradient(
-      to top,
-      rgba(2,6,23,0.96),
-      rgba(2,6,23,0.16) 42%,
-      transparent
-    );
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.96),
+    rgba(2, 6, 23, 0.16) 42%,
+    transparent
+  );
 }
 
 .player__overlay {
-  transition:
-    background .35s ease;
+  transition: background .35s ease;
 }
 
 .timeline__progress,
 .volume__progress {
-  transition:
-    width .08s linear;
+  transition: width .08s linear;
 }

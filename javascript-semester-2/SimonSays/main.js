@@ -39,6 +39,14 @@ class Game {
     }
   }
 
+  get cntOfBtn() {
+    return this.#cntOfBtn;
+  }
+
+  get sequence() {
+    return this.#sequence;
+  }
+
   updateControls() {
     const restartBtn = document.querySelector("#restart");
     const startBtn = document.querySelector("#start");
@@ -71,16 +79,6 @@ class Game {
       }
     }
   }
-
-
-  get cntOfBtn() {
-    return this.#cntOfBtn;
-  }
-
-  get sequence() {
-    return this.#sequence;
-  }
-
 
   init() {
     this.load();
@@ -301,5 +299,6 @@ class Game {
     this.#record = 0;
   }
 }
+
 const game = new Game(4);
 game.init();

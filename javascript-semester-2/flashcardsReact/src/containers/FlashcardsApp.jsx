@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Deck } from '../models/Deck.js';
-import { Card } from '../models/Card.js';
-import { StudySession } from '../study/StudySession.js';
-import { StorageService } from '../services/StorageService.js';
+import {Deck} from '../models/Deck.js';
+import {Card} from '../models/Card.js';
+import {StudySession} from '../study/StudySession.js';
+import {StorageService} from '../services/StorageService.js';
 import DeckList from '../components/deck/DeckList.jsx';
 import StudyPanel from '../components/study/StudyPanel.jsx';
 import CardForm from '../components/form/CardForm.jsx';
@@ -16,6 +16,7 @@ class FlashcardsApp extends React.Component {
     const data = StorageService.load();
 
     const decks = Array.isArray(data.decks) ? data.decks : [];
+
     let activeDeckId = data.activeDeckId ?? null;
 
     if (!activeDeckId && decks.length > 0) {
@@ -28,8 +29,7 @@ class FlashcardsApp extends React.Component {
       activeDeckId = deck.id;
     }
 
-    let activeDeck =
-      decks.find((deck) => deck.id === activeDeckId) || decks[0];
+    let activeDeck = decks.find((deck) => deck.id === activeDeckId) || decks[0];
 
     if (!activeDeck) {
       const deck = new Deck();
@@ -54,31 +54,29 @@ class FlashcardsApp extends React.Component {
   }
 
   buildSession = (deck) => {
-    const mode = this.state?.session
-      ? this.state.session.getMode()
-      : 'all';
+    const mode = this.state?.session ? this.state.session.getMode() : 'all';
 
     return new StudySession(deck, mode);
   };
 
   componentDidUpdate() {
-    StorageService.save(
-      this.state.decks,
-      this.state.activeDeckId,
-    );
+    StorageService.save(this.state.decks, this.state.activeDeckId,);
   }
 
   getActiveDeck = () => {
-    return this.state.decks.find(
-      (deck) => deck.id === this.state.activeDeckId,
-    );
+    return this.state.decks.find((deck) => deck.id === this.state.activeDeckId,);
   };
 
   createDeck = () => {
-    const name = window.prompt('Deck name:') || 'New Deck';
-    const deck = new Deck([], Date.now(), name);
+    const name = window.prompt('Deck name:');
 
-    const decks = [...this.state.decks, deck];
+    if (name === null) {
+      return;
+    }
+
+    const deck = new Deck([], Date.now(), name.trim() || 'New Deck',);
+
+    const decks = [...this.state.decks, deck,];
 
     this.setState({
       decks,
@@ -91,8 +89,7 @@ class FlashcardsApp extends React.Component {
   };
 
   deleteDeck = (id) => {
-    let decks =
-      this.state.decks.filter((deck) => deck.id !== id);
+    let decks = this.state.decks.filter((deck) => deck.id !== id);
 
     let activeDeckId = this.state.activeDeckId;
 
@@ -106,29 +103,18 @@ class FlashcardsApp extends React.Component {
       }
     }
 
-    const activeDeck =
-      decks.find((deck) => deck.id === activeDeckId);
+    const activeDeck = decks.find((deck) => deck.id === activeDeckId);
 
     this.setState({
-      decks,
-      activeDeckId,
-      session: this.buildSession(activeDeck),
-      editingCardId: null,
-      frontInput: '',
-      backInput: '',
+      decks, activeDeckId, session: this.buildSession(activeDeck), editingCardId: null, frontInput: '', backInput: '',
     });
   };
 
   setActiveDeck = (id) => {
-    const deck =
-      this.state.decks.find((item) => item.id === id);
+    const deck = this.state.decks.find((item) => item.id === id);
 
     this.setState({
-      activeDeckId: id,
-      session: this.buildSession(deck),
-      editingCardId: null,
-      frontInput: '',
-      backInput: '',
+      activeDeckId: id, session: this.buildSession(deck), editingCardId: null, frontInput: '', backInput: '',
     });
   };
 
@@ -143,26 +129,16 @@ class FlashcardsApp extends React.Component {
     const deck = this.getActiveDeck();
 
     if (this.state.editingCardId !== null) {
-      deck.updateCard(
-        this.state.editingCardId,
-        front,
-        back,
-      );
+      deck.updateCard(this.state.editingCardId, front, back,);
     } else {
-      deck.addCard(
-        new Card(Date.now(), front, back),
-      );
+      deck.addCard(new Card(Date.now(), front, back),);
     }
 
     const session = this.state.session;
     session.reset();
 
     this.setState({
-      decks: [...this.state.decks],
-      session,
-      editingCardId: null,
-      frontInput: '',
-      backInput: '',
+      decks: [...this.state.decks], session, editingCardId: null, frontInput: '', backInput: '',
     });
   };
 
@@ -175,22 +151,18 @@ class FlashcardsApp extends React.Component {
     session.reset();
 
     this.setState({
-      decks: [...this.state.decks],
-      session,
+      decks: [...this.state.decks], session,
     });
   };
 
   editCard = (card) => {
     this.setState({
-      editingCardId: card.id,
-      frontInput: card.front,
-      backInput: card.back,
+      editingCardId: card.id, frontInput: card.front, backInput: card.back,
     });
   };
 
   toggleLearned = () => {
-    const card =
-      this.state.session.getCurrentCard();
+    const card = this.state.session.getCurrentCard();
 
     if (!card) {
       return;
@@ -207,8 +179,7 @@ class FlashcardsApp extends React.Component {
     }
 
     this.setState({
-      decks: [...this.state.decks],
-      session,
+      decks: [...this.state.decks], session,
     });
   };
 
@@ -217,7 +188,7 @@ class FlashcardsApp extends React.Component {
 
     session.prev();
 
-    this.setState({ session });
+    this.setState({session});
   };
 
   nextCard = () => {
@@ -225,7 +196,7 @@ class FlashcardsApp extends React.Component {
 
     session.next();
 
-    this.setState({ session });
+    this.setState({session});
   };
 
   flipCard = () => {
@@ -233,7 +204,7 @@ class FlashcardsApp extends React.Component {
 
     session.flip();
 
-    this.setState({ session });
+    this.setState({session});
   };
 
   shuffleCards = () => {
@@ -241,7 +212,7 @@ class FlashcardsApp extends React.Component {
 
     session.shuffle();
 
-    this.setState({ session });
+    this.setState({session});
   };
 
   setMode = (event) => {
@@ -249,7 +220,7 @@ class FlashcardsApp extends React.Component {
 
     session.setMode(event.target.value);
 
-    this.setState({ session });
+    this.setState({session});
   };
 
   handleFrontChange = (event) => {
@@ -271,64 +242,60 @@ class FlashcardsApp extends React.Component {
   };
 
   render() {
-    const card =
-      this.state.session.getCurrentCard();
+    const card = this.state.session.getCurrentCard();
 
-    const isFlipped =
-      this.state.session.isFlipped();
+    const isFlipped = this.state.session.isFlipped();
 
-    const pos =
-      this.state.session.getCurrentIndex() + 1;
+    const pos = this.state.session.getCurrentIndex() + 1;
 
-    const total =
-      this.state.session.getCount();
+    const total = this.state.session.getCount();
 
     const deck = this.getActiveDeck();
-    const cards = deck ? deck.getCards() : [];
+    const cards = deck
+      ? deck.getCards()
+      : [];
 
-    return (
-      <div id="app">
-        <DeckList
-          decks={this.state.decks}
-          activeDeckId={this.state.activeDeckId}
-          onSelect={this.setActiveDeck}
-          onDelete={this.deleteDeck}
-          onCreate={this.createDeck}
-        />
+    return (<div id="app">
+      <DeckList
+        decks={this.state.decks}
+        activeDeckId={this.state.activeDeckId}
+        onSelect={this.setActiveDeck}
+        onDelete={this.deleteDeck}
+        onCreate={this.createDeck}
+      />
 
-        <StudyPanel
-          card={card}
-          isFlipped={isFlipped}
-          position={pos}
-          total={total}
-          onFlip={this.flipCard}
-          onPrev={this.prevCard}
-          onNext={this.nextCard}
-          onShuffle={this.shuffleCards}
-          onMark={this.toggleLearned}
-          onModeChange={this.setMode}
-          onToggleList={this.toggleList}
-          showList={this.state.showList}
-          mode={this.state.session.getMode()}
-        />
+      <StudyPanel
+        card={card}
+        isFlipped={isFlipped}
+        position={pos}
+        total={total}
+        onFlip={this.flipCard}
+        onPrev={this.prevCard}
+        onNext={this.nextCard}
+        onShuffle={this.shuffleCards}
+        onMark={this.toggleLearned}
+        onModeChange={this.setMode}
+        onToggleList={this.toggleList}
+        showList={this.state.showList}
+        mode={this.state.session.getMode()}
+      />
 
-        <CardForm
-          frontInput={this.state.frontInput}
-          backInput={this.state.backInput}
-          onFrontChange={this.handleFrontChange}
-          onBackChange={this.handleBackChange}
-          onSubmit={this.addCard}
-          isEditing={this.state.editingCardId !== null}
-        />
+      <CardForm
+        frontInput={this.state.frontInput}
+        backInput={this.state.backInput}
+        onFrontChange={this.handleFrontChange}
+        onBackChange={this.handleBackChange}
+        onSubmit={this.addCard}
+        isEditing={this.state.editingCardId !== null}
+      />
 
-        <CardList
-          cards={cards}
-          visible={this.state.showList}
-          onEdit={this.editCard}
-          onDelete={this.deleteCard}
-        />
-      </div>
-    );
+      <CardList
+        cards={cards}
+        visible={this.state.showList}
+        onEdit={this.editCard}
+        onDelete={this.deleteCard}
+      />
+    </div>);
   }
 }
 

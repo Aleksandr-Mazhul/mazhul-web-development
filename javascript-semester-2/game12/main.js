@@ -51,7 +51,6 @@ class Player {
 }
 
 
-
 class Game {
   constructor(diceCount, diceSides, playersCount) {
     this.diceCount = diceCount;

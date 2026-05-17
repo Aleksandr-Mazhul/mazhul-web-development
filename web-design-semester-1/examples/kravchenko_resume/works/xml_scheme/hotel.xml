@@ -4,107 +4,107 @@
            xsi:noNamespaceSchemaLocation="scheme.xsd"
            lastUpdated="2024-10-18">
 
-	<Hotel id="Hotel1" rating="4.5" status="occupied" available="true">
-		<Name>STD (standard)</Name>
-		<Description>Стандартный однокомнатный номер, размером 16-22 кв.м</Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>Факс</Convenience>
-			<Convenience>ТВ</Convenience>
+    <Hotel id="Hotel1" rating="4.5" status="occupied" available="true">
+        <Name>STD (standard)</Name>
+        <Description>Стандартный однокомнатный номер, размером 16-22 кв.м</Description>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>Факс</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
-		</Conveniences>
-		<Price>100$</Price>
-	</Hotel>
+        </Conveniences>
+        <Price>100$</Price>
+    </Hotel>
 
-    	<Hotel id="Hotel2" rating="4.0" status="booked" available="true">
-		<Name>Superior</Name>
+    <Hotel id="Hotel2" rating="4.0" status="booked" available="true">
+        <Name>Superior</Name>
         <Description>Улучшенный стандартный номер</Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>Факс</Convenience>
-			<Convenience>ТВ</Convenience>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>Факс</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-бар</Convenience>
-		</Conveniences>
-		<Price>150$</Price>
-	</Hotel>
+        </Conveniences>
+        <Price>150$</Price>
+    </Hotel>
 
-	<Hotel id="Hotel3" rating="5.0" status="occupied" available="true">
-		<Name>Studio</Name>
-        <Description>Компактный номер, где гостиная совмещена с кухней. </Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>ТВ</Convenience>
+    <Hotel id="Hotel3" rating="5.0" status="occupied" available="true">
+        <Name>Studio</Name>
+        <Description>Компактный номер, где гостиная совмещена с кухней.</Description>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-бар</Convenience>
-		</Conveniences>
-		<Price>170$</Price>
-	</Hotel> 
-	<Hotel id="Hotel4" rating="4.5" status="freely" available="true">
-		<Name>Family room</Name>
+        </Conveniences>
+        <Price>170$</Price>
+    </Hotel>
+    <Hotel id="Hotel4" rating="4.5" status="freely" available="true">
+        <Name>Family room</Name>
         <Description>Семейный номер с больщой площадью</Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>Факс</Convenience>
-			<Convenience>ТВ</Convenience>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>Факс</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-холодильник</Convenience>
-			<Convenience>Игровая зона</Convenience>
-		</Conveniences>
-		<Price>210$</Price>
-	</Hotel>
+            <Convenience>Игровая зона</Convenience>
+        </Conveniences>
+        <Price>210$</Price>
+    </Hotel>
 
-	<Hotel id="Hotel5" rating="5.0" status="booked" available="true">
-		<Name>Delux</Name>
+    <Hotel id="Hotel5" rating="5.0" status="booked" available="true">
+        <Name>Delux</Name>
         <Description>Это превосходный делюкс. Номер отличается повышенной комфортностью.</Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>ТВ</Convenience>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-бар</Convenience>
-		</Conveniences>
-		<Price>250$</Price>
-	</Hotel>
+        </Conveniences>
+        <Price>250$</Price>
+    </Hotel>
 
-	<Hotel id="Hotel6" rating="4.0" status="freely" available="true">
-		<Name>Suite</Name>
+    <Hotel id="Hotel6" rating="4.0" status="freely" available="true">
+        <Name>Suite</Name>
         <Description>Категория Люкс, которая представляет из себя двухкомнатный илитрехкомнатный номер</Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>Факс</Convenience>
-			<Convenience>ТВ</Convenience>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>Факс</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-бар</Convenience>
-		</Conveniences>
-		<Price>300$</Price>
-	</Hotel>
+        </Conveniences>
+        <Price>300$</Price>
+    </Hotel>
 
-	<Hotel id="Hotel7" rating="4.5" status="booked" available="true">
-		<Name>Business Room</Name>
-        <Description>Компактный номер, где гостиная совмещена с кухней. </Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>Компьютер</Convenience>
-			<Convenience>Факс</Convenience>
-			<Convenience>ТВ</Convenience>
+    <Hotel id="Hotel7" rating="4.5" status="booked" available="true">
+        <Name>Business Room</Name>
+        <Description>Компактный номер, где гостиная совмещена с кухней.</Description>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>Компьютер</Convenience>
+            <Convenience>Факс</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-бар</Convenience>
-		</Conveniences>
-		<Price>320$</Price>
-	</Hotel>
+        </Conveniences>
+        <Price>320$</Price>
+    </Hotel>
 
-	<Hotel id="Hotel8" rating="4.0" status="booked" available="true">
-		<Name>Presidential Suite</Name>
+    <Hotel id="Hotel8" rating="4.0" status="booked" available="true">
+        <Name>Presidential Suite</Name>
         <Description>Президентский Люкс включает в себя несколько больших комнат</Description>
-		<Conveniences>
-			<Convenience>Интерент</Convenience>
-			<Convenience>Факс</Convenience>
-			<Convenience>ТВ</Convenience>
+        <Conveniences>
+            <Convenience>Интерент</Convenience>
+            <Convenience>Факс</Convenience>
+            <Convenience>ТВ</Convenience>
             <Convenience>Сейф</Convenience>
             <Convenience>Мини-бар</Convenience>
-			<Convenience>Балкон</Convenience>
-		</Conveniences>
-		<Price>400$</Price>
-	</Hotel>
+            <Convenience>Балкон</Convenience>
+        </Conveniences>
+        <Price>400$</Price>
+    </Hotel>
 
 </HotelInfo>

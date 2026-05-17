@@ -25,7 +25,7 @@ h1 {
   text-align: center;
 }
 
-p{
+p {
   font-size: 1.5vw;
 }
 
@@ -156,6 +156,6 @@ input:focus {
   outline: none;
 }
 
-legend{
+legend {
   color: #660066;
 }

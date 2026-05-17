@@ -1,13 +1,14 @@
 # Agent Quick Guide for `mazhul-web-development`
 
-This repository is a portfolio of small web projects. It contains mostly vanilla JavaScript, HTML, and CSS work, plus a Vite app in `vite-app/`.
+This repository is a portfolio of small web projects. It contains mostly vanilla JavaScript, HTML, and CSS work, plus a
+Vite app in `vite-app/`.
 
 ## What to do first
 
 1. Read the closest `README.md` and any local `AGENTS.md` before changing files.
 2. Identify the project type:
-   - `vite-app/` → use the Vite scripts.
-   - everything else → treat it as a static browser project.
+    - `vite-app/` → use the Vite scripts.
+    - everything else → treat it as a static browser project.
 3. Make the smallest correct change. Do not refactor unrelated code.
 
 ## Project rules
