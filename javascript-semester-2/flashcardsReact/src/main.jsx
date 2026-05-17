@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App.jsx';
 import './styles/reset.css';
-import './styles/app.css';
 import './styles/variables.css';
+import './styles/app.css';
 
 ReactDOM.createRoot(
   document.getElementById('root'))

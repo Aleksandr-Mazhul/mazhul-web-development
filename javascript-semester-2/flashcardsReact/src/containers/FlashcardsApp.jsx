@@ -255,7 +255,7 @@ class FlashcardsApp extends React.Component {
       ? deck.getCards()
       : [];
 
-    return (<div id="app">
+    return (<div id="app" className="glass">
       <DeckList
         decks={this.state.decks}
         activeDeckId={this.state.activeDeckId}

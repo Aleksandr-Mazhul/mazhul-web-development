@@ -1,5 +1,6 @@
 import React from 'react';
 import DeckItem from './DeckItem.jsx';
+import deckAdd from '../../assets/icons/deck-add.svg';
 
 class DeckList extends React.Component {
   render() {
@@ -26,8 +27,9 @@ class DeckList extends React.Component {
         <button
           className="deck add"
           onClick={onCreate}
+          aria-label="Create deck"
         >
-          +
+          <img src={deckAdd} className="icon" alt="" />
         </button>
       </div>
     );
