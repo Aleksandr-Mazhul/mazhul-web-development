@@ -1,24 +1,23 @@
-import React from 'react';
+import {memo} from 'react';
 
-class ModeSelect extends React.Component {
-  render() {
-    const {value, onChange} = this.props;
+function ModeSelect({value, onChange,}) {
+  return (
+    <select
+      value={value}
+      onChange={onChange}
+    >
 
-    return (
-      <select
-        value={value}
-        onChange={onChange}
-      >
-        <option value="all">
-          All
-        </option>
+      <option value="all">
+        All
+      </option>
 
-        <option value="unlearned">
-          Unlearned
-        </option>
-      </select>
-    );
-  }
+      <option value="unlearned">
+        Unlearned
+      </option>
+
+    </select>
+  );
+
 }
 
-export default ModeSelect;
+export default memo(ModeSelect);

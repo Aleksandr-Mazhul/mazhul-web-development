@@ -1,72 +1,87 @@
-import React from 'react';
+import {memo} from 'react';
+
+import arrowLeft from '../../assets/icons/arrow-left.svg';
+import arrowRight from '../../assets/icons/arrow-right.svg';
+import flipIcon from '../../assets/icons/flip.svg';
+import shuffleIcon from '../../assets/icons/shuffle.svg';
 import learnedIcon from '../../assets/icons/learned.svg';
 
-class FlashCard extends React.Component {
+function Controls({
+                    onPrev, onNext, onFlip, onShuffle, onMark,
+                  }) {
 
-  handleToggleLearned = (event) => {
-    const {onToggleLearned} = this.props;
+  return (
 
-    event.stopPropagation();
+    <div className="controls-wrapper">
 
-    onToggleLearned();
-  };
+      <div className="controls">
 
-  render() {
+        <button
+          onClick={onPrev}
+          className="control-btn"
+          data-tooltip="Previous"
+        >
+          <img
+            src={arrowLeft}
+            className="icon"
+            alt=""
+          />
+        </button>
 
-    const {
-      card, isFlipped, onFlip,
-    } = this.props;
+        <button
+          onClick={onFlip}
+          className="control-btn"
+          data-tooltip="Flip"
+        >
+          <img
+            src={flipIcon}
+            className="icon"
+            alt=""
+          />
+        </button>
 
-    if (!card) {
-      return (<div id="card">
-        <div className="note">
-          No cards
-        </div>
-      </div>);
-    }
+        <button
+          onClick={onNext}
+          className="control-btn"
+          data-tooltip="Next"
+        >
+          <img
+            src={arrowRight}
+            className="icon"
+            alt=""
+          />
+        </button>
 
-    let className = 'note';
+        <button
+          onClick={onShuffle}
+          className="control-btn"
+          data-tooltip="Shuffle"
+        >
+          <img
+            src={shuffleIcon}
+            className="icon"
+            alt=""
+          />
+        </button>
 
-    if (isFlipped) {
-      className += ' flipped';
-    }
-
-    if (card.learned) {
-      className += ' learned';
-    }
-
-    return (
-
-      <div
-        id="card"
-        onClick={onFlip}
-      >
-
-        <div className={className}>
-
-          <div
-            className={`badge ${card.learned ? 'visible' : ''}`}
-            onClick={this.handleToggleLearned}
-            role="button"
-            aria-label="Toggle learned"
-          >
-
-            <img
-              src={learnedIcon}
-              className="icon"
-              alt=""
-            />
-
-          </div>
-
-          {isFlipped ? card.back : card.front}
-
-        </div>
+        <button
+          onClick={onMark}
+          className="control-btn"
+          data-tooltip="Learned"
+        >
+          <img
+            src={learnedIcon}
+            className="icon"
+            alt=""
+          />
+        </button>
 
       </div>
 
-    );
-  }
+    </div>
+
+  );
+
 }
 
-export default FlashCard;
+export default memo(Controls);

@@ -11,216 +11,308 @@ import CardList from '../components/cards/CardList.jsx';
 
 function FlashcardsApp() {
 
-  const storageData = useMemo(() => StorageService.load(), [],);
+  const storageData = useMemo(
+    () => StorageService.load(),
+    [],
+  );
 
   const [decks, setDecks] = useState(() => {
-    return storageData.decks?.length ? storageData.decks : [new Deck()];
+    return storageData.decks?.length
+      ? storageData.decks
+      : [new Deck()];
   });
 
-  const [activeDeckId, setActiveDeckId] = useState(() => storageData.activeDeckId ?? storageData.decks[0]?.id ?? decks[0].id,);
+  const [activeDeckId, setActiveDeckId] =
+    useState(
+      () =>
+        storageData.activeDeckId
+        ?? storageData.decks?.[0]?.id
+        ?? decks[0].id,
+    );
 
-  const [editingCardId, setEditingCardId] = useState(null);
+  const [editingCardId, setEditingCardId] =
+    useState(null);
 
-  const [showList, setShowList] = useState(false);
+  const [showList, setShowList] =
+    useState(false);
 
-  const [frontInput, setFrontInput] = useState('');
+  const [frontInput, setFrontInput] =
+    useState('');
 
-  const [backInput, setBackInput] = useState('');
+  const [backInput, setBackInput] =
+    useState('');
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] =
+    useState(0);
 
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] =
+    useState(false);
 
-  const [mode, setMode] = useState('all');
+  const [mode, setMode] =
+    useState('all');
 
   const activeDeck = useMemo(() => {
-    return decks.find(deck => deck.id === activeDeckId,);
+    return decks.find(
+      deck =>
+        deck.id === activeDeckId,
+    );
   }, [decks, activeDeckId]);
+
+  const cards = useMemo(() => {
+    return activeDeck
+      ? activeDeck.getCards()
+      : [];
+  }, [activeDeck]);
 
   const visibleCards = useMemo(() => {
 
-    if (!activeDeck) {
-      return [];
-    }
+    return mode === 'all'
+      ? cards
+      : cards.filter(
+        card => !card.learned,
+      );
 
-    const cards = activeDeck.getCards();
+  }, [cards, mode]);
 
-    return mode === 'all' ? cards : cards.filter(card => !card.learned,);
+  const total =
+    visibleCards.length;
 
-  }, [activeDeck, mode]);
+  const currentCard =
+    total > 0
+      ? visibleCards[currentIndex]
+      : null;
 
-  const total = visibleCards.length;
-
-  const currentCard = total > 0 ? visibleCards[currentIndex] : null;
-
-  const position = total > 0 ? currentIndex + 1 : 0;
+  const position =
+    total > 0
+      ? currentIndex + 1
+      : 0;
 
   useEffect(() => {
 
-    StorageService.save(decks, activeDeckId,);
+    StorageService.save(
+      decks,
+      activeDeckId,
+    );
 
-  }, [decks, activeDeckId,]);
+  }, [decks, activeDeckId]);
 
   useEffect(() => {
 
-    if (currentIndex >= total) {
+    if (
+      currentIndex >= total
+    ) {
       setCurrentIndex(0);
     }
 
-  }, [total, currentIndex,]);
+  }, [currentIndex, total]);
 
-  const resetStudy = useCallback(() => {
+  const resetStudy =
+    useCallback(() => {
 
-    setCurrentIndex(0);
+      setCurrentIndex(0);
 
-    setIsFlipped(false);
+      setIsFlipped(false);
 
-  }, []);
+    }, []);
 
-  const createDeck = useCallback(() => {
+  const createDeck =
+    useCallback(() => {
 
-    const name = window.prompt('Deck name:',);
+      const name =
+        window.prompt(
+          'Deck name:',
+        );
 
-    if (name === null) {
-      return;
-    }
-
-    const deck = new Deck([], Date.now(), name.trim() || 'New Deck',);
-
-    setDecks(prev => [...prev, deck,],);
-
-    setActiveDeckId(deck.id,);
-
-    resetStudy();
-
-  }, [resetStudy,]);
-
-  const deleteDeck = useCallback((id) => {
-
-    setDecks(prev => {
-
-      let newDecks = prev.filter(deck => deck.id !== id,);
-
-      if (newDecks.length === 0) {
-        newDecks = [new Deck(),];
+      if (name === null) {
+        return;
       }
 
-      if (activeDeckId === id) {
-        setActiveDeckId(newDecks[0].id,);
+      const deck =
+        new Deck(
+          [],
+          Date.now(),
+          name.trim()
+          || 'New Deck',
+        );
+
+      setDecks(
+        prev => [
+          ...prev,
+          deck,
+        ],
+      );
+
+      setActiveDeckId(
+        deck.id,
+      );
+
+      resetStudy();
+
+    }, [resetStudy]);
+
+  const selectDeck =
+    useCallback((id) => {
+
+      setActiveDeckId(id);
+
+      resetStudy();
+
+    }, [resetStudy]);
+
+  const addCard =
+    useCallback(() => {
+
+      const front =
+        frontInput.trim();
+
+      const back =
+        backInput.trim();
+
+      if (
+        !front ||
+        !back
+      ) {
+        return;
       }
 
-      return newDecks;
+      if (
+        editingCardId !== null
+      ) {
 
-    });
+        activeDeck.updateCard(
+          editingCardId,
+          front,
+          back,
+        );
 
-    resetStudy();
+      } else {
 
-  }, [activeDeckId, resetStudy,]);
+        activeDeck.addCard(
+          new Card(
+            Date.now(),
+            front,
+            back,
+          ),
+        );
 
-  const selectDeck = useCallback((id) => {
+      }
 
-    setActiveDeckId(id);
+      setDecks([
+        ...decks,
+      ]);
 
-    resetStudy();
+      setEditingCardId(null);
 
-  }, [resetStudy,]);
+      setFrontInput('');
 
-  const addCard = useCallback(() => {
+      setBackInput('');
 
-    const front = frontInput.trim();
+      resetStudy();
 
-    const back = backInput.trim();
+    }, [
+      activeDeck,
+      frontInput,
+      backInput,
+      editingCardId,
+      decks,
+      resetStudy,
+    ]);
 
-    if (!front || !back) {
-      return;
-    }
+  const deleteCard =
+    useCallback((id) => {
 
-    if (editingCardId !== null) {
+      activeDeck.removeCard(id);
 
-      activeDeck.updateCard(editingCardId, front, back,);
+      setDecks([
+        ...decks,
+      ]);
 
-    } else {
+      resetStudy();
 
-      activeDeck.addCard(new Card(Date.now(), front, back,),);
+    }, [
+      activeDeck,
+      decks,
+      resetStudy,
+    ]);
 
-    }
+  const editCard =
+    useCallback((card) => {
 
-    setDecks([...decks,]);
+      setEditingCardId(card.id);
 
-    setEditingCardId(null,);
+      setFrontInput(card.front);
 
-    setFrontInput('');
+      setBackInput(card.back);
 
-    setBackInput('');
+    }, []);
 
-    resetStudy();
+  const toggleLearned =
+    useCallback(() => {
 
-  }, [activeDeck, frontInput, backInput, editingCardId, decks, resetStudy,]);
+      if (!currentCard) {
+        return;
+      }
 
-  const deleteCard = useCallback((id) => {
+      activeDeck.toggleLearned(
+        currentCard.id,
+      );
 
-    activeDeck.removeCard(id,);
+      setDecks([
+        ...decks,
+      ]);
 
-    setDecks([...decks,]);
+    }, [
+      activeDeck,
+      currentCard,
+      decks,
+    ]);
 
-    resetStudy();
+  const nextCard =
+    useCallback(() => {
 
-  }, [activeDeck, decks, resetStudy,]);
+      if (total === 0) {
+        return;
+      }
 
-  const editCard = useCallback((card) => {
+      setCurrentIndex(
+        prev =>
+          (prev + 1)
+          % total,
+      );
 
-    setEditingCardId(card.id,);
+      setIsFlipped(false);
 
-    setFrontInput(card.front,);
+    }, [total]);
 
-    setBackInput(card.back,);
+  const prevCard =
+    useCallback(() => {
 
-  }, []);
+      if (total === 0) {
+        return;
+      }
 
-  const toggleLearned = useCallback(() => {
+      setCurrentIndex(
+        prev =>
+          (
+            prev
+            - 1
+            + total
+          )
+          % total,
+      );
 
-    if (!currentCard) {
-      return;
-    }
+      setIsFlipped(false);
 
-    activeDeck.toggleLearned(currentCard.id,);
+    }, [total]);
 
-    setDecks([...decks,]);
+  const flipCard =
+    useCallback(() => {
 
-  }, [activeDeck, currentCard, decks,]);
+      setIsFlipped(
+        prev => !prev,
+      );
 
-  const nextCard = useCallback(() => {
-
-    setCurrentIndex(prev => (prev + 1) % total,);
-
-    setIsFlipped(false,);
-
-  }, [total]);
-
-  const prevCard = useCallback(() => {
-
-    setCurrentIndex(prev => (prev - 1 + total) % total,);
-
-    setIsFlipped(false,);
-
-  }, [total]);
-
-  const flipCard = useCallback(() => {
-
-    setIsFlipped(prev => !prev,);
-
-  }, []);
-
-  const shuffleCards = useCallback(() => {
-
-    const shuffled = [...visibleCards]
-      .sort(() => Math.random() - 0.5,);
-
-    setCurrentIndex(0,);
-
-    setIsFlipped(false,);
-
-  }, [visibleCards,]);
+    }, []);
 
   return (
 
@@ -233,7 +325,7 @@ function FlashcardsApp() {
         decks={decks}
         activeDeckId={activeDeckId}
         onSelect={selectDeck}
-        onDelete={deleteDeck}
+        onDelete={() => {}}
         onCreate={createDeck}
       />
 
@@ -245,10 +337,18 @@ function FlashcardsApp() {
         onFlip={flipCard}
         onPrev={prevCard}
         onNext={nextCard}
-        onShuffle={shuffleCards}
+        onShuffle={() => {}}
         onMark={toggleLearned}
-        onModeChange={e => setMode(e.target.value,)}
-        onToggleList={() => setShowList(prev => !prev,)}
+        onModeChange={e =>
+          setMode(
+            e.target.value,
+          )
+        }
+        onToggleList={() =>
+          setShowList(
+            prev => !prev,
+          )
+        }
         showList={showList}
         mode={mode}
       />
@@ -256,14 +356,24 @@ function FlashcardsApp() {
       <CardForm
         frontInput={frontInput}
         backInput={backInput}
-        onFrontChange={e => setFrontInput(e.target.value,)}
-        onBackChange={e => setBackInput(e.target.value,)}
+        onFrontChange={e =>
+          setFrontInput(
+            e.target.value,
+          )
+        }
+        onBackChange={e =>
+          setBackInput(
+            e.target.value,
+          )
+        }
         onSubmit={addCard}
-        isEditing={editingCardId !== null}
+        isEditing={
+          editingCardId !== null
+        }
       />
 
       <CardList
-        cards={visibleCards}
+        cards={cards}
         visible={showList}
         onEdit={editCard}
         onDelete={deleteCard}
@@ -272,6 +382,7 @@ function FlashcardsApp() {
     </div>
 
   );
+
 }
 
 export default FlashcardsApp;
